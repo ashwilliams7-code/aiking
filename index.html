@@ -264,13 +264,17 @@
   Cal("ui", { theme: "dark", styles: { branding: { brandColor: "#C6F32F" } }, hideEventTypeDetails: false });
   document.querySelectorAll("[data-cal-link]").forEach(function (el) {
     const slug = el.getAttribute("data-cal-link");
-    // Only wire the popup if a real slug is set (contains a username, not the placeholder default).
     el.addEventListener("click", function (e) {
+      e.preventDefault();
       if (slug && slug !== "aiking/intro") {
-        e.preventDefault();
+        // Real Cal.com slug set → open the booking popup.
         Cal("modal", { calLink: slug, config: { theme: "dark" } });
+      } else {
+        // No Cal.com yet → fall back to an email enquiry so the button still works.
+        window.location.href = "mailto:ash.williams7@icloud.com?subject=" +
+          encodeURIComponent("Booking a call with AIKING") +
+          "&body=" + encodeURIComponent("Hi Ash, I'd like to book a call about AI for my business.");
       }
-      // else: fall through to the #book anchor scroll.
     });
   });
 </script>
