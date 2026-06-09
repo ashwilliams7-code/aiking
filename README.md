@@ -1,15 +1,16 @@
-# AIKING — aiking.info
+# AI King — aiking.info
 
-Landing site for **AIKING** (the *King of AI* persona). Single-page, static, no build step.
+Landing site for **AI King**, Ash Williams' founder-built AI systems studio.
 
 - **Live:** https://aiking.info
-- **Stack:** plain HTML/CSS/JS (one `index.html`), hosted on GitHub Pages.
-- **Booking:** Cal.com popup — set your real `username/event` slug in the `data-cal-link` attributes in `index.html` (see the comment block near the bottom of the file).
+- **Stack:** static HTML/CSS/JS (`index.html`) on GitHub Pages.
+- **Motion:** CSS boot sequence + canvas hero atmosphere; no backend required.
+- **Primary CTA:** mailto-based free AI systems audit until a real booking slug is connected.
 
 ## Edit & deploy
 
-It's a single file — edit `index.html`, commit, push. GitHub Pages redeploys automatically on push to `main`.
+This is a static site. Edit `index.html`, commit, push to `main`, and GitHub Pages redeploys automatically.
 
 ## Custom domain
 
-`CNAME` pins the site to `aiking.info`. DNS must point at GitHub Pages (apex A/AAAA records + a `www` CNAME).
+`CNAME` pins the site to `aiking.info`. DNS should point at GitHub Pages.
