@@ -287,11 +287,90 @@
   .cred b{color:var(--lime)}
 
   /* Stack */
-  .logo-card{padding:18px;display:flex;align-items:center;gap:14px}
-  .logo-mark{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;flex:0 0 auto;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);font-family:"Bricolage Grotesque";font-weight:800;color:var(--lime);overflow:hidden}
-  .logo-mark img{width:100%;height:100%;object-fit:cover}
-  .logo-card h3{font-size:18px;line-height:1.05;margin-bottom:4px}
-  .logo-card p{color:var(--muted);font-size:13px}
+  .logos{perspective:1100px}
+  .logo-card{
+    --accent:202,255,61;
+    --accent-2:248,207,77;
+    --d:0s;
+    isolation:isolate;
+    min-height:146px;
+    padding:18px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    align-items:center;
+    gap:16px;
+    background:
+      radial-gradient(160px 110px at 18% 22%,rgba(var(--accent),.19),transparent 70%),
+      radial-gradient(220px 130px at 100% 0%,rgba(var(--accent-2),.10),transparent 66%),
+      linear-gradient(154deg,rgba(255,255,255,.088),rgba(255,255,255,.026));
+    transform-style:preserve-3d;
+    transition:transform .24s cubic-bezier(.16,1,.3,1),border-color .24s,box-shadow .24s,background .24s;
+  }
+  .logo-card::before{
+    content:"";
+    position:absolute;
+    inset:1px;
+    border-radius:calc(var(--r) - 1px);
+    background:linear-gradient(115deg,transparent 8%,rgba(255,255,255,.14) 42%,transparent 70%);
+    transform:translateX(-130%) skewX(-14deg);
+    opacity:.55;
+    animation:logoSheen 6.5s cubic-bezier(.16,1,.3,1) infinite;
+    animation-delay:calc(var(--d) + .35s);
+    pointer-events:none;
+    z-index:1;
+  }
+  .logo-card::after{
+    content:"";
+    position:absolute;
+    inset:auto 14px 11px;
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(var(--accent),.65),transparent);
+    opacity:.65;
+    animation:stackScan 3.8s ease-in-out infinite;
+    animation-delay:var(--d);
+  }
+  @keyframes logoSheen{0%,54%{transform:translateX(-130%) skewX(-14deg)}74%,100%{transform:translateX(130%) skewX(-14deg)}}
+  @keyframes stackScan{0%,100%{transform:scaleX(.28);opacity:.22}50%{transform:scaleX(1);opacity:.75}}
+  .logo-stage{position:relative;width:82px;height:82px;display:grid;place-items:center;flex:0 0 auto;transform:translateZ(24px)}
+  .logo-ring{
+    position:absolute;
+    inset:0;
+    border-radius:28px;
+    background:conic-gradient(from 90deg,rgba(var(--accent),.05),rgba(var(--accent),.72),rgba(var(--accent-2),.62),rgba(var(--accent),.05));
+    filter:drop-shadow(0 14px 32px rgba(var(--accent),.16));
+    animation:ringSpin 12s linear infinite;
+    animation-delay:var(--d);
+  }
+  .logo-ring::after{content:"";position:absolute;inset:2px;border-radius:26px;background:#0d0f0a}
+  @keyframes ringSpin{to{transform:rotate(360deg)}}
+  .logo-mark{
+    position:relative;
+    z-index:2;
+    width:68px;
+    height:68px;
+    border-radius:23px;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    padding:10px;
+    background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.045));
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 15px 36px rgba(0,0,0,.32),0 0 34px rgba(var(--accent),.13) inset;
+    overflow:hidden;
+    animation:logoFloat 4.8s ease-in-out infinite;
+    animation-delay:var(--d);
+  }
+  @keyframes logoFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1.5deg)}}
+  .logo-mark img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.38))}
+  .logo-mark.hermes{padding:6px;background:radial-gradient(circle at 50% 18%,rgba(255,255,255,.18),rgba(202,255,61,.08) 58%,rgba(255,255,255,.04))}
+  .logo-mark.hermes img{transform:scale(1.08)}
+  .logo-mark.openclaw{padding:5px;background:radial-gradient(circle at 48% 28%,rgba(255,255,255,.18),rgba(255,72,72,.12) 60%,rgba(255,255,255,.04))}
+  .logo-mark.anthropic{padding:12px;background:linear-gradient(145deg,rgba(250,246,235,.18),rgba(255,255,255,.045))}
+  .logo-mark.higgsfield{padding:8px;background:radial-gradient(circle at 48% 36%,rgba(255,255,255,.2),rgba(155,108,255,.12) 64%,rgba(255,255,255,.04))}
+  .logo-copy{position:relative;z-index:2;min-width:0}
+  .tool-kicker{display:inline-flex;margin-bottom:8px;border:1px solid rgba(var(--accent),.28);background:rgba(var(--accent),.085);color:rgb(var(--accent));border-radius:999px;padding:5px 9px;font-family:"IBM Plex Mono";font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .logo-card h3{font-size:21px;line-height:1.02;margin-bottom:5px}
+  .logo-card p{color:#cbc9ba;font-size:13.5px;line-height:1.45}
 
   /* CTA */
   .cta-box{position:relative;overflow:hidden;border-radius:34px;border:1px solid rgba(248,207,77,.28);background:radial-gradient(540px 300px at 50% 0%,rgba(202,255,61,.22),transparent 66%),linear-gradient(155deg,#171b0e,#090a07);padding:34px 20px;text-align:center;box-shadow:var(--shadow)}
@@ -602,22 +681,34 @@
         <h2>The stack changes. The outcome stays practical.</h2>
         <p class="lead">We choose the right tools for the job — model, agent runtime, automation layer and media stack — then hide the complexity behind a simple workflow.</p>
       </div>
-      <div class="logos">
-        <article class="logo-card">
-          <div class="logo-mark">H</div>
-          <div><h3>Hermes Agents</h3><p>Agent runtime</p></div>
+      <div class="logos" aria-label="AIKING tool stack logos">
+        <article class="logo-card" style="--accent:202,255,61;--accent-2:248,207,77;--d:.05s">
+          <div class="logo-stage">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <div class="logo-mark hermes"><img src="logos/hermes.png" alt="Hermes Agent logo" width="68" height="68" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="logo-copy"><span class="tool-kicker">Runtime</span><h3>Hermes Agents</h3><p>Agent runtime, memory, tools and orchestration.</p></div>
         </article>
-        <article class="logo-card">
-          <div class="logo-mark">OC</div>
-          <div><h3>OpenClaw</h3><p>Open automation</p></div>
+        <article class="logo-card" style="--accent:255,77,77;--accent-2:0,229,204;--d:.18s">
+          <div class="logo-stage">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <div class="logo-mark openclaw"><img src="logos/openclaw.svg" alt="OpenClaw logo" width="68" height="68" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="logo-copy"><span class="tool-kicker">Automation</span><h3>OpenClaw</h3><p>Open-source AI automation for real workflows.</p></div>
         </article>
-        <article class="logo-card">
-          <div class="logo-mark"><img src="logos/anthropic.png" alt="Anthropic logo" width="54" height="54" loading="lazy" /></div>
-          <div><h3>Claude Code</h3><p>Technical delivery</p></div>
+        <article class="logo-card" style="--accent:250,246,235;--accent-2:248,207,77;--d:.31s">
+          <div class="logo-stage">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <div class="logo-mark anthropic"><img src="logos/anthropic.png" alt="Anthropic logo" width="68" height="68" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="logo-copy"><span class="tool-kicker">Code</span><h3>Claude Code</h3><p>Technical delivery, review and implementation.</p></div>
         </article>
-        <article class="logo-card">
-          <div class="logo-mark"><img src="logos/higgsfield.png" alt="Higgsfield logo" width="54" height="54" loading="lazy" /></div>
-          <div><h3>Higgsfield</h3><p>Image &amp; video AI</p></div>
+        <article class="logo-card" style="--accent:155,108,255;--accent-2:248,207,77;--d:.44s">
+          <div class="logo-stage">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <div class="logo-mark higgsfield"><img src="logos/higgsfield.png" alt="Higgsfield logo" width="68" height="68" loading="lazy" decoding="async" /></div>
+          </div>
+          <div class="logo-copy"><span class="tool-kicker">Media</span><h3>Higgsfield</h3><p>Image and video AI for sharper brand assets.</p></div>
         </article>
       </div>
     </div>
