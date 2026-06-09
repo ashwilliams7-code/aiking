@@ -1,11 +1,11 @@
 # AI King — aiking.info
 
-Landing site for **AI King**, Ash Williams' founder-built AI systems studio.
+Landing site for **AI King**, Ash Williams' private executive AI systems consulting studio.
 
 - **Live:** https://aiking.info
 - **Stack:** static HTML/CSS/JS (`index.html`) on GitHub Pages.
-- **Motion:** CSS boot sequence + canvas hero atmosphere; no backend required.
-- **Primary CTA:** mailto-based free AI systems audit until a real booking slug is connected.
+- **Motion:** CSS boot/mobile launch sequence, canvas hero atmosphere, marquee proof strips, scroll-controlled story stage, animated counters, sticky mobile CTA; no backend required.
+- **Primary CTA:** mailto-based private AI systems consultation until a real booking slug is connected.
 
 ## Edit & deploy
 
