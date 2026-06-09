@@ -87,6 +87,75 @@
   .gold{color:var(--gold)}
   .mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.01em}
 
+  /* Mobile Instagram launch sequence */
+  .insta-loader{display:none}
+  @media(max-width:759px){
+    body.loader-lock{overflow:hidden;touch-action:none}
+    .insta-loader{
+      position:fixed;
+      inset:0;
+      z-index:999;
+      display:grid;
+      place-items:center;
+      min-height:100svh;
+      padding:calc(28px + var(--safe-t)) 22px calc(28px + var(--safe-b));
+      overflow:hidden;
+      color:var(--text);
+      background:
+        radial-gradient(320px 260px at 50% 24%,rgba(202,255,61,.30),transparent 68%),
+        radial-gradient(280px 220px at 88% 16%,rgba(155,108,255,.20),transparent 70%),
+        radial-gradient(220px 200px at 10% 76%,rgba(248,207,77,.18),transparent 70%),
+        linear-gradient(180deg,#080806 0%,#101407 58%,#080806 100%);
+      pointer-events:auto;
+      animation:loaderAutoExit .62s cubic-bezier(.16,1,.3,1) 3.7s forwards;
+    }
+    .insta-loader::before{
+      content:"";
+      position:absolute;
+      inset:-20%;
+      background:
+        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+      background-size:38px 38px;
+      mask-image:radial-gradient(circle at 50% 42%,#000 0 45%,transparent 78%);
+      opacity:.32;
+      transform:rotate(-8deg) scale(1.1);
+      animation:gridDrift 7s linear infinite;
+    }
+    .insta-loader::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 5px);
+      mix-blend-mode:soft-light;
+      opacity:.55;
+      pointer-events:none;
+    }
+    body.loader-done .insta-loader{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s cubic-bezier(.16,1,.3,1),visibility .55s}
+    .launch-orb{position:absolute;width:68vw;height:68vw;max-width:330px;max-height:330px;border-radius:50%;background:radial-gradient(circle,rgba(202,255,61,.22),rgba(248,207,77,.10) 42%,transparent 70%);filter:blur(2px);animation:orbBreathe 2.8s ease-in-out infinite}
+    .launch-card{position:relative;z-index:2;width:min(100%,356px);display:grid;justify-items:center;text-align:center;gap:18px;padding:28px 20px 22px;border-radius:34px;border:1px solid rgba(248,207,77,.28);background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.035));box-shadow:0 26px 90px rgba(0,0,0,.52),0 0 0 1px rgba(202,255,61,.10) inset;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transform-origin:50% 58%;animation:launchIn .72s cubic-bezier(.16,1,.3,1) both}
+    .launch-crown{position:relative;width:116px;height:116px;display:grid;place-items:center;border-radius:36px;background:linear-gradient(145deg,rgba(202,255,61,.18),rgba(248,207,77,.12));box-shadow:0 0 70px rgba(202,255,61,.24)}
+    .launch-crown::before,.launch-crown::after{content:"";position:absolute;inset:-12px;border-radius:42px;border:1px solid rgba(202,255,61,.34);animation:launchRing 2.2s cubic-bezier(.16,1,.3,1) infinite}
+    .launch-crown::after{inset:-24px;border-color:rgba(248,207,77,.22);animation-delay:.35s}
+    .launch-crown svg{position:relative;z-index:2;width:68px;height:68px;color:#101407;filter:drop-shadow(0 12px 22px rgba(0,0,0,.30));animation:crownPop 2.2s ease-in-out infinite}
+    .launch-crown .fill{position:absolute;inset:9px;border-radius:30px;background:linear-gradient(135deg,var(--lime),var(--gold));box-shadow:0 0 0 1px rgba(255,255,255,.28) inset}
+    .launch-kicker{font-family:"IBM Plex Mono";font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);display:inline-flex;align-items:center;gap:8px}.launch-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 20px var(--lime);animation:pulse 1.2s ease-in-out infinite}
+    .launch-title{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(42px,14vw,62px);line-height:.86;letter-spacing:-.05em;text-wrap:balance}.launch-title span{display:block;color:var(--gold)}
+    .launch-copy{color:#d8d5c4;font-size:14px;line-height:1.5;max-width:285px}
+    .launch-steps{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:2px}.launch-step{border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.18);border-radius:14px;padding:9px 7px;font-family:"IBM Plex Mono";font-size:10px;font-weight:800;letter-spacing:.08em;color:#ede8cd;text-transform:uppercase;opacity:.35;transform:translateY(8px);animation:stepOn .58s cubic-bezier(.16,1,.3,1) forwards}.launch-step:nth-child(1){animation-delay:.55s}.launch-step:nth-child(2){animation-delay:.95s}.launch-step:nth-child(3){animation-delay:1.35s}
+    .launch-progress{position:relative;width:100%;height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.10);box-shadow:0 0 0 1px rgba(255,255,255,.08) inset}.launch-progress span{position:absolute;inset:0 auto 0 0;width:100%;border-radius:inherit;background:linear-gradient(90deg,var(--lime),var(--gold),#fff3b1);transform-origin:left;animation:loadBar 2.65s cubic-bezier(.16,1,.3,1) .35s both}.launch-progress span::after{content:"";position:absolute;inset:-8px 0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:barSpark .9s linear infinite}
+    .launch-source{font-family:"IBM Plex Mono";font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.launch-source b{color:var(--lime);font-weight:800}
+    @keyframes loaderAutoExit{to{opacity:0;visibility:hidden;pointer-events:none}}
+    @keyframes gridDrift{to{transform:rotate(-8deg) scale(1.1) translate3d(-38px,38px,0)}}
+    @keyframes orbBreathe{0%,100%{transform:scale(.82);opacity:.62}50%{transform:scale(1.08);opacity:1}}
+    @keyframes launchIn{from{opacity:0;transform:translateY(18px) scale(.94);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+    @keyframes launchRing{0%{opacity:.95;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.18)}}
+    @keyframes crownPop{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}
+    @keyframes stepOn{to{opacity:1;transform:none;border-color:rgba(202,255,61,.32);background:rgba(202,255,61,.08);color:var(--lime)}}
+    @keyframes loadBar{from{transform:scaleX(.04)}to{transform:scaleX(1)}}
+    @keyframes barSpark{to{transform:translateX(65%)}}
+  }
+
   /* Nav */
   nav{
     position:fixed;
@@ -396,6 +465,11 @@
   @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
   .hero-copy .eyebrow,.hero-copy h1,.hero-copy .hero-sub,.hero-copy .actions,.hero-copy .micro,.hero-visual{animation:up .8s cubic-bezier(.16,1,.3,1) both}
   .hero-copy h1{animation-delay:.06s}.hero-copy .hero-sub{animation-delay:.12s}.hero-copy .actions{animation-delay:.18s}.hero-copy .micro{animation-delay:.24s}.hero-visual{animation-delay:.18s}
+  @keyframes navDrop{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+  @media(max-width:759px){
+    nav{animation:navDrop .72s cubic-bezier(.16,1,.3,1) 2.9s both}
+    .hero-copy .eyebrow{animation-delay:2.82s}.hero-copy h1{animation-delay:2.94s}.hero-copy .hero-sub{animation-delay:3.06s}.hero-copy .actions{animation-delay:3.18s}.hero-copy .micro{animation-delay:3.28s}.hero-visual{animation-delay:3.14s}
+  }
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
   .reveal.show{opacity:1;transform:none}
 
@@ -434,11 +508,35 @@
   }
   @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
-    .reveal{opacity:1;transform:none}.royal-card{transform:none}.mobilebar{transition:none}
+    .reveal{opacity:1;transform:none}.royal-card{transform:none}.mobilebar{transition:none}.insta-loader{display:none!important}
   }
 </style>
 </head>
 <body>
+<div class="insta-loader" id="instaLoader" aria-hidden="true">
+  <div class="launch-orb" aria-hidden="true"></div>
+  <div class="launch-card">
+    <div class="launch-kicker">Instagram tap detected</div>
+    <div class="launch-crown" aria-hidden="true">
+      <span class="fill"></span>
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 22 21 35 32 12l11 23 13-13-6 31H14L8 22Z" />
+        <path d="M15 53h34" />
+      </svg>
+    </div>
+    <div>
+      <div class="launch-title">KING <span>OF AI</span></div>
+      <p class="launch-copy">Loading Ash’s agent kingdom: Sky thinks, Atlas ships, Yogi hardens.</p>
+    </div>
+    <div class="launch-steps" aria-hidden="true">
+      <div class="launch-step">Sky</div>
+      <div class="launch-step">Atlas</div>
+      <div class="launch-step">Yogi</div>
+    </div>
+    <div class="launch-progress" aria-hidden="true"><span></span></div>
+    <div class="launch-source">tap → <b>AIKING.INFO</b></div>
+  </div>
+</div>
 <nav aria-label="Primary navigation">
   <div class="nav-inner">
     <a class="brand" href="#top" aria-label="KING OF AI home">
@@ -749,6 +847,30 @@
 (function(){
   var year = document.getElementById('yr');
   if (year) year.textContent = new Date().getFullYear();
+
+  var loader = document.getElementById('instaLoader');
+  var isPhone = window.matchMedia && window.matchMedia('(max-width: 759px)').matches;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ua = navigator.userAgent || '';
+  var ref = document.referrer || '';
+  var qs = location.search || '';
+  var fromInstagram = /Instagram|FBAN|FBAV/i.test(ua) || /instagram\.com/i.test(ref) || /(?:\?|&)(ig|instagram|previewLoader)=1/i.test(qs);
+
+  if (loader && isPhone && !reduceMotion) {
+    document.body.classList.add('loader-lock');
+    var kicker = loader.querySelector('.launch-kicker');
+    var source = loader.querySelector('.launch-source');
+    if (kicker) kicker.textContent = fromInstagram ? 'Instagram tap detected' : 'KING OF AI launch sequence';
+    if (source) source.innerHTML = (fromInstagram ? 'IG tap' : 'mobile tap') + ' → <b>AIKING.INFO</b>';
+    var closeLoader = function(){
+      document.body.classList.add('loader-done');
+      document.body.classList.remove('loader-lock');
+      window.setTimeout(function(){ if (loader && loader.parentNode) loader.parentNode.removeChild(loader); }, 760);
+    };
+    window.setTimeout(closeLoader, fromInstagram ? 3350 : 3050);
+  } else if (loader && loader.parentNode) {
+    loader.parentNode.removeChild(loader);
+  }
 
   var PLACEHOLDER_SLUG = 'aiking/intro';
   var mail = 'mailto:ash.williams7@icloud.com?subject=' + encodeURIComponent('AIKING free AI systems call') + '&body=' + encodeURIComponent('Hi Ash, I would like to book a free AI systems call for my business.');
