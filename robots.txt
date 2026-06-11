@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /command-centre/
+Sitemap: https://aiking.info/sitemap.xml
