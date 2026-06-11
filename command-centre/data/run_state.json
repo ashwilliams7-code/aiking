@@ -1,6 +1,6 @@
 {
-  "last_run_at": "2026-06-11T17:06:27+10:00",
-  "mode": "local scraper verification",
+  "last_run_at": "2026-06-11T07:08:42+00:00",
+  "mode": "GitHub Actions cloud scraper",
   "status": "ok",
   "source": "OpenStreetMap public listings + public website homepage scan",
   "cities": [
@@ -11,8 +11,8 @@
     "dentist",
     "aesthetic"
   ],
-  "found": 10,
-  "saved": 10,
+  "found": 8,
+  "saved": 8,
   "errors": [],
   "safety": "Public website/contact metadata only. No login, no bypassing, no private data, no automatic outbound."
 }
