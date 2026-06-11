@@ -25,7 +25,7 @@
 <link rel="canonical" href="https://aiking.info/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Space+Grotesk:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f1113'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='25' font-family='Arial,sans-serif' font-weight='900' fill='%23d1fe17'%3EAI%3C/text%3E%3C/svg%3E" />
 
 <script type="application/ld+json">
@@ -76,13 +76,14 @@
     --safe-t:env(safe-area-inset-top,0px);
     --safe-b:env(safe-area-inset-bottom,0px);
   }
-  *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg);overflow-x:hidden}body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.55;background:
+  *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px;background:var(--bg);overflow-x:hidden}body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.55;background:
     radial-gradient(920px 520px at 10% -8%,rgba(209,254,23,.14),transparent 64%),
     radial-gradient(760px 520px at 94% 4%,rgba(209,254,23,.08),transparent 64%),
     linear-gradient(180deg,#0f1113 0%,#131517 46%,#0f1113 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.66) 58%,transparent 100%);opacity:.64}
   body::after{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:-2;background:conic-gradient(from 140deg at 50% 42%,transparent,rgba(209,254,23,.055),transparent,rgba(255,0,91,.035),transparent);filter:blur(26px);animation:ambientSpin 28s linear infinite;opacity:.72}
-  body.mobile-launch-lock{overflow:hidden;touch-action:none}::selection{background:var(--green);color:#14151a}a{color:inherit;text-decoration:none}img,svg,canvas{display:block;max-width:100%}img{height:auto}button{font:inherit;color:inherit}h1,h2,h3,.display,.wordmark{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.055em}h1,h2,h3,p{margin:0}p{color:var(--muted)}ul{margin:0;padding:0;list-style:none}.mono{font-family:"Space Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.wrap{width:min(100% - 40px,1180px);margin:0 auto}.section{position:relative;padding:82px 0}.section.compact{padding:62px 0}.section-head{max-width:760px;margin-bottom:28px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.kicker{display:inline-flex;align-items:center;gap:9px;padding:8px 11px;border:1px solid var(--line-strong);border-radius:10px;background:rgba(209,254,23,.10);color:var(--green-2);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}.section-kicker{color:var(--green);text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.14em}.section h2,.section-head h2{margin-top:12px;font-size:clamp(38px,5.8vw,78px);line-height:.9}.lead{margin-top:16px;font-size:clamp(17px,2vw,21px);color:var(--soft)}.grid{display:grid;gap:18px}.gold{color:var(--green)}.ai-mark{color:var(--green);text-shadow:0 0 22px rgba(209,254,23,.22);white-space:nowrap}.ai-mark::selection{color:#14151a}.btn-primary .ai-mark{color:#14151a;text-shadow:none}.hand-note{font-family:Caveat,"Space Grotesk",cursive!important;letter-spacing:.01em!important;text-transform:none!important}.hero-cta-note{margin-top:12px;color:var(--muted);font-size:13px;font-weight:700}.logo-mark{position:relative;width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--green),#effe17);color:#14151a;font-family:"Space Grotesk";font-weight:900;letter-spacing:-.08em;box-shadow:inset 0 -4px rgba(0,0,0,.20),0 0 28px rgba(209,254,23,.24)}.logo-mark span{position:relative;z-index:1;transform:translateY(-1px)}.logo-mark::before{content:"";position:absolute;inset:5px;border-radius:9px;border:1px solid rgba(20,21,26,.34)}.logo-mark::after{content:"";position:absolute;right:-4px;top:-4px;width:11px;height:11px;border-radius:50%;background:#ff005b;box-shadow:0 0 20px rgba(255,0,91,.7)}
+  body.mobile-launch-lock{overflow:hidden;touch-action:none}::selection{background:var(--green);color:#14151a}a{color:inherit;text-decoration:none}img,svg,canvas{display:block;max-width:100%}img{height:auto}button{font:inherit;color:inherit}h1,h2,h3,.display,.wordmark{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.055em}h1,h2,h3,p{margin:0}p{color:var(--muted)}ul{margin:0;padding:0;list-style:none}.mono{font-family:"Space Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.wrap{width:min(100% - 40px,1180px);margin:0 auto}.section{position:relative;padding:82px 0}.section.compact{padding:62px 0}.section-head{max-width:760px;margin-bottom:28px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.kicker{display:inline-flex;align-items:center;gap:9px;padding:8px 11px;border:1px solid var(--line-strong);border-radius:10px;background:rgba(209,254,23,.10);color:var(--green-2);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}.section-kicker{color:var(--green);text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.14em}.section h2,.section-head h2{margin-top:12px;font-size:clamp(34px,4.6vw,60px);line-height:.94}.lead{margin-top:16px;font-size:clamp(17px,2vw,21px);color:var(--soft)}.grid{display:grid;gap:18px}.gold{color:var(--green)}.ai-mark{color:var(--green);text-shadow:0 0 22px rgba(209,254,23,.22);white-space:nowrap}.ai-mark::selection{color:#14151a}.btn-primary .ai-mark{color:#14151a;text-shadow:none}.hero-cta-note{margin-top:12px;color:var(--muted);font-size:13px;font-weight:700}
+  :focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}.btn:focus-visible,.menu-toggle:focus-visible{outline-offset:2px}.quiz-form input:focus-visible + span{border-color:rgba(209,254,23,.65);box-shadow:0 0 0 2px rgba(209,254,23,.45)}.logo-mark{position:relative;width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--green),#effe17);color:#14151a;font-family:"Space Grotesk";font-weight:900;letter-spacing:-.08em;box-shadow:inset 0 -4px rgba(0,0,0,.20),0 0 28px rgba(209,254,23,.24)}.logo-mark span{position:relative;z-index:1;transform:translateY(-1px)}.logo-mark::before{content:"";position:absolute;inset:5px;border-radius:9px;border:1px solid rgba(20,21,26,.34)}.logo-mark::after{content:"";position:absolute;right:-4px;top:-4px;width:11px;height:11px;border-radius:50%;background:#ff005b;box-shadow:0 0 20px rgba(255,0,91,.7)}
 
   .scroll-progress{position:fixed;left:0;top:0;z-index:10000;width:100%;height:3px;background:rgba(209,254,23,.12);pointer-events:none}.scroll-progress span{display:block;width:100%;height:100%;background:linear-gradient(90deg,var(--green),var(--mint));transform:scaleX(0);transform-origin:left;box-shadow:0 0 18px rgba(209,254,23,.7)}
 
@@ -92,23 +93,19 @@
     .mobile-launch{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:22px;background:
       radial-gradient(340px 260px at 50% 20%,rgba(209,254,23,.25),transparent 68%),
       radial-gradient(280px 220px at 14% 82%,rgba(209,254,23,.13),transparent 72%),
-      linear-gradient(180deg,#0f1113 0%,#18191c 54%,#0f1113 100%);overflow:hidden;animation:mobileLaunchExit .58s cubic-bezier(.16,1,.3,1) 3.35s forwards}.mobile-launch::before{content:"";position:absolute;inset:-22%;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:42px 42px;transform:rotate(-10deg) scale(1.1);animation:mobileGrid 6.5s linear infinite;mask-image:radial-gradient(circle,#000 0 42%,transparent 74%)}.launch-orb{position:absolute;width:72vw;height:72vw;max-width:340px;max-height:340px;border-radius:50%;background:radial-gradient(circle,rgba(209,254,23,.22),rgba(209,254,23,.09) 46%,transparent 70%);filter:blur(2px);animation:orbPulse 2.6s ease-in-out infinite}.launch-card{position:relative;z-index:2;width:min(100%,360px);display:grid;justify-items:center;text-align:center;gap:17px;padding:27px 20px 22px;border-radius:34px;border:1px solid rgba(209,254,23,.34);background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.035));box-shadow:0 26px 90px rgba(0,0,0,.54),0 0 0 1px rgba(209,254,23,.10) inset;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);animation:mobileLaunchIn .72s cubic-bezier(.16,1,.3,1) both}.launch-kicker{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--green-2);display:inline-flex;align-items:center;gap:8px}.launch-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 18px var(--mint);animation:pulse 1.2s ease-in-out infinite}.launch-wordmark{font-family:"Space Grotesk";font-size:clamp(54px,18vw,78px);font-weight:900;line-height:.78;letter-spacing:-.07em;text-transform:uppercase;text-shadow:0 0 36px rgba(209,254,23,.22)}.launch-wordmark span{display:block;color:var(--green)}.launch-copy{max-width:275px;color:var(--soft);font-size:14px}.launch-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;width:100%}.launch-steps span{padding:9px 7px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22);color:var(--quiet);font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;transform:translateY(8px);opacity:0;animation:stepOn .4s cubic-bezier(.16,1,.3,1) forwards}.launch-steps span:nth-child(1){animation-delay:.45s}.launch-steps span:nth-child(2){animation-delay:.76s}.launch-steps span:nth-child(3){animation-delay:1.07s}.launch-progress{width:100%;height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.10);box-shadow:0 0 0 1px rgba(255,255,255,.08) inset}.launch-progress span{display:block;width:100%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--mint),var(--green-2));transform-origin:left;animation:loadBar 2.8s cubic-bezier(.16,1,.3,1) .2s both}.launch-source{color:var(--quiet);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.launch-source b{color:var(--mint-2)}body.mobile-launch-ready:not(.mobile-launch-done) .hero-reveal{opacity:0;transform:translateY(18px);filter:blur(8px)}body.mobile-launch-done .hero-reveal{transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1),filter .65s;opacity:1;transform:none;filter:none}.hero-reveal:nth-child(1){transition-delay:.04s}.hero-reveal:nth-child(2){transition-delay:.12s}.hero-reveal:nth-child(3){transition-delay:.2s}.hero-reveal:nth-child(4){transition-delay:.28s}.hero-reveal:nth-child(5){transition-delay:.36s}
+      linear-gradient(180deg,#0f1113 0%,#18191c 54%,#0f1113 100%);overflow:hidden;animation:mobileLaunchExit .58s cubic-bezier(.16,1,.3,1) 3.35s forwards}.mobile-launch::before{content:"";position:absolute;inset:-22%;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:42px 42px;transform:rotate(-10deg) scale(1.1);animation:mobileGrid 6.5s linear infinite;mask-image:radial-gradient(circle,#000 0 42%,transparent 74%)}.launch-orb{position:absolute;width:72vw;height:72vw;max-width:340px;max-height:340px;border-radius:50%;background:radial-gradient(circle,rgba(209,254,23,.22),rgba(209,254,23,.09) 46%,transparent 70%);filter:blur(2px);animation:orbPulse 2.6s ease-in-out infinite}.launch-card{position:relative;z-index:2;width:min(100%,360px);display:grid;justify-items:center;text-align:center;gap:17px;padding:27px 20px 22px;border-radius:34px;border:1px solid rgba(209,254,23,.34);background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.035));box-shadow:0 26px 90px rgba(0,0,0,.54),0 0 0 1px rgba(209,254,23,.10) inset;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);animation:mobileLaunchIn .72s cubic-bezier(.16,1,.3,1) both}.launch-kicker{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--green-2);display:inline-flex;align-items:center;gap:8px}.launch-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 18px var(--mint);animation:pulse 1.2s ease-in-out infinite}.launch-wordmark{font-family:"Space Grotesk";font-size:clamp(54px,18vw,78px);font-weight:900;line-height:.78;letter-spacing:-.07em;text-transform:uppercase;text-shadow:0 0 36px rgba(209,254,23,.22)}.launch-wordmark span{display:block;color:var(--green)}.launch-copy{max-width:275px;color:var(--soft);font-size:14px}.launch-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;width:100%}.launch-steps span{padding:9px 7px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22);color:var(--quiet);font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;transform:translateY(8px);opacity:0;animation:stepOn .4s cubic-bezier(.16,1,.3,1) forwards}.launch-steps span:nth-child(1){animation-delay:.45s}.launch-steps span:nth-child(2){animation-delay:.76s}.launch-steps span:nth-child(3){animation-delay:1.07s}.launch-progress{width:100%;height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.10);box-shadow:0 0 0 1px rgba(255,255,255,.08) inset}.launch-progress span{display:block;width:100%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--mint),var(--green-2));transform-origin:left;animation:loadBar 2.8s cubic-bezier(.16,1,.3,1) .2s both}.launch-source{color:var(--quiet);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.launch-source b{color:var(--mint-2)}.hero-copy{perspective:900px}.hero-reveal{opacity:0;animation:heroIn3d .85s cubic-bezier(.16,1,.3,1) both}.hero-reveal:nth-child(1){animation-delay:.05s}.hero-reveal:nth-child(2){animation-delay:.14s}.hero-reveal:nth-child(3){animation-delay:.23s}.hero-reveal:nth-child(4){animation-delay:.32s}.hero-reveal:nth-child(5){animation-delay:.41s}.hero-reveal:nth-child(6){animation-delay:.5s}.hero-reveal:nth-child(7){animation-delay:.58s}.command-panel.hero-reveal{animation-delay:.62s}body.mobile-launch-lock .hero-reveal{animation-play-state:paused}
   }
 
   /* Desktop entry */
-  .boot{display:none}@media(min-width:1280px){.boot{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:30px;background:radial-gradient(520px 320px at 50% 34%,rgba(209,254,23,.20),transparent 68%),linear-gradient(180deg,#0f1113,#031008);transition:opacity .45s cubic-bezier(.16,1,.3,1),visibility .45s}.boot.hidden{opacity:0;visibility:hidden;pointer-events:none}.boot-card{position:relative;width:min(100%,520px);padding:34px 26px 28px;border-radius:34px;border:1px solid var(--line-strong);background:linear-gradient(160deg,rgba(255,255,255,.11),rgba(255,255,255,.035));box-shadow:var(--shadow);text-align:center;overflow:hidden}.boot-card::after{content:"";position:absolute;inset:-2px;background:linear-gradient(110deg,transparent,rgba(209,254,23,.20),transparent);transform:translateX(-120%);animation:sweep 1.7s ease-in-out .15s both;pointer-events:none}.boot-word{position:relative;font-family:"Space Grotesk";font-weight:900;font-size:clamp(58px,8vw,92px);line-height:.82;letter-spacing:-.07em}.boot-word span{display:block;color:var(--green)}.boot-lines{position:relative;margin-top:22px;display:grid;gap:9px}.boot-line{display:flex;justify-content:space-between;gap:14px;padding:10px 12px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(0,0,0,.20);font-size:11px;text-transform:uppercase;font-weight:900;color:#f7f7f8;opacity:0;transform:translateY(10px);animation:lineIn .42s cubic-bezier(.16,1,.3,1) forwards}.boot-line:nth-child(1){animation-delay:.26s}.boot-line:nth-child(2){animation-delay:.52s}.boot-line:nth-child(3){animation-delay:.78s}.boot-line:nth-child(4){animation-delay:1.04s}.boot-line b{color:var(--mint-2)}.boot-progress{position:relative;margin-top:17px;width:100%;height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.1)}.boot-progress span{display:block;width:100%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--mint),var(--green-2));transform-origin:left;animation:loadBar 1.55s cubic-bezier(.16,1,.3,1) .12s both}}
+  .boot{display:none}@media(min-width:1280px){.boot{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;padding:30px;background:radial-gradient(520px 320px at 50% 34%,rgba(209,254,23,.20),transparent 68%),linear-gradient(180deg,#0f1113,#031008);transition:opacity .45s cubic-bezier(.16,1,.3,1),visibility .45s}.boot.hidden{opacity:0;visibility:hidden;pointer-events:none}.boot-card{position:relative;width:min(100%,520px);padding:34px 26px 28px;border-radius:34px;border:1px solid var(--line-strong);background:linear-gradient(160deg,rgba(255,255,255,.11),rgba(255,255,255,.035));box-shadow:var(--shadow);text-align:center;overflow:hidden}.boot-card::after{content:"";position:absolute;inset:-2px;background:linear-gradient(110deg,transparent,rgba(209,254,23,.20),transparent);transform:translateX(-120%);animation:sweep 1.7s ease-in-out .15s both;pointer-events:none}.boot-word{position:relative;font-family:"Space Grotesk";font-weight:900;font-size:clamp(58px,8vw,92px);line-height:.82;letter-spacing:-.07em}.boot-word span{display:block;color:var(--green)}.boot-lines{position:relative;margin-top:22px;display:grid;gap:9px}.boot-line{display:flex;justify-content:space-between;gap:14px;padding:10px 12px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(0,0,0,.20);font-size:11px;text-transform:uppercase;font-weight:900;color:#f7f7f8;opacity:0;transform:translateY(10px);animation:lineIn .42s cubic-bezier(.16,1,.3,1) forwards}.boot-line:nth-child(1){animation-delay:.15s}.boot-line:nth-child(2){animation-delay:.32s}.boot-line:nth-child(3){animation-delay:.49s}.boot-line:nth-child(4){animation-delay:.66s}.boot-line b{color:var(--mint-2)}.boot-progress{position:relative;margin-top:17px;width:100%;height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.1)}.boot-progress span{display:block;width:100%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--mint),var(--green-2));transform-origin:left;animation:loadBar .95s cubic-bezier(.16,1,.3,1) .12s both}}
 
   nav{position:fixed;top:0;left:0;right:0;z-index:90;padding:calc(12px + var(--safe-t)) 14px 12px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(1,4,2,.72);backdrop-filter:blur(20px) saturate(145%);-webkit-backdrop-filter:blur(20px) saturate(145%)}.nav-inner{width:min(100%,1180px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;white-space:nowrap}.wordmark{font-weight:900;font-size:22px;line-height:.9;text-transform:uppercase}.brand small{display:block;margin-top:4px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--quiet);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.nav-links{display:none;align-items:center;gap:22px;font-size:14px;font-weight:900;color:rgba(255,255,255,.74)}.nav-links a{opacity:.74;transition:.18s}.nav-links a:hover{opacity:1;color:var(--green)}
   .btn{min-height:56px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border:1px solid transparent;font-weight:900;cursor:pointer;user-select:none;transition:transform .18s,box-shadow .18s,border-color .18s,background .18s;position:relative;overflow:hidden}.btn:active{transform:scale(.985)}.btn-primary{background:linear-gradient(135deg,var(--green),#a8d507,var(--mint));color:#14151a;box-shadow:0 18px 58px rgba(209,254,23,.24)}.btn-primary::after{content:"";position:absolute;inset:-45% auto -45% -35%;width:34%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.62),transparent);transform:skewX(-18deg);animation:buttonSheen 4.2s ease-in-out infinite}.btn-secondary{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.045);color:var(--text)}.btn-secondary:hover{border-color:rgba(209,254,23,.40);background:rgba(209,254,23,.07)}.btn-mini{min-height:42px;padding:10px 15px;font-size:13px}.arrow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
   .nav-actions{margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:10px}.nav-menu{position:relative;z-index:120}.menu-toggle{min-height:42px;display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.055);color:var(--text);font-size:13px;font-weight:900;cursor:pointer;transition:.18s}.menu-toggle:hover,.nav-menu.open .menu-toggle{border-color:rgba(209,254,23,.42);background:rgba(209,254,23,.09);color:var(--green-2)}.menu-dots{width:18px;height:12px;position:relative;display:inline-block}.menu-dots::before,.menu-dots::after{content:"";position:absolute;left:0;right:0;height:2px;border-radius:999px;background:currentColor}.menu-dots::before{top:2px}.menu-dots::after{bottom:2px}.menu-panel{position:absolute;top:calc(100% + 12px);right:0;width:min(86vw,380px);padding:10px;border-radius:24px;border:1px solid rgba(209,254,23,.24);background:rgba(12,14,15,.94);box-shadow:0 26px 90px rgba(0,0,0,.48),0 0 0 1px rgba(255,255,255,.05) inset;backdrop-filter:blur(22px) saturate(145%);-webkit-backdrop-filter:blur(22px) saturate(145%);opacity:0;transform:translateY(8px) scale(.98);pointer-events:none;transition:opacity .18s ease,transform .18s ease}.nav-menu.open .menu-panel{opacity:1;transform:none;pointer-events:auto}.menu-panel a{display:grid;gap:3px;padding:13px 14px;border-radius:16px;border:1px solid transparent;color:inherit}.menu-panel a:hover{border-color:rgba(209,254,23,.22);background:rgba(209,254,23,.075)}.menu-panel b{color:#f7f7f8;font-size:14px}.menu-panel span{color:var(--muted);font-size:12px;line-height:1.35}
 
-  header{position:relative;min-height:clamp(680px,86svh,900px);display:flex;align-items:center;padding:92px 0 44px;overflow:hidden}#signalCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.68;filter:saturate(120%)}.hero-shell{display:grid;gap:30px;align-items:center}.hero-copy{position:relative;z-index:2}.hero-copy h1{margin-top:18px;font-size:clamp(52px,9vw,112px);line-height:.86;max-width:950px;text-shadow:0 0 36px rgba(209,254,23,.14)}.hero-sub{margin-top:22px;max-width:760px;font-size:clamp(18px,2.2vw,24px);color:var(--soft)}.hero-sub b{color:var(--text)}.actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}.trust-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:9px}.chip{display:inline-flex;align-items:center;gap:7px;padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);color:#f7f7f8;font-size:12px;font-weight:900}.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}.promise-strip{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:780px}.promise-strip span{display:block;border:1px solid rgba(209,254,23,.22);border-radius:20px;background:linear-gradient(160deg,rgba(209,254,23,.10),rgba(209,254,23,.035));padding:14px 15px;box-shadow:0 0 36px rgba(209,254,23,.08)}.promise-strip b{display:block;color:var(--text);font-size:13px;text-transform:uppercase;letter-spacing:.11em}.promise-strip em{display:block;margin-top:5px;color:var(--muted);font-style:normal;font-size:13px}
-
+  header{position:relative;min-height:clamp(680px,86svh,900px);display:flex;align-items:center;padding:92px 0 44px;overflow:hidden}#signalCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.68;filter:saturate(120%)}.hero-shell{display:grid;gap:30px;align-items:center}.hero-copy{position:relative;z-index:2}.hero-copy h1{margin-top:18px;font-size:clamp(52px,9vw,112px);line-height:.86;max-width:950px;text-shadow:0 0 36px rgba(209,254,23,.14)}.hero-sub{margin-top:22px;max-width:760px;font-size:clamp(18px,2.2vw,24px);color:var(--soft)}.hero-sub b{color:var(--text)}.actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}.trust-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:9px}.chip{display:inline-flex;align-items:center;gap:7px;padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);color:#f7f7f8;font-size:12px;font-weight:900}.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}
   .risk-strip{margin-top:18px;max-width:780px;display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;padding:16px;border:1px solid rgba(209,254,23,.34);border-radius:24px;background:linear-gradient(160deg,rgba(209,254,23,.13),rgba(209,254,23,.04));box-shadow:0 18px 70px rgba(0,0,0,.22)}.risk-strip strong{display:block;color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:.13em}.risk-strip p{margin-top:4px;color:#f7f7f8;font-weight:800;font-size:14px}.risk-badge{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:var(--green);color:#14151a;font-weight:900;box-shadow:0 0 34px rgba(209,254,23,.28)}
-  .cta-band{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:24px;border-radius:30px;border:1px solid rgba(209,254,23,.30);background:radial-gradient(520px 220px at 12% 0%,rgba(209,254,23,.19),transparent 72%),linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));box-shadow:0 24px 86px rgba(0,0,0,.26)}.cta-band small{display:block;color:var(--green);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:900}.cta-band h3{margin-top:8px;font-size:clamp(28px,4.8vw,48px);line-height:.92}.cta-band p{margin-top:10px;color:var(--soft);font-size:16px;max-width:740px}.cta-band .btn{white-space:nowrap}
-  .about-section{background:linear-gradient(180deg,transparent,rgba(255,255,255,.025),transparent)}.about-grid{display:grid;grid-template-columns:1fr .82fr;gap:22px;align-items:stretch}.about-proof h3{font-size:clamp(28px,3.4vw,42px);line-height:.96;margin-top:16px}.about-proof p{margin-top:12px;color:var(--soft)}.ventures-head{margin-top:34px;max-width:820px}.ventures-head h3,.contact-panel h3{margin-top:10px;font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(30px,4vw,52px);line-height:.92;letter-spacing:-.055em}.ventures-head p{margin-top:10px;color:var(--soft);font-size:17px}.ventures-grid{margin-top:18px;grid-template-columns:repeat(4,1fr)}.venture-card .card-inner{padding:20px}.venture-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.venture-top b{font-family:"Space Grotesk",Inter,sans-serif;font-size:22px;line-height:1}.venture-top span{padding:6px 8px;border-radius:999px;border:1px solid rgba(209,254,23,.22);background:rgba(209,254,23,.075);color:var(--green-2);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}.venture-card p{margin-top:14px;font-size:14px}.venture-card a{display:inline-flex;margin-top:16px;color:var(--green);font-size:13px;font-weight:900}.contact-panel{margin-top:20px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:24px;border-radius:30px;border:1px solid rgba(209,254,23,.28);background:radial-gradient(520px 220px at 12% 0%,rgba(209,254,23,.16),transparent 72%),linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));box-shadow:0 22px 70px rgba(0,0,0,.22)}.contact-panel p{margin-top:10px;max-width:720px;color:var(--soft)}.contact-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;max-width:430px}.contact-note{width:100%;color:var(--quiet);font-size:11px;text-align:right}.proof-led-grid{grid-template-columns:repeat(3,1fr)}.proof-led-card .card-inner{padding:22px}.proof-led-card h3{font-size:25px;line-height:1;margin-top:16px}.proof-led-card p{margin-top:10px}.proof-led-card b{color:var(--green)}
-  .demo-section{background:linear-gradient(180deg,transparent,rgba(255,255,255,.025),transparent)}.demo-grid{grid-template-columns:1fr 1fr;align-items:stretch}.demo-board{padding:24px;border-radius:34px;border:1px solid rgba(209,254,23,.30);background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:var(--shadow)}.demo-board h3{font-size:clamp(32px,4.5vw,58px);line-height:.9}.demo-steps{margin-top:22px;display:grid;gap:10px}.demo-step{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:13px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.04)}.demo-step span{width:31px;height:31px;border-radius:11px;display:grid;place-items:center;background:rgba(209,254,23,.12);border:1px solid rgba(209,254,23,.32);color:var(--green);font-weight:900}.demo-step b{display:block;color:#f7f7f8}.demo-step small{display:block;margin-top:2px;color:var(--muted);font-weight:700}.demo-proof{display:grid;gap:14px}.demo-proof .card-inner{min-height:100%;display:grid;align-content:space-between;gap:16px}.demo-proof h3{font-size:28px;line-height:1}.demo-proof p{font-size:16px}.demo-output{font-family:"Space Mono",ui-monospace,monospace;font-size:12px;color:#dfffa7;border:1px solid rgba(209,254,23,.18);border-radius:18px;background:rgba(0,0,0,.22);padding:14px;white-space:pre-line}
-  .guarantee-box{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:center;padding:34px;border-radius:38px;border:1px solid rgba(209,254,23,.42);background:radial-gradient(620px 280px at 18% 0%,rgba(209,254,23,.24),transparent 72%),linear-gradient(160deg,rgba(255,255,255,.105),rgba(255,255,255,.03));box-shadow:var(--shadow);overflow:hidden;position:relative}.guarantee-box::after{content:"";position:absolute;inset:auto -10% -45% 32%;height:240px;background:radial-gradient(circle,rgba(209,254,23,.18),transparent 68%);pointer-events:none}.guarantee-mark{font-family:"Space Grotesk";font-size:clamp(74px,12vw,150px);line-height:.76;letter-spacing:-.08em;color:var(--green);text-shadow:0 0 48px rgba(209,254,23,.22)}.guarantee-content{position:relative;z-index:1}.guarantee-content h2{font-size:clamp(42px,6.8vw,86px);line-height:.88}.guarantee-content p{margin-top:16px;font-size:19px;color:var(--soft)}.guarantee-list{margin-top:18px;display:grid;gap:9px}.guarantee-list li{display:flex;gap:10px;color:#f7f7f8;font-weight:800}.guarantee-list li::before{content:"✓";color:var(--green);font-weight:900}
+  .about-section{background:linear-gradient(180deg,transparent,rgba(255,255,255,.025),transparent)}.about-grid{display:grid;grid-template-columns:1fr .82fr;gap:22px;align-items:stretch}.about-proof h3{font-size:clamp(28px,3.4vw,42px);line-height:.96;margin-top:16px}.about-proof p{margin-top:12px;color:var(--soft)}.ventures-head{margin-top:34px;max-width:820px}.ventures-head h2,.contact-panel h2{margin-top:10px;font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(30px,4vw,52px);line-height:.92;letter-spacing:-.055em}.ventures-head p{margin-top:10px;color:var(--soft);font-size:17px}.ventures-grid{margin-top:18px;grid-template-columns:repeat(4,1fr)}.venture-card .card-inner{padding:20px}.venture-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.venture-top b{font-family:"Space Grotesk",Inter,sans-serif;font-size:22px;line-height:1}.venture-top span{padding:6px 8px;border-radius:999px;border:1px solid rgba(209,254,23,.22);background:rgba(209,254,23,.075);color:var(--green-2);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}.venture-card p{margin-top:14px;font-size:14px}.venture-card a{display:inline-flex;margin-top:16px;color:var(--green);font-size:13px;font-weight:900}.contact-panel{margin-top:20px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:24px;border-radius:30px;border:1px solid rgba(209,254,23,.28);background:radial-gradient(520px 220px at 12% 0%,rgba(209,254,23,.16),transparent 72%),linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));box-shadow:0 22px 70px rgba(0,0,0,.22)}.contact-panel p{margin-top:10px;max-width:720px;color:var(--soft)}.contact-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;max-width:430px}.contact-note{width:100%;color:var(--quiet);font-size:11px;text-align:right}  .demo-section{background:linear-gradient(180deg,transparent,rgba(255,255,255,.025),transparent)}.demo-grid{grid-template-columns:1fr 1fr;align-items:stretch}.demo-board{padding:24px;border-radius:34px;border:1px solid rgba(209,254,23,.30);background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.028));box-shadow:var(--shadow)}.demo-board h3{font-size:clamp(32px,4.5vw,58px);line-height:.9}.demo-steps{margin-top:22px;display:grid;gap:10px}.demo-step{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:13px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.04)}.demo-step span{width:31px;height:31px;border-radius:11px;display:grid;place-items:center;background:rgba(209,254,23,.12);border:1px solid rgba(209,254,23,.32);color:var(--green);font-weight:900}.demo-step b{display:block;color:#f7f7f8}.demo-step small{display:block;margin-top:2px;color:var(--muted);font-weight:700}.demo-proof{display:grid;gap:14px}.demo-proof .card-inner{min-height:100%;display:grid;align-content:space-between;gap:16px}.demo-proof h3{font-size:28px;line-height:1}.demo-proof p{font-size:16px}.demo-output{font-family:"Space Mono",ui-monospace,monospace;font-size:12px;color:#dfffa7;border:1px solid rgba(209,254,23,.18);border-radius:18px;background:rgba(0,0,0,.22);padding:14px;white-space:pre-line}
 
 
 
@@ -117,11 +114,8 @@
   .proof-marquee::before,.proof-marquee::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}.proof-marquee::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}.proof-marquee::after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
   .marquee-track{display:flex;width:max-content;gap:18px;padding:14px 0;animation:marqueeLeft 28s linear infinite;will-change:transform}.marquee-track.reverse{animation-name:marqueeRight;animation-duration:34s;border-top:1px solid rgba(255,255,255,.055);opacity:.68}.marquee-track span{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;color:#ebfff1;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:11px}.marquee-track span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 16px rgba(209,254,23,.72)}
 
-  .letter-section{padding-top:92px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(209,254,23,.035) 48%,transparent)}.letter-wrap{display:grid;grid-template-columns:.72fr 1.28fr;gap:34px;align-items:start}.letter-head{position:sticky;top:110px}.letter-head .date{display:inline-flex;margin-bottom:18px;padding:8px 10px;border:1px solid rgba(209,254,23,.24);border-radius:999px;background:rgba(209,254,23,.075);color:var(--green-2);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.letter-head h2{font-size:clamp(42px,6vw,82px);line-height:.86}.letter-body{display:grid;gap:20px;font-size:clamp(20px,2.3vw,30px);line-height:1.22;color:var(--soft)}.letter-body p{color:var(--soft)}.letter-body strong{color:var(--text)}.letter-body em{color:var(--green-2);font-style:normal}.letter-callout{margin-top:14px;padding:22px;border-radius:26px;border:1px solid rgba(209,254,23,.28);background:linear-gradient(160deg,rgba(209,254,23,.11),rgba(209,254,23,.035));box-shadow:0 24px 90px rgba(0,0,0,.24)}.letter-callout b{display:block;color:var(--green);font-size:12px;letter-spacing:.14em;text-transform:uppercase}.letter-callout p{margin-top:8px;font-size:18px;line-height:1.45;color:#f7f7f8}
 
-  .cinema-scroll{position:relative;height:200vh;background:radial-gradient(800px 400px at 50% 14%,rgba(209,254,23,.12),transparent 68%),linear-gradient(180deg,transparent,rgba(209,254,23,.045),transparent)}.cinema-stage{position:sticky;top:0;height:88svh;min-height:600px;overflow:hidden;display:grid;place-items:center;padding:58px 0 28px}.cinema-stage::before{content:"";position:absolute;inset:8%;border:1px solid rgba(209,254,23,.12);border-radius:42px;background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.018));box-shadow:inset 0 0 90px rgba(209,254,23,.05);transform:perspective(1200px) rotateX(calc((var(--story-p,0) - .5) * 5deg)) rotateY(calc((var(--story-p,0) - .5) * -8deg));transition:transform .25s linear}.cinema-inner{position:relative;width:min(100% - 34px,1160px);height:min(60svh,560px);display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:center}.chapter-rail{display:flex;flex-direction:column;gap:10px;align-self:center}.chapter-pill{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.035);color:var(--quiet);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;transition:.28s}.chapter-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:.28s}.chapter-pill.is-active{color:var(--green-2);border-color:rgba(209,254,23,.42);background:rgba(209,254,23,.10);transform:translateX(8px)}.chapter-pill.is-active::before{background:var(--green);box-shadow:0 0 18px var(--green)}.stage-copy{max-width:520px}.stage-copy .scene-num{display:inline-flex;color:var(--mint-2);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.16em}.stage-copy h2{margin-top:14px;font-size:clamp(44px,6vw,86px);line-height:.86}.stage-copy p{margin-top:18px;font-size:clamp(18px,2vw,23px);color:var(--soft)}.stage-proof{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}.stage-proof span{padding:9px 11px;border-radius:999px;border:1px solid rgba(209,254,23,.22);background:rgba(0,0,0,.22);font-size:12px;font-weight:900;color:#e8fff0}.stage-art{position:relative;height:100%;min-height:420px;perspective:1400px;transform-style:preserve-3d}.orbit-shell{position:absolute;inset:8% 2%;border-radius:50%;border:1px dashed rgba(209,254,23,.22);transform:rotateX(63deg) rotateZ(calc(var(--story-p,0) * 120deg));filter:drop-shadow(0 0 22px rgba(209,254,23,.16));transition:transform .2s linear}.orbit-shell.o2{inset:18% 13%;border-color:rgba(209,254,23,.18);transform:rotateX(67deg) rotateZ(calc(var(--story-p,0) * -160deg))}.stage-core{position:absolute;left:50%;top:50%;width:min(54vw,310px);aspect-ratio:1;transform:translate(-50%,-50%) rotateY(calc((var(--story-p,0) - .5) * 28deg));border-radius:36%;display:grid;place-items:center;text-align:center;border:1px solid rgba(209,254,23,.38);background:radial-gradient(circle,rgba(209,254,23,.22),rgba(209,254,23,.08) 52%,rgba(1,4,2,.62) 72%);box-shadow:0 36px 120px rgba(0,0,0,.42),0 0 70px rgba(209,254,23,.12);transition:transform .2s linear}.stage-core b{font-family:"Space Grotesk";font-size:clamp(34px,5vw,58px);line-height:.84}.stage-core small{display:block;margin-top:9px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.16em}.stage-node{position:absolute;width:min(44%,210px);padding:15px;border-radius:22px;border:1px solid rgba(255,255,255,.11);background:rgba(3,16,7,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 20px 70px rgba(0,0,0,.34);transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .35s,border-color .35s}.stage-node b{display:block;color:var(--green-2);font-size:11px;text-transform:uppercase;letter-spacing:.13em}.stage-node span{display:block;margin-top:7px;color:#edfef1;font-weight:800;line-height:1.18}.stage-node.n1{left:2%;top:10%;transform:translate3d(calc(var(--story-p,0) * 28px),0,60px)}.stage-node.n2{right:1%;top:20%;transform:translate3d(calc(var(--story-p,0) * -32px),calc(var(--story-p,0) * 16px),90px)}.stage-node.n3{left:7%;bottom:13%;transform:translate3d(calc(var(--story-p,0) * 18px),calc(var(--story-p,0) * -16px),110px)}.stage-node.n4{right:5%;bottom:10%;transform:translate3d(calc(var(--story-p,0) * -20px),0,80px)}.stage-node.is-active{border-color:rgba(209,254,23,.52);box-shadow:0 26px 90px rgba(0,0,0,.42),0 0 44px rgba(209,254,23,.14);transform:translate3d(0,-10px,140px) scale(1.04)}
 
-  .stats-section{padding-top:72px}.stats-grid{grid-template-columns:repeat(4,1fr)}.stat-card{padding:24px;min-height:178px}.stat-card strong{display:flex;align-items:flex-end;gap:2px;font-family:"Space Grotesk";font-size:clamp(46px,6vw,76px);line-height:.82;color:var(--green)}.stat-card strong small{font-size:.34em;color:var(--mint-2);letter-spacing:.02em;margin-bottom:8px}.stat-card p{margin-top:16px;color:var(--soft);font-weight:800}.stat-card span.label{display:block;margin-top:8px;color:var(--quiet);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
 
   .command-panel{position:relative;min-height:560px;border:1px solid rgba(209,254,23,.26);border-radius:38px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.033));box-shadow:var(--shadow),0 0 0 1px rgba(255,255,255,.05) inset;overflow:hidden;transform-style:preserve-3d}.command-panel::before{content:"";position:absolute;inset:-2px;background:radial-gradient(480px 240px at 50% 16%,rgba(209,254,23,.20),transparent 62%),radial-gradient(360px 230px at 90% 76%,rgba(209,254,23,.15),transparent 62%);pointer-events:none}.panel-top{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 18px 0}.panel-title{font-size:12px;color:var(--green-2);font-weight:900;text-transform:uppercase;letter-spacing:.18em}.status{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:900;color:var(--mint-2);text-transform:uppercase;letter-spacing:.12em}.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 18px var(--mint);animation:pulse 1.1s ease-in-out infinite}.core{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:min(68%,330px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(209,254,23,.28);display:grid;place-items:center;background:radial-gradient(circle,rgba(209,254,23,.13),rgba(209,254,23,.07) 52%,transparent 72%);animation:coreBreathe 5s ease-in-out infinite}.core::before,.core::after{content:"";position:absolute;inset:14%;border-radius:50%;border:1px dashed rgba(239,254,23,.34);animation:spin 15s linear infinite}.core::after{inset:28%;border-color:rgba(209,254,23,.34);animation-duration:10s;animation-direction:reverse}.core strong{font-family:"Space Grotesk";font-size:clamp(32px,5vw,50px);line-height:.88;text-align:center}.core span{display:block;margin-top:8px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);text-align:center}.route{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(209,254,23,.42),transparent);height:1px;width:44%;left:28%;top:50%;transform-origin:center;animation:flow 2.35s linear infinite}.route.r2{transform:rotate(62deg);animation-delay:.4s}.route.r3{transform:rotate(-48deg);animation-delay:.8s}.route.r4{transform:rotate(135deg);animation-delay:1.2s}.work-card{position:absolute;z-index:2;width:min(43%,198px);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:14px;background:rgba(1,4,2,.60);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 50px rgba(0,0,0,.26);animation:nodeFloat 4.8s ease-in-out infinite}.work-card::before{content:"";position:absolute;top:14px;right:14px;width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 15px var(--mint)}.work-card b{display:block;font-size:12px;color:var(--green-2);text-transform:uppercase;letter-spacing:.12em}.work-card span{display:block;margin-top:6px;color:#edf8ef;font-size:13px}.work-card small{display:block;margin-top:8px;color:var(--quiet);font-size:11px;font-weight:900}.w1{left:22px;top:82px}.w2{right:22px;top:148px;animation-delay:.5s}.w3{left:28px;bottom:104px;animation-delay:1s}.w4{right:26px;bottom:56px;animation-delay:1.35s}
 
@@ -137,30 +131,107 @@
   .cta-box{text-align:center;padding:46px;border-radius:38px;border:1px solid rgba(209,254,23,.38);background:radial-gradient(620px 280px at 50% 0%,rgba(209,254,23,.22),transparent 70%),linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));box-shadow:var(--shadow);overflow:hidden;position:relative}.cta-box::before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent,rgba(209,254,23,.12),transparent,rgba(209,254,23,.14),transparent);animation:spin 18s linear infinite;opacity:.65}.cta-box > *{position:relative}.cta-box h2{font-size:clamp(42px,7vw,88px);line-height:.88}.cta-box .lead{max-width:780px;margin-left:auto;margin-right:auto}.socials{margin-top:24px;display:flex;justify-content:center;gap:10px}.soc{min-width:52px;height:52px;padding:0 16px;border-radius:18px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.045);display:grid;place-items:center;font-weight:900;color:#f7f7f8}.soc:hover{border-color:rgba(209,254,23,.5);color:var(--green)}
   footer{padding:34px 0 calc(34px + var(--safe-b));border-top:1px solid rgba(255,255,255,.08);color:var(--quiet);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:85;padding:10px 12px calc(10px + var(--safe-b));transform:translateY(115%);transition:transform .28s cubic-bezier(.16,1,.3,1);pointer-events:none}.mobilebar.show{transform:translateY(0);pointer-events:auto}.mobilebar-inner{display:flex;gap:8px;border:1px solid rgba(209,254,23,.28);border-radius:24px;background:rgba(1,4,2,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:8px;box-shadow:0 18px 60px rgba(0,0,0,.45)}.mobilebar .btn{flex:1}.mobilebar .ig{flex:0 0 58px;padding:0}
 
-  [data-reveal]{opacity:0;transform:translateY(28px);filter:blur(10px);transition:opacity .68s cubic-bezier(.16,1,.3,1),transform .68s cubic-bezier(.16,1,.3,1),filter .68s}.is-visible{opacity:1!important;transform:none!important;filter:none!important}.stagger > *{opacity:0;transform:translateY(22px);transition:opacity .62s cubic-bezier(.16,1,.3,1),transform .62s cubic-bezier(.16,1,.3,1)}.stagger.is-visible > *{opacity:1;transform:none}.stagger.is-visible > *:nth-child(2){transition-delay:.08s}.stagger.is-visible > *:nth-child(3){transition-delay:.16s}.stagger.is-visible > *:nth-child(4){transition-delay:.24s}
+  [data-reveal]{opacity:0;transform:perspective(900px) translateY(34px) rotateX(10deg) scale(.97);transform-origin:50% 85%;filter:blur(10px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1),filter .7s}.is-visible{opacity:1!important;transform:none!important;filter:none!important}.stagger > *{opacity:0;transform:perspective(700px) translateY(26px) rotateX(8deg);transform-origin:50% 90%;transition:opacity .62s cubic-bezier(.16,1,.3,1),transform .62s cubic-bezier(.16,1,.3,1)}.stagger.is-visible > *{opacity:1;transform:none}.stagger.is-visible > *:nth-child(2){transition-delay:.08s}.stagger.is-visible > *:nth-child(3){transition-delay:.16s}.stagger.is-visible > *:nth-child(4){transition-delay:.24s}
 
   @keyframes ambientSpin{to{transform:rotate(360deg)}}@keyframes mobileLaunchExit{to{opacity:0;visibility:hidden;pointer-events:none}}@keyframes mobileGrid{to{transform:rotate(-10deg) scale(1.1) translate3d(-42px,42px,0)}}@keyframes orbPulse{0%,100%{transform:scale(.82);opacity:.62}50%{transform:scale(1.08);opacity:1}}@keyframes mobileLaunchIn{from{opacity:0;transform:translateY(18px) scale(.94);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}@keyframes stepOn{to{opacity:1;transform:none;border-color:rgba(209,254,23,.34);background:rgba(209,254,23,.08);color:var(--green)}}@keyframes loadBar{from{transform:scaleX(.04)}to{transform:scaleX(1)}}@keyframes sweep{to{transform:translateX(260%)}}@keyframes lineIn{to{opacity:1;transform:none}}@keyframes pulse{0%,100%{opacity:.7;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes coreBreathe{0%,100%{transform:translate(-50%,-50%) scale(.98)}50%{transform:translate(-50%,-50%) scale(1.04)}}@keyframes nodeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes flow{0%{opacity:0;clip-path:inset(0 100% 0 0)}35%{opacity:1;clip-path:inset(0 0 0 0)}100%{opacity:0;clip-path:inset(0 0 0 100%)}}@keyframes territory{0%,100%{transform:scaleX(.38);opacity:.62}50%{transform:scaleX(1);opacity:1}}@keyframes buttonSheen{0%,60%{transform:translateX(0) skewX(-18deg);opacity:0}70%{opacity:.75}100%{transform:translateX(430%) skewX(-18deg);opacity:0}}@keyframes dataSweep{0%{clip-path:inset(0 100% 0 0)}45%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
 
-  @media(min-width:1280px){.nav-links,.nav-cta{display:flex}.hero-shell{grid-template-columns:minmax(0,1.16fr) minmax(390px,.84fr);gap:24px}.hero-copy h1{font-size:clamp(44px,4.8vw,68px);line-height:.93}.hero-sub{max-width:700px}.promise-strip,.risk-strip{max-width:700px}.command-panel{min-height:460px}.section{padding:64px 0}.section.compact{padding:46px 0}.letter-section{padding-top:64px}.mobilebar{display:none}}
+  @media(min-width:1280px){.nav-links,.nav-cta{display:flex}.hero-shell{grid-template-columns:minmax(0,1.16fr) minmax(390px,.84fr);gap:24px}.hero-copy h1{font-size:clamp(44px,4.8vw,68px);line-height:.93}.hero-sub{max-width:700px}.risk-strip{max-width:700px}.command-panel{min-height:0;display:flex;flex-direction:column;gap:16px;padding-bottom:18px}.command-panel .route{display:none}.core{position:relative;left:auto;top:auto;inset:auto;transform:none;animation:none;margin:10px auto 0;width:216px;flex:0 0 auto}.core strong{font-size:26px}.core span{font-size:10px}.work-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 18px;margin-top:auto}.command-panel .work-card{position:relative;inset:auto;width:auto;animation:none}.section{padding:64px 0}.section.compact{padding:46px 0}.mobilebar{display:none}}
   @media(max-width:1080px){.problem-grid,.process-grid{grid-template-columns:repeat(2,1fr)}.offer-grid,.flow-layout,.about-grid,.contact-panel{grid-template-columns:1fr}.ventures-grid{grid-template-columns:repeat(2,1fr)}.flow-copy{position:relative;top:auto}.command-panel{min-height:520px}.contact-links{justify-content:flex-start;max-width:none}.contact-note{text-align:left}}
-  @media(max-width:759px){.wrap{width:min(100% - 32px,1180px)}.section{padding:58px 0}.section.compact{padding:46px 0}nav{padding-left:12px;padding-right:12px}.wordmark{font-size:20px}.brand small{font-size:8px}.nav-cta{display:none}.menu-toggle span:first-child{display:none}.menu-toggle{width:44px;justify-content:center;padding:10px}.menu-panel{right:-4px;width:min(92vw,340px)}header{min-height:auto;padding:88px 0 38px}.hero-shell{gap:24px}.hero-copy h1{font-size:clamp(46px,15.2vw,70px)}.hero-sub{font-size:18px}.actions .btn{width:100%}.promise-strip{grid-template-columns:1fr;margin-top:16px}.trust-row{gap:8px;margin-top:18px}.chip{font-size:11px}.risk-strip{margin-top:14px;padding:14px}.command-panel{min-height:440px;border-radius:30px}.core{width:62%}.work-card{width:calc(50% - 24px);padding:11px}.work-card span{font-size:12px}.work-card small{display:none}.w1{left:14px;top:68px}.w2{right:14px;top:112px}.w3{left:14px;bottom:84px}.w4{right:14px;bottom:44px}.problem-grid,.process-grid,.ventures-grid{grid-template-columns:1fr}.contact-links .btn{width:100%}.deploy-card .card-inner{grid-template-columns:1fr}.founder-card{grid-template-columns:1fr;text-align:left;padding:22px}.founder-avatar{width:92px;height:92px}.cta-box{padding:34px 20px}.footer-inner{display:grid}.mobilebar .btn{font-size:13px;padding:13px 14px;min-height:50px}}
-  @media(max-width:380px){.wrap{width:min(100% - 26px,1180px)}.command-panel{min-height:455px}.work-card{width:calc(50% - 18px);padding:10px}.work-card span{font-size:11px}.core strong{font-size:32px}.btn{padding-left:17px;padding-right:17px}}
+  @media(max-width:759px){.wrap{width:min(100% - 32px,1180px)}.section{padding:46px 0}.section.compact{padding:36px 0}body::after{display:none}nav{padding-left:12px;padding-right:12px}.wordmark{font-size:20px}.brand small{font-size:8px}.nav-cta{display:none}.menu-toggle span:first-child{display:none}.menu-toggle{width:44px;justify-content:center;padding:10px}.menu-panel{right:-4px;width:min(92vw,340px)}header{min-height:auto;padding:82px 0 26px}.hero-shell{gap:18px}.hero-copy h1{font-size:clamp(38px,12.5vw,56px)}.hero-sub{margin-top:16px;font-size:16.5px}.actions{margin-top:20px}.actions .btn{width:100%}.trust-row{gap:8px;margin-top:18px}.chip{font-size:11px}.risk-strip{margin-top:14px;padding:14px}.command-panel{min-height:0;display:flex;flex-direction:column;gap:8px;border-radius:26px;padding-bottom:12px}.command-panel .route{display:none}.core{position:relative;left:auto;top:auto;inset:auto;transform:none;animation:none;margin:2px auto 0;width:150px}.core strong{font-size:19px}.core span{font-size:9px;margin-top:5px}.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px}.command-panel .work-card{position:relative;inset:auto;width:auto;animation:none;padding:10px;border-radius:16px}.work-card span{font-size:11px;margin-top:4px}.work-card b{font-size:9.5px}.work-card small{display:none}.work-card::before{width:6px;height:6px;top:10px;right:10px}.problem-grid,.process-grid{grid-template-columns:1fr}.contact-links .btn{width:100%}.deploy-card .card-inner{grid-template-columns:1fr}.founder-card{grid-template-columns:1fr;text-align:left;padding:22px}.founder-avatar{width:92px;height:92px}.cta-box{padding:34px 20px}.footer-inner{display:grid}.mobilebar .btn{font-size:13px;padding:13px 14px;min-height:50px}}
+  @media(max-width:380px){.wrap{width:min(100% - 26px,1180px)}.btn{padding-left:17px;padding-right:17px}}
 
 @keyframes marqueeLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}@keyframes marqueeRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-  @media(max-width:1080px){.letter-wrap{grid-template-columns:1fr}.letter-head{position:relative;top:auto}.stats-grid{grid-template-columns:repeat(2,1fr)}.cinema-inner{grid-template-columns:1fr;height:auto}.cinema-stage{min-height:940px}.chapter-rail{flex-direction:row;overflow:auto;padding-bottom:2px}.chapter-pill{flex:0 0 auto}.stage-art{min-height:430px}.stage-copy{max-width:760px}}
-  @media(max-width:1279px){.proof-marquee{margin-top:-1px}.marquee-track{animation-duration:22s;padding:12px 0}.marquee-track.reverse{display:none}.letter-section{padding-top:58px}.letter-body{font-size:21px;gap:18px}.letter-callout{padding:18px;border-radius:22px}.cinema-scroll{height:auto;padding:0;background:radial-gradient(520px 260px at 50% 10%,rgba(209,254,23,.12),transparent 68%)}.cinema-stage{position:relative;top:auto;height:auto;min-height:0;padding:48px 0 calc(56px + var(--safe-b));overflow:hidden}.cinema-stage::before{inset:18px 10px 20px;border-radius:30px}.cinema-inner{grid-template-columns:1fr;width:min(100% - 32px,480px);max-width:480px;height:auto;min-height:0;gap:16px;align-items:start;overflow:hidden}.cinema-inner > *,.stage-copy,.stage-art{min-width:0;width:100%;max-width:100%}.stage-copy h2{font-size:clamp(36px,11vw,50px);line-height:.9}.stage-copy p{font-size:16px;line-height:1.45}.stage-proof{width:100%;max-width:100%;gap:7px}.stage-proof span{font-size:11px;padding:8px 9px;white-space:normal}.chapter-rail{width:100%;max-width:100%;margin-top:14px;display:flex;gap:7px;overflow-x:auto;scrollbar-width:none}.chapter-rail::-webkit-scrollbar{display:none}.chapter-pill{font-size:10px;padding:8px 9px;white-space:nowrap}.chapter-pill.is-active{transform:translateY(-2px)}.stage-art{min-height:280px;margin-top:0;overflow:hidden;border-radius:28px}.orbit-shell{display:none}.stage-core{width:min(52vw,198px)}.stage-node{width:42%;padding:11px;border-radius:17px}.stage-node span{font-size:12px;line-height:1.28}.stage-node b{font-size:9px}.stage-node.n1{left:2%;top:6%}.stage-node.n2{right:2%;top:12%}.stage-node.n3{left:2%;bottom:10%}.stage-node.n4{right:2%;bottom:7%}.stats-grid{grid-template-columns:1fr}.stat-card{min-height:auto;padding:22px}.stat-card strong{font-size:58px}footer{padding-bottom:calc(118px + var(--safe-b))}}
+  @media(max-width:1279px){.proof-marquee{margin-top:-1px}.marquee-track{animation-duration:22s;padding:12px 0}.marquee-track.reverse{display:none}footer{padding-bottom:calc(118px + var(--safe-b))}}
 
-  @media(max-width:1080px){.proof-led-grid,.demo-grid,.guarantee-box,.cta-band{grid-template-columns:1fr}.cta-band .btn{width:100%}.guarantee-mark{font-size:92px}.demo-proof{grid-template-columns:1fr}}
+  @media(max-width:1080px){.demo-grid,.demo-proof{grid-template-columns:1fr}}
 
-  @media(max-width:759px){.brand{gap:8px}.logo-mark{width:34px;height:34px;flex-basis:34px;border-radius:11px}.hero-copy h1{font-size:clamp(46px,15.2vw,70px);letter-spacing:-.065em}.hero-cta-note{font-size:12px}.letter-head .date{font-size:28px;padding:2px 0;border:0;background:transparent;color:var(--green);display:inline-flex}.letter-body{font-size:20px;line-height:1.24}.founder-card{padding:18px;border-radius:28px}.founder-identity{align-items:center;gap:12px;padding:10px;border-radius:22px}.founder-avatar{width:86px;height:86px;border-radius:21px}.founder-avatar img{border-radius:18px}.founder-name{font-size:30px}.founder-title{font-size:10px;letter-spacing:.1em}.founder-social{gap:6px}.founder-handle,.founder-followers,.founder-badge{font-size:11px;min-height:30px;padding:6px 8px}.faq-grid{grid-template-columns:1fr}.faq-card summary{font-size:20px;padding:20px 52px 20px 20px}.cta-box .actions .btn{width:100%}}
+  @media(max-width:759px){.brand{gap:8px}.logo-mark{width:34px;height:34px;flex-basis:34px;border-radius:11px}.hero-copy h1{letter-spacing:-.06em}.hero-cta-note{font-size:12px}.founder-card{padding:18px;border-radius:28px}.founder-identity{align-items:center;gap:12px;padding:10px;border-radius:22px}.founder-avatar{width:86px;height:86px;border-radius:21px}.founder-avatar img{border-radius:18px}.founder-name{font-size:30px}.founder-title{font-size:10px;letter-spacing:.1em}.founder-social{gap:6px}.founder-handle,.founder-followers,.founder-badge{font-size:11px;min-height:30px;padding:6px 8px}.faq-grid{grid-template-columns:1fr}.faq-card summary{font-size:20px;padding:20px 52px 20px 20px}.cta-box .actions .btn{width:100%}}
 
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.boot,.mobile-launch{display:none!important}[data-reveal],.stagger > *{opacity:1!important;transform:none!important;filter:none!important}.hero-reveal{opacity:1!important;transform:none!important;filter:none!important}}
 
   /* Dynamic funnel + portal layer */
-  .quiz-section{background:radial-gradient(620px 260px at 50% 0%,rgba(209,254,23,.12),transparent 70%)}.quiz-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch;padding:24px;border-radius:38px;border:1px solid rgba(209,254,23,.28);background:linear-gradient(160deg,rgba(255,255,255,.095),rgba(255,255,255,.028));box-shadow:var(--shadow)}.quiz-copy{align-self:center;padding:10px}.quiz-copy h2{margin-top:12px;font-size:clamp(36px,5vw,70px);line-height:.9}.quiz-board{padding:18px;border-radius:30px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22)}.quiz-progress{height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.09);margin-bottom:16px}.quiz-progress span{display:block;width:33.3%;height:100%;background:linear-gradient(90deg,var(--green),var(--mint));border-radius:inherit;transition:.24s}.quiz-form fieldset{border:0;margin:0;padding:0;display:none}.quiz-form fieldset.is-active{display:grid;gap:10px}.quiz-form legend{font-family:"Space Grotesk";font-size:clamp(24px,3.2vw,38px);line-height:1;margin-bottom:12px;font-weight:900;letter-spacing:-.04em}.quiz-form label,.audit-form label{display:grid;gap:8px;color:#f7f7f8;font-weight:900}.quiz-form label span{display:block;padding:14px 15px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);color:var(--soft);transition:.18s}.quiz-form input{position:absolute;opacity:0}.quiz-form input:checked + span{border-color:rgba(209,254,23,.55);background:rgba(209,254,23,.13);color:#f7f7f8;box-shadow:0 0 38px rgba(209,254,23,.09)}.quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}.quiz-result{display:grid;gap:12px}.quiz-result h3{font-size:clamp(30px,4.2vw,52px);line-height:.92}.quiz-result-list{display:grid;gap:8px}.quiz-result-list span{display:flex;gap:8px;padding:10px 12px;border-radius:15px;border:1px solid rgba(209,254,23,.20);background:rgba(209,254,23,.07);color:var(--soft);font-weight:800}.resource-filter{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px}.resource-filter button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);color:var(--soft);border-radius:999px;padding:10px 13px;font-weight:900;cursor:pointer}.resource-filter button.is-active{border-color:rgba(209,254,23,.45);background:rgba(209,254,23,.12);color:var(--green-2)}.resource-grid{grid-template-columns:repeat(3,1fr)}.resource-card .card-inner{display:grid;gap:12px;min-height:100%}.resource-card h3{font-size:25px;line-height:1}.resource-card p{font-size:15px}.resource-tag{display:inline-flex;width:max-content;padding:7px 9px;border-radius:999px;border:1px solid rgba(209,254,23,.24);background:rgba(209,254,23,.075);color:var(--green-2);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.portal-grid{display:grid;grid-template-columns:1fr .9fr;gap:22px;align-items:center}.portal-console{padding:20px;border-radius:30px;border:1px solid rgba(209,254,23,.30);background:linear-gradient(180deg,rgba(2,8,4,.84),rgba(14,18,16,.72));box-shadow:var(--shadow)}.console-top,.console-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}.console-top{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.13em}.console-top b,.console-row b{color:var(--green-2);font-size:12px;text-transform:uppercase;letter-spacing:.09em}.console-row span{color:#f7f7f8;font-weight:800}.audit-modal{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;padding:18px}.audit-modal[hidden]{display:none}.audit-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}.audit-panel{position:relative;width:min(100%,760px);max-height:min(92vh,900px);overflow:auto;padding:26px;border-radius:34px;border:1px solid rgba(209,254,23,.36);background:radial-gradient(520px 240px at 20% 0%,rgba(209,254,23,.17),transparent 70%),linear-gradient(160deg,#171a1b,#0f1113);box-shadow:0 34px 110px rgba(0,0,0,.66),0 0 70px rgba(209,254,23,.12)}.audit-panel h2{margin-top:12px;font-size:clamp(34px,5.5vw,64px);line-height:.9}.audit-close{position:absolute;right:14px;top:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-size:28px;cursor:pointer}.audit-form{margin-top:20px;display:grid;gap:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.audit-form input,.audit-form select,.audit-form textarea{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.065);color:#f7f7f8;padding:13px 14px;font:inherit}.audit-form textarea{resize:vertical}.audit-form input::placeholder,.audit-form textarea::placeholder{color:rgba(255,255,255,.42)}.audit-actions{display:flex;flex-wrap:wrap;gap:10px}.audit-note{font-size:12px;color:var(--quiet)}body.audit-open{overflow:hidden}.menu-panel[hidden]{display:none!important}
-  @media(max-width:1080px){.quiz-shell,.portal-grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:759px){.quiz-shell{padding:16px;border-radius:30px}.quiz-board{padding:14px;border-radius:24px}.quiz-actions,.audit-actions{display:grid}.resource-grid{grid-template-columns:1fr}.portal-console{padding:16px}.console-row,.console-top{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.audit-panel{padding:22px 16px;border-radius:28px}.audit-modal{padding:10px}.audit-panel .lead{font-size:16px}.mobilebar .ig{flex:0 0 76px}}
+  .quiz-section{background:radial-gradient(620px 260px at 50% 0%,rgba(209,254,23,.12),transparent 70%)}.quiz-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch;padding:24px;border-radius:38px;border:1px solid rgba(209,254,23,.28);background:linear-gradient(160deg,rgba(255,255,255,.095),rgba(255,255,255,.028));box-shadow:var(--shadow)}.quiz-copy{align-self:center;padding:10px}.quiz-copy h2{margin-top:12px;font-size:clamp(36px,5vw,70px);line-height:.9}.quiz-board{padding:18px;border-radius:30px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22)}.quiz-progress{height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.09);margin-bottom:16px}.quiz-progress span{display:block;width:33.3%;height:100%;background:linear-gradient(90deg,var(--green),var(--mint));border-radius:inherit;transition:.24s}.quiz-form fieldset{border:0;margin:0;padding:0;display:none}.quiz-form fieldset.is-active{display:grid;gap:10px}.quiz-form legend{font-family:"Space Grotesk";font-size:clamp(24px,3.2vw,38px);line-height:1;margin-bottom:12px;font-weight:900;letter-spacing:-.04em}.quiz-form label,.audit-form label{display:grid;gap:8px;color:#f7f7f8;font-weight:900}.quiz-form label span{display:block;padding:14px 15px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);color:var(--soft);transition:.18s}.quiz-form input{position:absolute;opacity:0}.quiz-form input:checked + span{border-color:rgba(209,254,23,.55);background:rgba(209,254,23,.13);color:#f7f7f8;box-shadow:0 0 38px rgba(209,254,23,.09)}.quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}.quiz-result{display:grid;gap:12px}.quiz-result h3{font-size:clamp(30px,4.2vw,52px);line-height:.92}.quiz-result-list{display:grid;gap:8px}.quiz-result-list span{display:flex;gap:8px;padding:10px 12px;border-radius:15px;border:1px solid rgba(209,254,23,.20);background:rgba(209,254,23,.07);color:var(--soft);font-weight:800}.portal-grid{display:grid;grid-template-columns:1fr .9fr;gap:22px;align-items:center}.portal-console{padding:20px;border-radius:30px;border:1px solid rgba(209,254,23,.30);background:linear-gradient(180deg,rgba(2,8,4,.84),rgba(14,18,16,.72));box-shadow:var(--shadow)}.console-top,.console-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}.console-top{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.13em}.console-top b,.console-row b{color:var(--green-2);font-size:12px;text-transform:uppercase;letter-spacing:.09em}.console-row span{color:#f7f7f8;font-weight:800}.audit-modal{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;padding:18px}.audit-modal[hidden]{display:none}.audit-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}.audit-panel{position:relative;width:min(100%,760px);max-height:min(92vh,900px);overflow:auto;padding:26px;border-radius:34px;border:1px solid rgba(209,254,23,.36);background:radial-gradient(520px 240px at 20% 0%,rgba(209,254,23,.17),transparent 70%),linear-gradient(160deg,#171a1b,#0f1113);box-shadow:0 34px 110px rgba(0,0,0,.66),0 0 70px rgba(209,254,23,.12)}.audit-panel h2{margin-top:12px;font-size:clamp(34px,5.5vw,64px);line-height:.9}.audit-close{position:absolute;right:14px;top:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-size:28px;cursor:pointer}.audit-form{margin-top:20px;display:grid;gap:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.audit-form input,.audit-form select,.audit-form textarea{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.065);color:#f7f7f8;padding:13px 14px;font:inherit}.audit-form textarea{resize:vertical}.audit-form input::placeholder,.audit-form textarea::placeholder{color:rgba(255,255,255,.42)}.audit-actions{display:flex;flex-wrap:wrap;gap:10px}.audit-note{font-size:12px;color:var(--quiet)}body.audit-open{overflow:hidden}body.audit-open .mobilebar{transform:translateY(115%);pointer-events:none}.menu-panel[hidden],.quiz-result[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @media(max-width:1080px){.quiz-shell,.portal-grid{grid-template-columns:1fr}}
+  @media(max-width:759px){.quiz-shell{padding:16px;border-radius:30px}.quiz-board{padding:14px;border-radius:24px}.quiz-actions,.audit-actions{display:grid}.portal-console{padding:16px}.console-row,.console-top{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.audit-panel{padding:22px 16px;border-radius:28px}.audit-modal{padding:10px}.audit-panel .lead{font-size:16px}.mobilebar .ig{flex:0 0 76px}}
 
+  @media(max-width:759px){
+    .section h2,.section-head h2{font-size:clamp(28px,8.6vw,38px)}
+    .lead{font-size:15.5px;margin-top:12px}
+    .section-head{margin-bottom:20px}
+    .chip{font-size:10.5px;padding:7px 9px}
+    .risk-strip p{font-size:13px}.risk-strip strong{font-size:11px}.risk-badge{width:40px;height:40px;border-radius:13px}
+    .card-inner{padding:16px}
+    .num{width:36px;height:36px;border-radius:12px}
+    .problem-card h3,.deploy-card h3,.step-card h3{font-size:20px;margin-top:14px}
+    .problem-card p,.deploy-card p,.step-card p{font-size:14px;margin-top:8px}
+    .impact{margin-top:14px}
+    .deploy-card{min-height:0;transform:none}
+    .flow-board{gap:12px}.grid{gap:12px}
+    .offer-card h3{font-size:23px;margin-top:14px}.offer-card p{font-size:14.5px;margin-top:10px}
+    .deliverables{margin-top:14px;gap:8px}.deliverables li{padding:10px;font-size:13.5px;border-radius:14px}
+    .offer-tag,.deploy-tag{font-size:10px;margin-top:12px}
+    .offer-stack{gap:12px}.offer-cta{margin-top:16px;display:grid;gap:8px}
+    .quiz-copy h2{font-size:clamp(28px,8.6vw,36px)}
+    .quiz-form legend{font-size:21px}.quiz-form label span{padding:12px 13px;font-size:14px}
+    .mini-proof{margin-top:14px;gap:7px}.mini-proof span{font-size:11px;padding:7px 9px}
+    .demo-board{padding:18px;border-radius:26px}.demo-board h3{font-size:23px}
+    .demo-steps{margin-top:16px;gap:8px}.demo-step{padding:11px;border-radius:15px}.demo-step b{font-size:14px}.demo-step small{font-size:12px}
+    .demo-step span{width:27px;height:27px;border-radius:9px}
+    .demo-proof{gap:12px}.demo-proof h3{font-size:21px}.demo-proof p{font-size:14px}.demo-output{font-size:11px;padding:12px}
+    .ventures-head p{font-size:14.5px}
+    .ventures-grid{display:grid;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:14px -16px 0;padding:4px 16px 6px}
+    .ventures-grid::-webkit-scrollbar{display:none}
+    .venture-card{scroll-snap-align:center}
+    .venture-card .card-inner{padding:16px;display:grid;align-content:start;min-height:170px}
+    .venture-top b{font-size:18px}.venture-card p{font-size:13px;margin-top:10px}.venture-card a{margin-top:12px;font-size:12.5px}
+    .ventures-head::after{content:"swipe to explore →";display:block;margin-top:8px;color:var(--quiet);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .contact-panel{padding:18px;border-radius:24px}.contact-panel p{font-size:14.5px}
+    .console-row span{font-size:13px}.console-row b{font-size:11px}.console-row,.console-top{padding:10px 0;gap:3px}
+    .founder-copy h2{font-size:clamp(26px,8vw,34px)}.founder-copy p{font-size:15px;margin-top:12px}
+    .faq-card summary{font-size:18px;padding:18px 50px 18px 18px}.faq-card p{padding:0 18px 18px;font-size:14.5px}
+    .cta-box{padding:30px 18px;border-radius:30px}.cta-box h2{font-size:clamp(30px,9.4vw,42px)}
+    .marquee-track{padding:10px 0}.marquee-track span{font-size:10px}
+    .about-grid{gap:16px}.ventures-head{margin-top:24px}.contact-panel{margin-top:16px}
+  }
+  /* 3D spectacle layer */
+  @keyframes heroIn3d{from{opacity:0;transform:perspective(800px) translateY(28px) rotateX(24deg);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+  @keyframes floorMove{to{transform:translateY(46px)}}
+  @keyframes orbDrift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(9vw,-7vh,0) scale(1.18)}}
+  @keyframes panelFloat{0%,100%{transform:translateY(0) rotateX(0)}50%{transform:translateY(-7px) rotateX(1.4deg)}}
+  @keyframes ctaPulse{0%{box-shadow:0 0 0 0 rgba(209,254,23,.5)}70%{box-shadow:0 0 0 14px rgba(209,254,23,0)}100%{box-shadow:0 0 0 14px rgba(209,254,23,0)}}
+  @keyframes markGlow{0%,100%{text-shadow:0 0 18px rgba(209,254,23,.2)}50%{text-shadow:0 0 34px rgba(209,254,23,.6),0 0 70px rgba(209,254,23,.25)}}
+  @keyframes stepIn3d{from{opacity:0;transform:perspective(700px) rotateX(-16deg) translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes resultPop{0%{opacity:0;transform:perspective(700px) scale(.88) rotateX(-10deg)}60%{transform:perspective(700px) scale(1.03) rotateX(2deg)}100%{opacity:1;transform:none}}
+  @keyframes optSelect{0%{transform:scale(1)}45%{transform:scale(1.045)}100%{transform:scale(1)}}
+  @keyframes cursorBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes kickerSweep{0%,55%{transform:translateX(-130%)}90%,100%{transform:translateX(330%)}}
+  .hero-floor{display:none}
+  .demo-output::after{content:"▌";color:var(--green);animation:cursorBlink 1.05s steps(1) infinite}
+  .quiz-step.is-active{animation:stepIn3d .5s cubic-bezier(.16,1,.3,1)}
+  .quiz-result:not([hidden]){animation:resultPop .65s cubic-bezier(.34,1.56,.64,1)}
+  .quiz-form input:checked + span{animation:optSelect .38s cubic-bezier(.34,1.56,.64,1)}
+  .carousel-dots{display:none}
+  @media(max-width:759px){
+    .hero-floor{display:block;position:absolute;left:-34%;right:-34%;bottom:-9%;height:64%;z-index:-1;transform:perspective(520px) rotateX(63deg);transform-origin:50% 0;overflow:hidden;mask-image:linear-gradient(180deg,transparent 0%,#000 26%,rgba(0,0,0,.6) 70%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 26%,rgba(0,0,0,.6) 70%,transparent 100%)}
+    .hero-floor::before{content:"";position:absolute;inset:-46px 0 0 0;background-image:linear-gradient(rgba(209,254,23,.30) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(209,254,23,.30) 1.5px,transparent 1.5px);background-size:46px 46px;animation:floorMove 2.3s linear infinite}
+    body::after{display:block;content:"";position:fixed;inset:auto;left:-14vw;top:6vh;width:74vw;height:74vw;border-radius:50%;background:radial-gradient(circle,rgba(209,254,23,.15),transparent 64%);filter:none;animation:orbDrift 13s ease-in-out infinite alternate;opacity:1;z-index:-2}
+    .command-panel{animation:panelFloat 6.5s ease-in-out infinite;transform-style:preserve-3d}
+    .command-panel.hero-reveal{animation:heroIn3d .85s cubic-bezier(.16,1,.3,1) .55s both,panelFloat 6.5s ease-in-out 1.8s infinite}
+    .btn-primary{animation:ctaPulse 2.8s ease-out 1.2s infinite}
+    .ai-mark{animation:markGlow 3.2s ease-in-out infinite}
+    .proof-marquee{transform:rotate(-1.5deg) scale(1.05);box-shadow:0 14px 60px rgba(0,0,0,.4),0 0 38px rgba(209,254,23,.10)}
+    .kicker{position:relative;overflow:hidden}.kicker::after{content:"";position:absolute;top:0;bottom:0;width:34%;background:linear-gradient(100deg,transparent,rgba(209,254,23,.30),transparent);transform:translateX(-130%) skewX(-16deg);animation:kickerSweep 3.6s ease-in-out 1s infinite}
+    .ventures-grid.coverflow{perspective:900px;overscroll-behavior-x:contain}
+    .ventures-grid.coverflow > *{opacity:1!important;transition:border-color .3s,box-shadow .3s;transform-origin:50% 50%;will-change:transform}
+    .venture-card.is-center{border-color:rgba(209,254,23,.55);box-shadow:0 20px 64px rgba(0,0,0,.45),0 0 42px rgba(209,254,23,.22)}
+    .carousel-dots{display:flex;justify-content:center;gap:7px;margin-top:14px}
+    .carousel-dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.18);transition:transform .25s,background .25s,box-shadow .25s}
+    .carousel-dots span.on{background:var(--green);box-shadow:0 0 12px var(--green);transform:scale(1.45)}
+    .num{box-shadow:0 0 0 0 rgba(209,254,23,.35);animation:ctaPulse 3.4s ease-out infinite}
+    .demo-step span{animation:ctaPulse 3.4s ease-out infinite}
+    .risk-badge{animation:ctaPulse 3s ease-out .6s infinite}
+  }
+  @media(prefers-reduced-motion:reduce){.hero-floor,.carousel-dots{display:none!important}}
 </style>
 </head>
 <body class="mobile-launch-ready">
@@ -206,14 +277,14 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <a class="btn btn-primary btn-mini nav-cta" href="#audit-application" data-open-audit>Open audit flow <span class="arrow">→</span></a>
+      <a class="btn btn-primary btn-mini nav-cta" href="#audit-application" data-open-audit>Request my AI audit <span class="arrow">→</span></a>
       <div class="nav-menu" data-menu>
         <button class="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="navMenuPanel"><span>Menu</span><span class="menu-dots" aria-hidden="true"></span></button>
         <div class="menu-panel" id="navMenuPanel" role="menu" hidden aria-hidden="true">
           <a href="#ai-bottleneck-quiz" role="menuitem"><b>AI Bottleneck Quiz</b><span>Self-select the first agent layer in under 60 seconds.</span></a>
           <a href="#offer" role="menuitem"><b>Services</b><span>Audit, guarded AI Agent sprint and private AI workforce layer.</span></a>
           <a href="#portal-preview" role="menuitem"><b>Command Centre Preview</b><span>Public-safe demo of the approval-first operating layer.</span></a>
-          <a href="#resources" role="menuitem"><b>Resources</b><span>Agent pages, decision guides and executive AI playbooks.</span></a>
+          <a href="#deployments" role="menuitem"><b>Agent Systems</b><span>The four guarded agent systems deployed after the audit.</span></a>
           <a href="#about" role="menuitem"><b>About AI King</b><span>Founder-led private AI systems for Australian operators.</span></a>
           <a href="#contact" role="menuitem"><b>Contact</b><span>Private audits, product support and Williams Group enquiries.</span></a>
         </div>
@@ -224,6 +295,7 @@
 
 <header id="top">
   <canvas id="signalCanvas" aria-hidden="true"></canvas>
+  <div class="hero-floor" aria-hidden="true"></div>
   <div class="wrap hero-shell">
     <div class="hero-copy">
       <div class="kicker hero-reveal">For CEOs ready to out-execute their market</div>
@@ -231,18 +303,13 @@
       <p class="hero-sub hero-reveal"><b><span class="ai-mark">AI</span> King installs private AI Agents where work actually happens</b> — follow-up, admin, sales ops, reporting and execution handled by guarded AI systems built for 100x operational leverage.</p>
       <div class="actions hero-reveal">
         <a class="btn btn-primary" href="#ai-bottleneck-quiz">Find my AI bottleneck <span class="arrow">→</span></a>
-        <a class="btn btn-secondary" href="#audit-application" data-open-audit>Open audit application</a>
+        <a class="btn btn-secondary" href="#audit-application" data-open-audit>Request my AI audit</a>
       </div>
       <div class="hero-cta-note hero-reveal">Don’t hire another agency. Deploy AI Agents.</div>
       <div class="trust-row hero-reveal" aria-label="AI King trust points">
         <span class="chip">Private AI Agent deployment</span>
         <span class="chip">Built for 100x operational leverage</span>
         <span class="chip">Human guardrails on high-stakes work</span>
-      </div>
-      <div class="promise-strip hero-reveal" aria-label="AI King outcome signals">
-        <span><b>AI workforce &gt; agency</b><em>your competitors buy ads; you deploy operators</em></span>
-        <span><b>Put AI Agents on the busywork</b><em>agents chase, draft, report, route and execute</em></span>
-        <span><b>Move brutally faster</b><em>automation runs while judgment stays protected</em></span>
       </div>
       <div class="risk-strip hero-reveal" aria-label="AI King risk reversal"><span class="risk-badge">3+</span><div><strong>Risk reversal</strong><p>If the audit cannot identify at least three concrete AI intelligence agent opportunities, you do not pay for the audit.</p></div></div>
     </div>
@@ -251,10 +318,12 @@
       <div class="panel-top"><span class="panel-title mono">AI KING // PRIVATE AI AGENTS</span><span class="status mono">AI Agents online</span></div>
       <div class="route"></div><div class="route r2"></div><div class="route r3"></div><div class="route r4"></div>
       <div class="core"><div><strong>AI Agents<br/>Move</strong><span class="mono">when intelligence is deployed</span></div></div>
-      <div class="work-card w1"><b>01 / Deploy</b><span>AI intelligence agents enter the daily grind.</span><small class="mono">Leverage created</small></div>
-      <div class="work-card w2"><b>02 / Coordinate</b><span>Specialist agents coordinate across tools.</span><small class="mono">Drag removed</small></div>
-      <div class="work-card w3"><b>03 / Execute</b><span>Follow-up, admin and reports move without chasing.</span><small class="mono">Capacity multiplied</small></div>
-      <div class="work-card w4"><b>04 / Guardrail</b><span>Clients, money and reputation stay protected.</span><small class="mono">Trust protected</small></div>
+      <div class="work-grid">
+        <div class="work-card w1"><b>01 / Deploy</b><span>AI intelligence agents enter the daily grind.</span><small class="mono">Leverage created</small></div>
+        <div class="work-card w2"><b>02 / Coordinate</b><span>Specialist agents coordinate across tools.</span><small class="mono">Drag removed</small></div>
+        <div class="work-card w3"><b>03 / Execute</b><span>Follow-up, admin and reports move without chasing.</span><small class="mono">Capacity multiplied</small></div>
+        <div class="work-card w4"><b>04 / Guardrail</b><span>Clients, money and reputation stay protected.</span><small class="mono">Trust protected</small></div>
+      </div>
     </div>
   </div>
 </header>
@@ -263,27 +332,24 @@
   <div class="marquee-track" aria-hidden="true">
     <span>Deploy AI Agents</span><span>AI workforce online</span><span>100x operational leverage</span><span>Competitors buying ads</span><span>You deploying agents</span><span>Human approval guardrails</span><span>Autonomous follow-through</span><span>Deploy AI Agents</span><span>AI workforce online</span><span>Private agent systems</span><span>Revenue follow-up agents</span><span>Human approval guardrails</span>
   </div>
-  <div class="marquee-track reverse" aria-hidden="true">
-    <span>AI Agent execution</span><span>Decision queues</span><span>Operator leverage</span><span>Inbox intelligence</span><span>CRM follow-up</span><span>Team handover</span><span>Premium client trust</span><span>AI Agent execution</span><span>Decision queues</span><span>Agentic operations</span><span>Inbox intelligence</span><span>CRM follow-up</span>
-  </div>
 </section>
 
 <main>
 
-  <section class="section compact" id="audit-promise">
+  <section class="section" id="problems">
     <div class="wrap">
-      <div class="cta-band" data-reveal>
-        <div>
-          <small>Anti-agency positioning</small>
-          <h3>Don’t hire another agency. Deploy AI Agents.</h3>
-          <p>AIKING says the quiet part loudly: competitors are buying attention; you are installing AI intelligence agents that move work, chase revenue, clean up operations and make manual busywork obsolete.</p>
-        </div>
-        <a class="btn btn-primary" href="#audit-application" data-open-audit>Open private audit flow <span class="arrow">→</span></a>
+      <div class="section-head" data-reveal>
+        <div class="section-kicker">Why this beats another agency</div>
+        <h2>If your competitors are buying marketing, deploy intelligence into operations.</h2>
+        <p class="lead">Most leaders have tools. Very few have a private AI workforce. <span class="ai-mark">AI</span> King finds the invisible drag your team has learned to work around — then builds the AI Agent system that removes it.</p>
+      </div>
+      <div class="grid problem-grid stagger" data-reveal>
+        <article class="card problem-card"><div class="card-inner"><div class="num">01</div><h3>You don’t need more staff. You need AI Agents.</h3><p>Approvals, context, priorities and follow-ups still pass through humans doing robotic work.</p><div class="impact"></div></div></article>
+        <article class="card problem-card"><div class="card-inner"><div class="num">02</div><h3>Revenue dies in follow-up.</h3><p>Warm leads, client requests and internal handovers lose speed because no agent owns the next move.</p><div class="impact"></div></div></article>
+        <article class="card problem-card"><div class="card-inner"><div class="num">03</div><h3>AI toys are not an AI workforce.</h3><p>Prompts, subscriptions and demos appear everywhere — but there is no executive deployment map for what agents should actually do.</p><div class="impact"></div></div></article>
       </div>
     </div>
   </section>
-
-
 
   <section class="section compact quiz-section" id="ai-bottleneck-quiz">
     <div class="wrap">
@@ -296,6 +362,7 @@
         </div>
         <div class="quiz-board" aria-live="polite">
           <div class="quiz-progress"><span id="quizProgress"></span></div>
+          <p class="sr-only" id="quizStatus" role="status"></p>
           <form id="bottleneckQuiz" class="quiz-form">
             <fieldset class="quiz-step is-active" data-step="0">
               <legend>Where is the business leaking the most speed?</legend>
@@ -334,99 +401,6 @@
     </div>
   </section>
 
-  <section class="section compact about-section" id="about">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="section-head" data-reveal>
-          <div class="section-kicker">About AI King</div>
-          <h2>Private <span class="ai-mark">AI</span> systems from the Williams Group venture stack.</h2>
-          <p class="lead">AI King is Ash Williams’ private consulting front door for CEOs, founders and operators who want AI agents mapped, built and governed around real business workflows — not another generic chatbot demo.</p>
-        </div>
-        <article class="card about-proof" data-reveal>
-          <div class="card-inner">
-            <div class="num">AU</div>
-            <h3>Founder-led, Australia-based, workflow-first.</h3>
-            <p>The work starts with an AI Intelligence Agent Audit: where revenue, operations, admin, reporting and founder attention are leaking speed. From there, the first agent system is scoped only where leverage and guardrails are clear.</p>
-            <div class="mini-proof"><span>Williams Group</span><span>Brisbane-based founder</span><span>Human approval gates</span><span>Public product proof</span></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="ventures-head" id="ventures" data-reveal>
-        <div class="section-kicker">Venture stack</div>
-        <h3>Other systems we build and operate.</h3>
-        <p>AI King sits beside a wider portfolio of practical AI products, workflow tools and public build proof — the same operating experience that informs the private agent audits.</p>
-      </div>
-
-      <div class="grid ventures-grid stagger" data-reveal>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>AutoAI Hub</b><span>Live platform</span></div><p>Custom AI systems, automations, dashboards and business-agent deployments for Australian operators.</p><a href="https://app.autoaihub.io/" target="_blank" rel="noopener">Open AutoAI Hub →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>King Klaw</b><span>SMB agents</span></div><p>Focused business-agent workflows for sales, admin, fulfilment and practical operating execution.</p><a href="https://kingklaw.au" target="_blank" rel="noopener">Visit King Klaw →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>Aurii</b><span>Trust layer</span></div><p>Private appearance-intelligence and pre-consult decision support for high-trust aesthetic planning.</p><a href="https://aurii.me" target="_blank" rel="noopener">Open Aurii →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>ClawHub</b><span>Library</span></div><p>Reusable agent workflow infrastructure: skills, templates and deployment patterns that compound over time.</p><a href="https://clawhub.ai" target="_blank" rel="noopener">Visit ClawHub →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>SeekMateAI</b><span>Build proof</span></div><p>Application-ops agents, inbox triage, job-search workflow automation and multi-bot orchestration.</p><a href="https://github.com/ashwilliams7-code/SeekMateAI" target="_blank" rel="noopener">View build proof →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>Homerun</b><span>Research ops</span></div><p>Prediction-market intelligence tooling for signal monitoring, research structure and faster market understanding.</p><a href="https://github.com/ashwilliams7-code/homerun" target="_blank" rel="noopener">View project →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>AHS Backend</b><span>Systems</span></div><p>Backend services, integrations and operational tooling supporting the AutoAI Hub product layer.</p><a href="https://github.com/ashwilliams7-code/ahs-backend" target="_blank" rel="noopener">View infrastructure →</a></div></article>
-        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>AI King</b><span>Consulting</span></div><p>The executive front door: private audits, agent architecture and guarded AI workforce deployment.</p><a href="#offer">See services →</a></div></article>
-      </div>
-
-      <div class="contact-panel" id="contact" data-reveal>
-        <div>
-          <div class="section-kicker">Contact</div>
-          <h3>Start with a private AI agent audit.</h3>
-          <p>Use the private audit flow for AI King audits, platform enquiries or Williams Group requests. The goal is context first: bottleneck, tools, urgency and the safest first agent deployment.</p>
-        </div>
-        <div class="contact-links">
-          <a class="btn btn-primary" href="#audit-application" data-open-audit>Open audit flow <span class="arrow">→</span></a>
-          <a class="btn btn-secondary" href="/command-centre/">Preview command centre</a>
-          <span class="mono contact-note">Australian-owned · Brisbane-based founder · typical response 24–48h business days</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cinema-scroll" id="story" data-scroll-story aria-label="AI King scroll-controlled operating layer story">
-    <div class="cinema-stage">
-      <div class="cinema-inner">
-        <div class="stage-copy">
-          <span class="scene-num mono" id="storyKicker">01 / Deploy</span>
-          <h2 id="storyTitle">Deploy AI Agents.</h2>
-          <p id="storyText">We identify the work your competitors still do manually, then deploy AI intelligence agents into the places that create speed, follow-up and leverage.</p>
-          <div class="stage-proof"><span>private session</span><span>workflow evidence</span><span>agentic deployment</span></div>
-          <div class="chapter-rail" aria-hidden="true">
-            <span class="chapter-pill is-active">Deploy</span>
-            <span class="chapter-pill">Map</span>
-            <span class="chapter-pill">AI Agents</span>
-            <span class="chapter-pill">Guardrail</span>
-            <span class="chapter-pill">Compound</span>
-          </div>
-        </div>
-        <div class="stage-art" aria-hidden="true">
-          <div class="orbit-shell"></div><div class="orbit-shell o2"></div>
-          <div class="stage-core"><div><b>AI King</b><small class="mono">operating layer</small></div></div>
-          <div class="stage-node n1 is-active"><b>01 Intelligence</b><span>Manual bottlenecks become deployment targets.</span></div>
-          <div class="stage-node n2"><b>02 Workflow</b><span>Messy processes become agentic systems.</span></div>
-          <div class="stage-node n3"><b>03 AI Agents</b><span>Specialist agents start moving without chasing.</span></div>
-          <div class="stage-node n4"><b>04 Trust</b><span>Human approvals protect high-stakes moments.</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="problems">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <div class="section-kicker">Why normal agencies lose</div>
-        <h2>If your competitors are buying marketing, deploy intelligence into operations.</h2>
-        <p class="lead">Most leaders have tools. Very few have a private AI workforce. <span class="ai-mark">AI</span> King finds the invisible drag your team has learned to work around — then builds the AI Agent system that removes it.</p>
-      </div>
-      <div class="grid problem-grid stagger" data-reveal>
-        <article class="card problem-card"><div class="card-inner"><div class="num">01</div><h3>You don’t need more staff. You need AI Agents.</h3><p>Approvals, context, priorities and follow-ups still pass through humans doing robotic work.</p><div class="impact"></div></div></article>
-        <article class="card problem-card"><div class="card-inner"><div class="num">02</div><h3>Revenue dies in follow-up.</h3><p>Warm leads, client requests and internal handovers lose speed because no agent owns the next move.</p><div class="impact"></div></div></article>
-        <article class="card problem-card"><div class="card-inner"><div class="num">03</div><h3>AI toys are not an AI workforce.</h3><p>Prompts, subscriptions and demos appear everywhere — but there is no executive deployment map for what agents should actually do.</p><div class="impact"></div></div></article>
-      </div>
-    </div>
-  </section>
-
   <section class="section offer-section" id="offer">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -446,8 +420,9 @@
               <li>First guarded AI Agent scope: the safest practical agent system to ship next.</li>
               <li>Risk and trust guardrails for money, clients, privacy and reputation.</li>
             </ul>
+            <div class="risk-strip" aria-label="Audit guarantee"><span class="risk-badge">3+</span><div><strong>Guarantee</strong><p>If the audit cannot identify at least three concrete AI Agent opportunities, you do not pay for it.</p></div></div>
             <div class="offer-cta">
-              <a class="btn btn-primary" href="#audit-application" data-open-audit>Open audit flow <span class="arrow">→</span></a>
+              <a class="btn btn-primary" href="#audit-application" data-open-audit>Request my AI audit <span class="arrow">→</span></a>
               <a class="btn btn-secondary" href="#demo">See the demo flow</a>
             </div>
             <span class="offer-tag">Strategy first · build second · leverage always</span>
@@ -458,6 +433,22 @@
           <article class="card offer-card" data-reveal><div class="card-inner"><div class="num">02</div><h3>Path 2: First Guarded AI Agent Sprint</h3><p>After the audit, the first AI Agent system is built around one real bottleneck: inbox triage, CRM follow-up, client handover, internal reporting or founder command flow.</p><span class="offer-tag">7–14 day implementation scope</span></div></article>
           <article class="card offer-card" data-reveal><div class="card-inner"><div class="num">03</div><h3>Path 3: Private AI Workforce Layer</h3><p>For leaders who need ongoing leverage: system improvement, workflow tuning, agent guardrails and weekly visibility without giving up human control.</p><span class="offer-tag">Managed support by fit</span></div></article>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="wrap">
+      <div class="section-head center" data-reveal>
+        <div class="section-kicker">From <span class="ai-mark">AI</span> audit to deployment</div>
+        <h2>From bold claim to live AI Agents.</h2>
+        <p class="lead">A focused path for leaders who want <span class="ai-mark">AI</span> intelligence deployed discreetly, practically and with the right human controls.</p>
+      </div>
+      <div class="grid process-grid stagger" data-reveal>
+        <article class="card step-card"><div class="card-inner"><div class="num">01</div><h3>AI Intelligence Audit</h3><p><b>Executive-level diagnosis.</b> Find the specific work, approvals, messages and follow-ups where the business still waits on manual humans.</p></div></article>
+        <article class="card step-card"><div class="card-inner"><div class="num">02</div><h3>AI Agent leverage map</h3><p><b>Separate hype from value.</b> Define what should be automated, augmented, assigned to agents, approved or left human.</p></div></article>
+        <article class="card step-card"><div class="card-inner"><div class="num">03</div><h3>AI Agent system build</h3><p><b>Deploy around real tools.</b> Connect inboxes, CRMs, docs, tasks and team workflows where the business already runs.</p></div></article>
+        <article class="card step-card"><div class="card-inner"><div class="num">04</div><h3>Harden + hand over</h3><p><b>Launch safely.</b> Test outputs, define approvals, document the system and improve from real executive use.</p></div></article>
       </div>
     </div>
   </section>
@@ -483,8 +474,8 @@
     <div class="wrap">
       <div class="section-head" data-reveal>
         <div class="section-kicker">The 90-second demo</div>
-        <h2>Make the buyer see the AI workforce before they buy the AI workforce.</h2>
-        <p class="lead">You should be able to picture the AI Agents before committing. This is the simplest AIKING demo path: messy inputs become agentic execution.</p>
+        <h2>See the AI workforce working before you commit.</h2>
+        <p class="lead">You should be able to picture the AI Agents before committing. This is the simplest demo path: messy inputs become agentic execution.</p>
       </div>
       <div class="grid demo-grid">
         <div class="demo-board" data-reveal>
@@ -512,118 +503,76 @@ OWNER: context switching again</div></div></article>
     </div>
   </section>
 
+  <section class="section compact about-section" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="section-head" data-reveal>
+          <div class="section-kicker">About AI King</div>
+          <h2>Private <span class="ai-mark">AI</span> systems from the Williams Group venture stack.</h2>
+          <p class="lead">AI King is Ash Williams’ private consulting front door for CEOs, founders and operators who want AI agents mapped, built and governed around real business workflows — not another generic chatbot demo.</p>
+        </div>
+        <article class="card about-proof" data-reveal>
+          <div class="card-inner">
+            <div class="num">AU</div>
+            <h3>Founder-led, Australia-based, workflow-first.</h3>
+            <p>The work starts with an AI Intelligence Agent Audit: where revenue, operations, admin, reporting and founder attention are leaking speed. From there, the first agent system is scoped only where leverage and guardrails are clear.</p>
+            <div class="mini-proof"><span>Williams Group</span><span>Brisbane-based founder</span><span>Human approval gates</span><span>Public product proof</span></div>
+          </div>
+        </article>
+      </div>
 
+      <div class="ventures-head" id="ventures" data-reveal>
+        <div class="section-kicker">Venture stack</div>
+        <h2>Other systems we build and operate.</h2>
+        <p>AI King sits beside a wider portfolio of practical AI products, workflow tools and public build proof — the same operating experience that informs the private agent audits.</p>
+      </div>
+
+      <div class="grid ventures-grid stagger" data-reveal>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>AutoAI Hub</b><span>Live platform</span></div><p>Custom AI systems, automations, dashboards and business-agent deployments for Australian operators.</p><a href="https://app.autoaihub.io/" target="_blank" rel="noopener">Open AutoAI Hub →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>King Klaw</b><span>SMB agents</span></div><p>Focused business-agent workflows for sales, admin, fulfilment and practical operating execution.</p><a href="https://kingklaw.au" target="_blank" rel="noopener">Visit King Klaw →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>Aurii</b><span>Trust layer</span></div><p>Private appearance-intelligence and pre-consult decision support for high-trust aesthetic planning.</p><a href="https://aurii.me" target="_blank" rel="noopener">Open Aurii →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>ClawHub</b><span>Library</span></div><p>Reusable agent workflow infrastructure: skills, templates and deployment patterns that compound over time.</p><a href="https://clawhub.ai" target="_blank" rel="noopener">Visit ClawHub →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>SeekMateAI</b><span>Build proof</span></div><p>Application-ops agents, inbox triage, job-search workflow automation and multi-bot orchestration.</p><a href="https://github.com/ashwilliams7-code/SeekMateAI" target="_blank" rel="noopener">View build proof →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>Homerun</b><span>Research ops</span></div><p>Prediction-market intelligence tooling for signal monitoring, research structure and faster market understanding.</p><a href="https://github.com/ashwilliams7-code/homerun" target="_blank" rel="noopener">View project →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>AHS Backend</b><span>Systems</span></div><p>Backend services, integrations and operational tooling supporting the AutoAI Hub product layer.</p><a href="https://github.com/ashwilliams7-code/ahs-backend" target="_blank" rel="noopener">View infrastructure →</a></div></article>
+        <article class="card venture-card"><div class="card-inner"><div class="venture-top"><b>AI King</b><span>Consulting</span></div><p>The executive front door: private audits, agent architecture and guarded AI workforce deployment.</p><a href="#offer">See services →</a></div></article>
+      </div>
+
+      <div class="contact-panel" id="contact" data-reveal>
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2>Start with a private AI agent audit.</h2>
+          <p>Use the private audit flow for AI King audits, platform enquiries or Williams Group requests. The goal is context first: bottleneck, tools, urgency and the safest first agent deployment.</p>
+        </div>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="#audit-application" data-open-audit>Request my AI audit <span class="arrow">→</span></a>
+          <a class="btn btn-secondary" href="/command-centre/">Preview command centre</a>
+          <span class="mono contact-note">Australian-owned · Brisbane-based founder · typical response 24–48h business days</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section compact portal-section" id="portal-preview">
     <div class="wrap">
       <div class="portal-grid">
         <div class="section-head" data-reveal>
-          <div class="section-kicker">Portal + plugin layer</div>
-          <h2>The WordPress-style command centre is already being mapped.</h2>
-          <p class="lead">Until the real WordPress login stack is staged, this route stays honest: a public-safe preview of the approval-first AIKING operating layer — no fake login claims, no private client data exposed.</p>
+          <div class="section-kicker">Command centre</div>
+          <h2>Every engagement gets a private command centre.</h2>
+          <p class="lead">A public-safe preview of the approval-first operating layer: decision queues, agent activity and human approval gates — without exposing any private client data.</p>
           <div class="actions"><a class="btn btn-primary" href="/command-centre/">Preview command centre <span class="arrow">→</span></a><a class="btn btn-secondary" href="#audit-application" data-open-audit>Request private portal access</a></div>
         </div>
         <div class="portal-console" data-reveal aria-label="AIKING portal build status">
-          <div class="console-top"><span class="mono">AIKING PORTAL STACK</span><b>staging map</b></div>
-          <div class="console-row"><span>WordPress CMS</span><b>planned</b></div>
-          <div class="console-row"><span>Audit application forms</span><b>live static flow</b></div>
-          <div class="console-row"><span>CRM + booking plugins</span><b>next</b></div>
-          <div class="console-row"><span>Client/prospect login</span><b>staging required</b></div>
-          <div class="console-row"><span>Private command dashboards</span><b>gated only</b></div>
+          <div class="console-top"><span class="mono">AIKING COMMAND CENTRE</span><b>build status</b></div>
+          <div class="console-row"><span>Decision queue + approvals</span><b>previewing</b></div>
+          <div class="console-row"><span>Audit application flow</span><b>live</b></div>
+          <div class="console-row"><span>CRM + booking integrations</span><b>next</b></div>
+          <div class="console-row"><span>Private client login</span><b>coming</b></div>
+          <div class="console-row"><span>Command dashboards</span><b>gated</b></div>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="section" id="process">
-    <div class="wrap">
-      <div class="section-head center" data-reveal>
-        <div class="section-kicker">From <span class="ai-mark">AI</span> audit to deployment</div>
-        <h2>From bold claim to live AI Agents.</h2>
-        <p class="lead">A focused path for leaders who want <span class="ai-mark">AI</span> intelligence deployed discreetly, practically and with the right human controls.</p>
-      </div>
-      <div class="grid process-grid stagger" data-reveal>
-        <article class="card step-card"><div class="card-inner"><div class="num">01</div><h3>AI Intelligence Audit</h3><p><b>Executive-level diagnosis.</b> Find the specific work, approvals, messages and follow-ups where the business still waits on manual humans.</p></div></article>
-        <article class="card step-card"><div class="card-inner"><div class="num">02</div><h3>AI Agent leverage map</h3><p><b>Separate hype from value.</b> Define what should be automated, augmented, assigned to agents, approved or left human.</p></div></article>
-        <article class="card step-card"><div class="card-inner"><div class="num">03</div><h3>AI Agent system build</h3><p><b>Deploy around real tools.</b> Connect inboxes, CRMs, docs, tasks and team workflows where the business already runs.</p></div></article>
-        <article class="card step-card"><div class="card-inner"><div class="num">04</div><h3>Harden + hand over</h3><p><b>Launch safely.</b> Test outputs, define approvals, document the system and improve from real executive use.</p></div></article>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section stats-section" id="proof">
-    <div class="wrap">
-      <div class="section-head center" data-reveal>
-        <div class="section-kicker">Proof that <span class="ai-mark">AI</span> moves the business</div>
-        <h2>100x leverage is not prettier marketing. It is less human drag.</h2>
-        <p class="lead">The page says what normal agencies will not: the agency model is slow, the AI workforce has arrived, and the advantage goes to the operator who deploys first.</p>
-      </div>
-      <div class="grid stats-grid stagger" data-reveal>
-        <article class="card stat-card"><strong><span data-count="4">0</span></strong><p>Agent layers mapped before build: intelligence, workflow, AI Agents, guardrail.</p><span class="label">Deployment map</span></article>
-        <article class="card stat-card"><strong><span data-count="1">0</span><small>st</small></strong><p>First private AI Agent system shipped around the highest-friction business bottleneck.</p><span class="label">Initial deployment</span></article>
-        <article class="card stat-card"><strong><span data-count="24">0</span><small>/7</small></strong><p>Agents work in the background while critical calls stay human-approved.</p><span class="label">Autonomous follow-through</span></article>
-        <article class="card stat-card"><strong><span data-count="100">0</span><small>x</small></strong><p>Operational leverage target: fewer humans doing robotic work, more systems moving revenue.</p><span class="label">Leverage ambition</span></article>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="section compact resources-section" id="resources">
-    <div class="wrap">
-      <div class="section-head center" data-reveal>
-        <div class="section-kicker">Dynamic content engine</div>
-        <h2>AIKING now has the bones of a full content platform.</h2>
-        <p class="lead">These are the first WordPress-ready resource pillars: each can become a CMS article, gated guide, quiz branch or sales enablement asset once the stack moves to staging.</p>
-      </div>
-      <div class="resource-filter" data-reveal aria-label="Filter AI King resources">
-        <button class="is-active" type="button" data-resource-filter="all">All</button>
-        <button type="button" data-resource-filter="agents">AI Agents</button>
-        <button type="button" data-resource-filter="revenue">Revenue</button>
-        <button type="button" data-resource-filter="guardrails">Guardrails</button>
-      </div>
-      <div class="grid resource-grid" id="resourceGrid" data-reveal></div>
-    </div>
-  </section>
-
-  <section class="section compact guarantee-section" id="guarantee">
-    <div class="wrap">
-      <div class="guarantee-box" data-reveal>
-        <div class="guarantee-mark">3+</div>
-        <div class="guarantee-content">
-          <div class="section-kicker">Risk reversal</div>
-          <h2>If we cannot find three concrete AI intelligence agent opportunities, you do not pay for the audit.</h2>
-          <p>The audit should create clarity, not homework. You should leave with visible bottlenecks, ranked agent opportunities and a practical first AI Agent scope.</p>
-          <ul class="guarantee-list">
-            <li>At least three specific agent deployment opportunities identified.</li>
-            <li>One highest-leverage guarded AI Agent system scoped clearly.</li>
-            <li>Human approval and reputation guardrails defined before build.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section letter-section" id="letter">
-    <div class="wrap letter-wrap">
-      <div class="letter-head" data-reveal>
-        <span class="date hand-note">Private note for CEOs + founders</span>
-        <h2>Your competitors are buying ads. You’re deploying an <span class="ai-mark">AI</span> workforce.</h2>
-      </div>
-      <div class="letter-body" data-reveal>
-        <p><span class="hand-note">Dear founder,</span></p>
-        <p>You already know <span class="ai-mark">AI</span> matters. The old agency answer is more strategy calls, more campaigns, more dashboards and more humans manually remembering the work. That is not leverage.</p>
-        <p>Meanwhile the business leaks momentum in ordinary places: warm leads waiting for replies, client requests buried in inboxes, staff asking the same questions, approvals stuck with you, notes that never become action, and systems that only work when someone remembers to chase.</p>
-        <p><strong>The real opportunity is not “using <span class="ai-mark">AI</span>.”</strong> It is deploying intelligence agents into the work that slows you down — so follow-up, admin, reporting, sales ops and handovers move before competitors even notice.</p>
-        <p><span class="ai-mark">AI</span> King starts with a private AI Intelligence Agent Audit. We map where the business is leaking speed, trust or attention. Then we decide what becomes an agent, what becomes an AI Agent system, what stays human, and what needs guardrails before it touches clients.</p>
-        <p><em>Don’t hire another agency. Deploy AI Agents.</em></p>
-        <div class="letter-callout"><b>What changes after the audit</b><p>The business moves from bottleneck → leverage map → private AI Agents → guardrail → live operating rhythm, with the first build chosen for 100x operational leverage instead of novelty.</p></div>
-      </div>
-    </div>
-  </section>
-
 
   <section class="section compact" id="founder">
     <div class="wrap">
@@ -675,7 +624,7 @@ OWNER: context switching again</div></div></article>
         <div class="section-kicker">Ready when you are</div>
         <h2>If your competitors are still hiring agencies, deploy the <span class="ai-mark">AI</span> workforce first.</h2>
         <p class="lead">Book the AI Intelligence Agent Audit and Ash will identify where <span class="ai-mark">AI</span> can create real leverage first — revenue follow-up, admin, client flow, reporting, execution or founder bottlenecks.</p>
-        <div class="actions" style="justify-content:center"><a class="btn btn-primary" href="#audit-application" data-open-audit>Open audit flow <span class="arrow">→</span></a><button class="btn btn-secondary" type="button" id="shareBtn">Share this page</button></div>
+        <div class="actions" style="justify-content:center"><a class="btn btn-primary" href="#audit-application" data-open-audit>Request my AI audit <span class="arrow">→</span></a><button class="btn btn-secondary" type="button" id="shareBtn">Share this page</button></div>
         <div class="socials" aria-label="Contact links"><a class="soc" href="mailto:ash.williams7@icloud.com" title="Email">Email</a><a class="soc" href="https://github.com/ashwilliams7-code" target="_blank" rel="noopener" title="GitHub">GitHub</a></div>
       </div>
     </div>
@@ -686,7 +635,7 @@ OWNER: context switching again</div></div></article>
   <div class="wrap footer-inner"><span>© <span id="year">2026</span> AI King · Williams Group · Australia</span><span class="mono">AI Agents · private systems · human guardrails</span></div>
 </footer>
 
-<div class="mobilebar" aria-label="Sticky mobile call to action"><div class="mobilebar-inner"><a class="btn btn-primary" href="#audit-application" data-open-audit>Open audit flow <span class="arrow">→</span></a><a class="btn btn-secondary ig" href="#ai-bottleneck-quiz" aria-label="AI bottleneck quiz">Quiz</a></div></div>
+<div class="mobilebar" aria-label="Sticky mobile call to action"><div class="mobilebar-inner"><a class="btn btn-primary" href="#audit-application" data-open-audit>Request my AI audit <span class="arrow">→</span></a><a class="btn btn-secondary ig" href="#ai-bottleneck-quiz" aria-label="AI bottleneck quiz">Quiz</a></div></div>
 
 
 <div class="audit-modal" id="audit-application" role="dialog" aria-modal="true" aria-labelledby="auditTitle" hidden>
@@ -694,8 +643,8 @@ OWNER: context switching again</div></div></article>
   <div class="audit-panel" tabindex="-1">
     <button class="audit-close" type="button" data-close-audit aria-label="Close audit application">×</button>
     <div class="section-kicker">Private AI Agent Audit</div>
-    <h2 id="auditTitle">Turn the static enquiry into an audit brief.</h2>
-    <p class="lead">Answer the essentials. The site builds a clean pre-filled request so Ash gets context instead of a vague email.</p>
+    <h2 id="auditTitle" tabindex="-1">Request your private AI audit.</h2>
+    <p class="lead">Answer the essentials and a structured brief goes straight to Ash — context first, no spam list, typical reply within 24–48h.</p>
     <form id="auditForm" class="audit-form">
       <div class="form-grid">
         <label>Full name <input name="name" autocomplete="name" placeholder="Your name" required></label>
@@ -707,7 +656,7 @@ OWNER: context switching again</div></div></article>
       <label>Current tools <input name="tools" placeholder="CRM, email, docs, booking, ads, Slack..."></label>
       <label>What should AI Agents move first? <textarea name="message" rows="4" placeholder="Example: warm leads go cold, staff ask repeat questions, inbox handovers are messy..."></textarea></label>
       <div class="audit-actions"><button class="btn btn-primary" type="submit">Create audit email <span class="arrow">→</span></button><button class="btn btn-secondary" type="button" data-close-audit>Not yet</button></div>
-      <p class="audit-note">No fake login. No hidden backend. This static flow hands off a structured brief; the real WordPress portal/login layer gets built on staging.</p>
+      <p class="audit-note">Private and direct: this opens a pre-filled email to Ash. Nothing is stored on this site.</p>
     </form>
   </div>
 </div>
@@ -727,7 +676,10 @@ OWNER: context switching again</div></div></article>
     document.body.classList.remove('mobile-launch-lock');
     window.setTimeout(function(){ if (mobileLaunch && mobileLaunch.parentNode) mobileLaunch.parentNode.removeChild(mobileLaunch); }, 760);
   }
-  if (mobileLaunch && isPhone && !reduceMotion && fromInstagram) {
+  var launchSeen = false;
+  try { launchSeen = sessionStorage.getItem('aikingLaunchSeen') === '1'; } catch(e) {}
+  if (mobileLaunch && isPhone && !reduceMotion && fromInstagram && !launchSeen) {
+    try { sessionStorage.setItem('aikingLaunchSeen', '1'); } catch(e) {}
     document.body.classList.add('mobile-launch-lock');
     var kicker = mobileLaunch.querySelector('.launch-kicker');
     var source = mobileLaunch.querySelector('.launch-source');
@@ -764,41 +716,16 @@ OWNER: context switching again</div></div></article>
   }
 
   var boot = document.getElementById('boot');
-  if (boot && !reduceMotion) {
-    window.setTimeout(function(){ boot.classList.add('hidden'); }, 1540);
-    window.setTimeout(function(){ if (boot && boot.parentNode) boot.parentNode.removeChild(boot); }, 2180);
+  var bootSeen = false;
+  try { bootSeen = sessionStorage.getItem('aikingBootSeen') === '1'; } catch(e) {}
+  if (boot && !reduceMotion && !bootSeen) {
+    try { sessionStorage.setItem('aikingBootSeen', '1'); } catch(e) {}
+    window.setTimeout(function(){ boot.classList.add('hidden'); }, 1100);
+    window.setTimeout(function(){ if (boot && boot.parentNode) boot.parentNode.removeChild(boot); }, 1700);
   } else if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
 
   var progress = document.querySelector('.scroll-progress span');
 
-  var story = document.querySelector('[data-scroll-story]');
-  var storyKicker = document.getElementById('storyKicker');
-  var storyTitle = document.getElementById('storyTitle');
-  var storyText = document.getElementById('storyText');
-  var chapterPills = [].slice.call(document.querySelectorAll('.chapter-pill'));
-  var stageNodes = [].slice.call(document.querySelectorAll('.stage-node'));
-  var storyScenes = [
-    {k:'01 / Deploy', t:'Deploy AI Agents.', d:'We identify the work your competitors still do manually, then deploy AI intelligence agents into the places that create speed, follow-up and leverage.'},
-    {k:'02 / Map', t:'Turn messy work into an agent map.', d:'The audit separates what should be automated, augmented, assigned to agents, approved, delegated or deliberately kept human.'},
-    {k:'03 / Agents', t:'Launch the first trusted AI Agent system.', d:'The first AI Agent system ships around real tools, inboxes, notes, CRMs, docs and team handovers — not a toy demo.'},
-    {k:'04 / Guardrail', t:'Keep high-stakes moments protected.', d:'Escalations, approvals, logs and handover rules make the agents useful without risking trust or reputation.'},
-    {k:'05 / Compound', t:'Move before competitors know what changed.', d:'The AI workforce keeps priorities, opportunities and client momentum moving while leadership stays focused.'}
-  ];
-  var activeScene = -1;
-  function setScene(index, p){
-    if (!story) return;
-    document.documentElement.style.setProperty('--story-p', p.toFixed(4));
-    if (index === activeScene) return;
-    activeScene = index;
-    var scene = storyScenes[index];
-    if (scene) {
-      if (storyKicker) storyKicker.textContent = scene.k;
-      if (storyTitle) storyTitle.textContent = scene.t;
-      if (storyText) storyText.textContent = scene.d;
-    }
-    chapterPills.forEach(function(el,i){ el.classList.toggle('is-active', i === index); });
-    stageNodes.forEach(function(el,i){ el.classList.toggle('is-active', i === Math.min(index, stageNodes.length - 1)); });
-  }
 
   var flowMeter = document.getElementById('flowMeter');
   var flowCards = [].slice.call(document.querySelectorAll('[data-flow-step]'));
@@ -807,13 +734,6 @@ OWNER: context switching again</div></div></article>
     var pct = Math.max(0, Math.min(1, window.scrollY / max));
     if (progress) progress.style.transform = 'scaleX(' + pct.toFixed(4) + ')';
 
-    if (story) {
-      var sr = story.getBoundingClientRect();
-      var range = Math.max(1, story.offsetHeight - window.innerHeight);
-      var storyPct = Math.max(0, Math.min(1, -sr.top / range));
-      var sceneIndex = Math.min(storyScenes.length - 1, Math.max(0, Math.floor(storyPct * storyScenes.length)));
-      setScene(sceneIndex, storyPct);
-    }
     if (flowCards.length) {
       var center = window.innerHeight * .52;
       var active = 0;
@@ -858,35 +778,16 @@ OWNER: context switching again</div></div></article>
 
 
 
-  var counters = [].slice.call(document.querySelectorAll('[data-count]'));
-  function animateCounter(el){
-    if (el.dataset.done) return;
-    el.dataset.done = '1';
-    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
-    var start = performance.now();
-    var dur = 980 + Math.min(target, 80) * 8;
-    function tick(now){
-      var t = Math.min(1, (now - start) / dur);
-      var eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(target * eased);
-      if (t < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  if (counters.length && !reduceMotion && 'IntersectionObserver' in window) {
-    var counterObserver = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){ if(entry.isIntersecting){ animateCounter(entry.target); counterObserver.unobserve(entry.target); } });
-    }, { threshold:.35 });
-    counters.forEach(function(el){ counterObserver.observe(el); });
-  } else counters.forEach(function(el){ el.textContent = el.getAttribute('data-count') || el.textContent; });
 
 
   var auditModal = document.getElementById('audit-application');
   var auditPanel = auditModal ? auditModal.querySelector('.audit-panel') : null;
   var auditForm = document.getElementById('auditForm');
   var quizSummary = null;
+  var lastAuditTrigger = null;
   function openAudit(){
     if (!auditModal) return;
+    lastAuditTrigger = document.activeElement;
     auditModal.hidden = false;
     document.body.classList.add('audit-open');
     if (quizSummary && auditForm) {
@@ -897,13 +798,22 @@ OWNER: context switching again</div></div></article>
       if (tools && quizSummary.tools) tools.value = quizSummary.tools;
       if (msg && !msg.value) msg.value = quizSummary.message;
     }
-    window.setTimeout(function(){ if (auditPanel) auditPanel.focus(); }, 20);
+    window.setTimeout(function(){ var t = document.getElementById('auditTitle'); if (t) t.focus(); else if (auditPanel) auditPanel.focus(); }, 20);
   }
   function closeAudit(){
     if (!auditModal) return;
     auditModal.hidden = true;
     document.body.classList.remove('audit-open');
+    if (lastAuditTrigger && lastAuditTrigger.focus) lastAuditTrigger.focus();
   }
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Tab' || !auditModal || auditModal.hidden || !auditPanel) return;
+    var focusables = auditPanel.querySelectorAll('button, [href], input, select, textarea');
+    if (!focusables.length) return;
+    var first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
   document.querySelectorAll('[data-open-audit]').forEach(function(el){
     el.addEventListener('click', function(e){ e.preventDefault(); openAudit(); });
   });
@@ -953,8 +863,16 @@ OWNER: context switching again</div></div></article>
     function selected(name){ var el = quiz.querySelector('[name="'+name+'"]:checked'); return el ? el.value : ''; }
     function selectedPath(){ var el = quiz.querySelector('[name="bottleneck"]:checked'); return el ? (el.getAttribute('data-path') || 'command') : 'command'; }
     function selectedTools(){ return [].slice.call(quiz.querySelectorAll('[name="tools"]:checked')).map(function(el){ return el.value; }).join(', '); }
+    var quizStatus = document.getElementById('quizStatus');
     function updateQuiz(){
       quizSteps.forEach(function(step,i){ step.classList.toggle('is-active', i === quizIndex); });
+      if (quizStatus) {
+        if (quizIndex >= quizSteps.length) quizStatus.textContent = 'Quiz complete. Your recommended path is shown below.';
+        else {
+          var legend = quizSteps[quizIndex] ? quizSteps[quizIndex].querySelector('legend') : null;
+          quizStatus.textContent = 'Step ' + (quizIndex + 1) + ' of ' + quizSteps.length + (legend ? ': ' + legend.textContent : '');
+        }
+      }
       if (quizResult) quizResult.hidden = quizIndex < quizSteps.length;
       if (quizBack) quizBack.style.visibility = quizIndex === 0 ? 'hidden' : 'visible';
       if (quizNext) quizNext.textContent = quizIndex >= quizSteps.length - 1 ? 'Show my path →' : 'Next →';
@@ -974,6 +892,14 @@ OWNER: context switching again</div></div></article>
       quizIndex = quizSteps.length;
       updateQuiz();
     }
+    quiz.addEventListener('change', function(e){
+      var t = e.target;
+      if (reduceMotion || !t || t.type !== 'radio' || quizIndex >= quizSteps.length) return;
+      window.setTimeout(function(){
+        if (quizIndex >= quizSteps.length - 1) showQuizResult();
+        else { quizIndex += 1; updateQuiz(); }
+      }, 260);
+    });
     if (quizBack) quizBack.addEventListener('click', function(){ quizIndex = Math.max(0, quizIndex - 1); updateQuiz(); });
     if (quizNext) quizNext.addEventListener('click', function(){
       if (quizIndex === 0 && !selected('bottleneck')) return;
@@ -985,32 +911,40 @@ OWNER: context switching again</div></div></article>
     updateQuiz();
   }
 
-  var resources = [
-    {tag:'agents', title:'What AI Agents Actually Do Inside a Business', text:'A plain-English breakdown of agent roles: chase, triage, summarize, draft, route and escalate.'},
-    {tag:'revenue', title:'Where Businesses Leak Follow-up Revenue', text:'How warm leads quietly die in inboxes, CRMs and handovers — and where AI Agents should intervene first.'},
-    {tag:'agents', title:'The AI Bottleneck Map', text:'A founder-level method for ranking what to automate, augment, approve or leave human.'},
-    {tag:'guardrails', title:'AI Agents vs Chatbots vs Automations', text:'Why the winning layer is not one prompt box — it is a guarded operating system around real workflows.'},
-    {tag:'guardrails', title:'Human Approval Points', text:'How to deploy AI without losing trust around clients, money, reputation and judgment.'},
-    {tag:'revenue', title:'The First Guarded Agent Sprint', text:'A 7–14 day scope for turning the highest-friction workflow into a practical first deployment.'}
-  ];
-  var resourceGrid = document.getElementById('resourceGrid');
-  function renderResources(filter){
-    if (!resourceGrid) return;
-    var items = resources.filter(function(item){ return filter === 'all' || item.tag === filter; });
-    resourceGrid.innerHTML = items.map(function(item){ return '<article class="card resource-card" data-resource-tag="'+item.tag+'"><div class="card-inner"><span class="resource-tag">'+item.tag+'</span><h3>'+item.title+'</h3><p>'+item.text+'</p><a href="#audit-application" data-open-audit>Turn this into my audit brief →</a></div></article>'; }).join('');
-    resourceGrid.querySelectorAll('[data-open-audit]').forEach(function(el){ el.addEventListener('click', function(e){ e.preventDefault(); openAudit(); }); });
-  }
-  if (resourceGrid) {
-    renderResources('all');
-    document.querySelectorAll('[data-resource-filter]').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        document.querySelectorAll('[data-resource-filter]').forEach(function(b){ b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-        renderResources(btn.getAttribute('data-resource-filter') || 'all');
-      });
-    });
-  }
 
+
+  var vGrid = document.querySelector('.ventures-grid');
+  if (vGrid && isPhone && !reduceMotion) {
+    vGrid.classList.add('coverflow');
+    var vCards = [].slice.call(vGrid.children);
+    var dots = document.createElement('div');
+    dots.className = 'carousel-dots';
+    dots.setAttribute('aria-hidden', 'true');
+    vCards.forEach(function(){ dots.appendChild(document.createElement('span')); });
+    vGrid.parentNode.insertBefore(dots, vGrid.nextSibling);
+    var vDots = [].slice.call(dots.children);
+    var vTick = false;
+    function coverflow(){
+      vTick = false;
+      var box = vGrid.getBoundingClientRect();
+      var mid = box.left + box.width / 2;
+      var nearest = 0, best = Infinity;
+      vCards.forEach(function(c, i){
+        var r = c.getBoundingClientRect();
+        var d = (r.left + r.width / 2 - mid) / box.width;
+        var rot = Math.max(-24, Math.min(24, d * 44));
+        var sc = 1 - Math.min(.12, Math.abs(d) * .2);
+        c.style.transform = 'perspective(800px) rotateY(' + (-rot).toFixed(2) + 'deg) scale(' + sc.toFixed(3) + ')';
+        c.classList.toggle('is-center', Math.abs(d) < .2);
+        if (Math.abs(d) < best) { best = Math.abs(d); nearest = i; }
+      });
+      vDots.forEach(function(el, i){ el.classList.toggle('on', i === nearest); });
+    }
+    function vQueue(){ if (!vTick) { vTick = true; requestAnimationFrame(coverflow); } }
+    vGrid.addEventListener('scroll', vQueue, { passive: true });
+    window.addEventListener('resize', vQueue, { passive: true });
+    coverflow();
+  }
 
   var share = document.getElementById('shareBtn');
   if (share){
@@ -1022,7 +956,7 @@ OWNER: context switching again</div></div></article>
   }
 
   var canvas = document.getElementById('signalCanvas');
-  if (canvas && !reduceMotion) {
+  if (canvas && !reduceMotion && !isPhone) {
     var ctx = canvas.getContext('2d');
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var nodes = [];
