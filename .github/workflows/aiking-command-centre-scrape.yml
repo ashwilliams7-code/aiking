@@ -1,0 +1,60 @@
+name: AI King Command Centre Scrape
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum public leads to scan"
+        required: false
+        default: "30"
+      cities:
+        description: "Comma-separated supported cities"
+        required: false
+        default: "Brisbane,Gold Coast"
+      niches:
+        description: "Comma-separated niches: dentist,aesthetic"
+        required: false
+        default: "dentist,aesthetic"
+  schedule:
+    - cron: "30 22 * * *"
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: aiking-command-centre-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile scraper
+        run: python -m py_compile command-centre/scripts/scrape_public_leads.py
+      - name: Run public-safe scraper
+        env:
+          LIMIT: ${{ github.event.inputs.limit || '30' }}
+          CITIES: ${{ github.event.inputs.cities || 'Brisbane,Gold Coast' }}
+          NICHES: ${{ github.event.inputs.niches || 'dentist,aesthetic' }}
+        run: python command-centre/scripts/scrape_public_leads.py --limit "$LIMIT" --cities "$CITIES" --niches "$NICHES"
+      - name: Commit updated command-centre data
+        run: |
+          git config user.name "ai-king-command-centre[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add command-centre/data/leads.json command-centre/data/run_state.json
+          if git diff --cached --quiet; then
+            echo "No command-centre data changes."
+          else
+            git commit -m "Update AI King command centre leads"
+            git push
+          fi
+      - name: Request GitHub Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

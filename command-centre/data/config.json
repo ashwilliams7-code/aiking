@@ -1,0 +1,41 @@
+{
+  "brand": "AI King",
+  "command_centre": "AI King Command Centre v1",
+  "owner": "Ash Williams",
+  "primary_offer": "AI Revenue Leakage Audit",
+  "positioning": "You may not need more leads. You may need to stop leaking the ones you already paid for.",
+  "approval_policy": "Manual approval before outbound for the first 100-200 messages. Sky can research, score and draft automatically; Ash approves send decisions.",
+  "priority_niches": [
+    "Brisbane aesthetics clinics",
+    "Gold Coast dental clinics",
+    "Allied health clinics",
+    "Premium trades",
+    "Real estate/property operators",
+    "B2B consultants/agencies"
+  ],
+  "status_order": [
+    "new",
+    "researched",
+    "scored",
+    "draft_ready",
+    "approval_queue",
+    "approved_to_contact",
+    "contacted",
+    "follow_up_due",
+    "warm",
+    "booked_call",
+    "proposal_sent",
+    "won",
+    "lost"
+  ],
+  "score_rules": {
+    "hot": 85,
+    "good": 75,
+    "watch": 60
+  },
+  "telegram_brief": {
+    "default_time": "08:30",
+    "destination": "origin Telegram chat",
+    "mode": "approval-first"
+  }
+}
