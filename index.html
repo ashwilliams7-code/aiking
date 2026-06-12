@@ -151,7 +151,65 @@
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.boot,.mobile-launch{display:none!important}[data-reveal],.stagger > *{opacity:1!important;transform:none!important;filter:none!important}.hero-reveal{opacity:1!important;transform:none!important;filter:none!important}.ai-mark{animation:markGlow 3.6s ease-in-out infinite!important}.btn-primary{animation:ctaPulse 3.2s ease-out 1.2s infinite!important}.demo-output::after{animation:cursorBlink 1.05s steps(1) infinite!important}}
 
   /* Dynamic funnel + portal layer */
-  .quiz-section{background:radial-gradient(620px 260px at 50% 0%,rgba(209,254,23,.12),transparent 70%)}.quiz-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch;padding:24px;border-radius:38px;border:1px solid rgba(209,254,23,.28);background:linear-gradient(160deg,rgba(255,255,255,.095),rgba(255,255,255,.028));box-shadow:var(--shadow)}.quiz-copy{align-self:center;padding:10px}.quiz-copy h2{margin-top:12px;font-size:clamp(36px,5vw,70px);line-height:.9}.quiz-board{padding:18px;border-radius:30px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22)}.quiz-progress{height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.09);margin-bottom:16px}.quiz-progress span{display:block;width:33.3%;height:100%;background:linear-gradient(90deg,var(--green),var(--mint));border-radius:inherit;transition:.24s}.quiz-form fieldset{border:0;margin:0;padding:0;display:none}.quiz-form fieldset.is-active{display:grid;gap:10px}.quiz-form legend{font-family:"Space Grotesk";font-size:clamp(24px,3.2vw,38px);line-height:1;margin-bottom:12px;font-weight:900;letter-spacing:-.04em}.quiz-form label,.audit-form label{display:grid;gap:8px;color:#f7f7f8;font-weight:900}.quiz-form label span{display:block;padding:14px 15px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);color:var(--soft);transition:.18s}.quiz-form input{position:absolute;opacity:0}.quiz-form input:checked + span{border-color:rgba(209,254,23,.55);background:rgba(209,254,23,.13);color:#f7f7f8;box-shadow:0 0 38px rgba(209,254,23,.09)}.quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}.quiz-result{display:grid;gap:12px}.quiz-result h3{font-size:clamp(30px,4.2vw,52px);line-height:.92}.quiz-result-list{display:grid;gap:8px}.quiz-result-list span{display:flex;gap:8px;padding:10px 12px;border-radius:15px;border:1px solid rgba(209,254,23,.20);background:rgba(209,254,23,.07);color:var(--soft);font-weight:800}.portal-grid{display:grid;grid-template-columns:1fr .9fr;gap:22px;align-items:center}.portal-console{padding:20px;border-radius:30px;border:1px solid rgba(209,254,23,.30);background:linear-gradient(180deg,rgba(2,8,4,.84),rgba(14,18,16,.72));box-shadow:var(--shadow)}.console-top,.console-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}.console-top{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.13em}.console-top b,.console-row b{color:var(--green-2);font-size:12px;text-transform:uppercase;letter-spacing:.09em}.console-row span{color:#f7f7f8;font-weight:800}.audit-modal{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;padding:18px}.audit-modal[hidden]{display:none}.audit-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}.audit-panel{position:relative;width:min(100%,760px);max-height:min(92vh,900px);overflow:auto;padding:26px;border-radius:34px;border:1px solid rgba(209,254,23,.36);background:radial-gradient(520px 240px at 20% 0%,rgba(209,254,23,.17),transparent 70%),linear-gradient(160deg,#171a1b,#0f1113);box-shadow:0 34px 110px rgba(0,0,0,.66),0 0 70px rgba(209,254,23,.12)}.audit-panel h2{margin-top:12px;font-size:clamp(34px,5.5vw,64px);line-height:.9}.audit-close{position:absolute;right:14px;top:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-size:28px;cursor:pointer}.audit-form{margin-top:20px;display:grid;gap:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.audit-form input,.audit-form select,.audit-form textarea{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.065);color:#f7f7f8;padding:13px 14px;font:inherit}.audit-form textarea{resize:vertical}.audit-form input::placeholder,.audit-form textarea::placeholder{color:rgba(255,255,255,.42)}.audit-actions{display:flex;flex-wrap:wrap;gap:10px}.audit-note{font-size:12px;color:var(--quiet)}body.audit-open{overflow:hidden}body.audit-open .mobilebar{transform:translateY(115%);pointer-events:none}.menu-panel[hidden],.quiz-result[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .quiz-section{background:radial-gradient(620px 260px at 50% 0%,rgba(209,254,23,.12),transparent 70%)}
+  .quiz-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch;padding:24px;border-radius:38px;border:1px solid rgba(209,254,23,.28);background:linear-gradient(160deg,rgba(255,255,255,.095),rgba(255,255,255,.028));box-shadow:var(--shadow)}
+  .quiz-copy{align-self:center;padding:10px}
+  .quiz-copy h2{margin-top:12px;font-size:clamp(36px,5vw,70px);line-height:.9}
+  .audit-flow-steps{counter-reset:auditFlow;display:grid;gap:9px;margin:20px 0 0;padding:0;list-style:none}
+  .audit-flow-steps li{counter-increment:auditFlow;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border:1px solid rgba(255,255,255,.10);border-radius:16px;background:rgba(255,255,255,.045);color:var(--soft);font-weight:800}
+  .audit-flow-steps li::before{content:counter(auditFlow);width:24px;height:24px;border-radius:9px;display:grid;place-items:center;background:rgba(209,254,23,.16);color:var(--green);font-family:"Space Mono";font-size:12px;font-weight:900}
+  .quiz-board{position:relative;padding:18px;border-radius:30px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22);overflow:hidden}
+  .quiz-board::before{content:"";position:absolute;inset:-1px;pointer-events:none;background:radial-gradient(520px 190px at 18% 0%,rgba(209,254,23,.12),transparent 68%);opacity:.9}
+  .quiz-board > *{position:relative}
+  .mini-audit-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+  .mini-audit-label,.quiz-step-count{display:inline-flex;align-items:center;min-height:30px;padding:7px 10px;border-radius:999px;border:1px solid rgba(209,254,23,.22);background:rgba(209,254,23,.08);font-family:"Space Mono";font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--green)}
+  .quiz-step-count{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.055);color:var(--soft)}
+  .quiz-step-copy{margin:0 0 12px;color:#f7f7f8;font-weight:850;font-size:14px}
+  .quiz-progress{height:8px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.09);margin-bottom:16px}
+  .quiz-progress span{display:block;width:33.3%;height:100%;background:linear-gradient(90deg,var(--green),var(--mint));border-radius:inherit;transition:.24s cubic-bezier(.16,1,.3,1)}
+  .quiz-form fieldset{border:0;margin:0;padding:0;display:none}
+  .quiz-form fieldset.is-active{display:grid;gap:10px}
+  .quiz-form legend{font-family:"Space Grotesk";font-size:clamp(24px,3.2vw,38px);line-height:1;margin-bottom:8px;font-weight:900;letter-spacing:-.04em}
+  .step-hint{margin:-2px 0 12px;color:var(--quiet);font-size:13px;font-weight:800}
+  .quiz-form label,.audit-form label{display:grid;gap:8px;color:#f7f7f8;font-weight:900}
+  .quiz-form label span{display:block;padding:14px 15px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);color:var(--soft);transition:.18s}
+  .quiz-form label span b{display:block;color:#f7f7f8;line-height:1.18}
+  .quiz-form label span small{display:block;margin-top:5px;color:var(--quiet);font-size:12.5px;font-weight:750;line-height:1.35}
+  .quiz-form input{position:absolute;opacity:0}
+  .quiz-form input:checked + span{border-color:rgba(209,254,23,.55);background:rgba(209,254,23,.13);color:#f7f7f8;box-shadow:0 0 38px rgba(209,254,23,.09)}
+  .quiz-form input:checked + span small{color:rgba(247,247,248,.74)}
+  .quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+  .quiz-actions .btn[disabled]{cursor:not-allowed;opacity:.45;transform:none;box-shadow:none}
+  .quiz-nudge{min-height:20px;margin-top:10px;color:var(--green);font-size:13px;font-weight:900}
+  .quiz-result{display:grid;gap:12px}
+  .quiz-result h3{font-size:clamp(30px,4.2vw,52px);line-height:.92}
+  .quiz-result-intro{color:#f7f7f8;font-weight:850}
+  .quiz-result-list{display:grid;gap:8px}
+  .quiz-result-list span{display:flex;gap:8px;padding:10px 12px;border-radius:15px;border:1px solid rgba(209,254,23,.20);background:rgba(209,254,23,.07);color:var(--soft);font-weight:800}
+  .portal-grid{display:grid;grid-template-columns:1fr .9fr;gap:22px;align-items:center}
+  .portal-console{padding:20px;border-radius:30px;border:1px solid rgba(209,254,23,.30);background:linear-gradient(180deg,rgba(2,8,4,.84),rgba(14,18,16,.72));box-shadow:var(--shadow)}
+  .console-top,.console-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .console-top{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.13em}
+  .console-top b,.console-row b{color:var(--green-2);font-size:12px;text-transform:uppercase;letter-spacing:.09em}
+  .console-row span{color:#f7f7f8;font-weight:800}
+  .audit-modal{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;padding:18px}
+  .audit-modal[hidden]{display:none}
+  .audit-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}
+  .audit-panel{position:relative;width:min(100%,760px);max-height:min(92vh,900px);overflow:auto;padding:26px;border-radius:34px;border:1px solid rgba(209,254,23,.36);background:radial-gradient(520px 240px at 20% 0%,rgba(209,254,23,.17),transparent 70%),linear-gradient(160deg,#171a1b,#0f1113);box-shadow:0 34px 110px rgba(0,0,0,.66),0 0 70px rgba(209,254,23,.12)}
+  .audit-panel h2{margin-top:12px;font-size:clamp(34px,5.5vw,64px);line-height:.9}
+  .audit-close{position:absolute;right:14px;top:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-size:28px;cursor:pointer}
+  .audit-form{margin-top:20px;display:grid;gap:14px}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .audit-form input,.audit-form select,.audit-form textarea{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.065);color:#f7f7f8;padding:13px 14px;font:inherit}
+  .audit-form textarea{resize:vertical}
+  .audit-form input::placeholder,.audit-form textarea::placeholder{color:rgba(255,255,255,.42)}
+  .audit-actions{display:flex;flex-wrap:wrap;gap:10px}
+  .audit-note{font-size:12px;color:var(--quiet)}
+  body.audit-open{overflow:hidden}
+  body.audit-open .mobilebar{transform:translateY(115%);pointer-events:none}
+  .menu-panel[hidden],.quiz-result[hidden]{display:none!important}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
   @media(max-width:1080px){.quiz-shell,.portal-grid{grid-template-columns:1fr}}
   @media(max-width:759px){.quiz-shell{padding:16px;border-radius:30px}.quiz-board{padding:14px;border-radius:24px}.quiz-actions,.audit-actions{display:grid}.portal-console{padding:16px}.console-row,.console-top{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.audit-panel{padding:22px 16px;border-radius:28px}.audit-modal{padding:10px}.audit-panel .lead{font-size:16px}.mobilebar .ig{flex:0 0 76px}}
 
@@ -278,11 +336,11 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <a class="btn btn-primary btn-mini nav-cta" href="#audit-application" data-open-audit>Open revenue leak audit <span class="arrow">→</span></a>
+      <a class="btn btn-primary btn-mini nav-cta" href="#ai-bottleneck-quiz">Start mini audit <span class="arrow">→</span></a>
       <div class="nav-menu" data-menu>
         <button class="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="navMenuPanel"><span>Menu</span><span class="menu-dots" aria-hidden="true"></span></button>
         <div class="menu-panel" id="navMenuPanel" role="menu" hidden aria-hidden="true">
-          <a href="#ai-bottleneck-quiz" role="menuitem"><b>Revenue Leak Quiz</b><span>Find the first leak worth turning into an AI Agent deployment.</span></a>
+          <a href="#ai-bottleneck-quiz" role="menuitem"><b>60-second Mini Audit</b><span>Pick the leak, tools and timing before opening a clean audit brief.</span></a>
           <a href="#offer" role="menuitem"><b>Services</b><span>Revenue leakage audit, guarded AI Agent sprint and private AI workforce layer.</span></a>
           <a href="#portal-preview" role="menuitem"><b>Command Centre Preview</b><span>Public-safe demo of the approval-first operating layer.</span></a>
           <a href="#deployments" role="menuitem"><b>Agent Systems</b><span>The four guarded agent systems deployed after the audit.</span></a>
@@ -303,7 +361,7 @@
       <h1 class="hero-reveal">Stop leaking revenue. Deploy <span class="ai-mark">AI</span> Agents.</h1>
       <p class="hero-sub hero-reveal"><b><span class="ai-mark">AI</span> King finds where leads, campaigns, inboxes, handovers and owner attention leak money</b> — then deploys guarded AI Agents that follow up, report, create and execute for 100x operational leverage.</p>
       <div class="actions hero-reveal">
-        <a class="btn btn-primary" href="#ai-bottleneck-quiz">Find my revenue leak <span class="arrow">→</span></a>
+        <a class="btn btn-primary" href="#ai-bottleneck-quiz">Start the mini audit <span class="arrow">→</span></a>
         <a class="btn btn-secondary" href="#audit-application" data-open-audit>Open AI Revenue Leakage Audit</a>
       </div>
       <div class="hero-cta-note hero-reveal">Don’t hire another agency. Deploy the AI Agents that stop the leak.</div>
@@ -359,46 +417,58 @@
     <div class="wrap">
       <div class="quiz-shell" data-reveal>
         <div class="quiz-copy">
-          <div class="section-kicker">Dynamic fit engine</div>
-          <h2>Find the first revenue leak worth fixing.</h2>
-          <p class="lead">A fast decision layer for founders: choose where money or momentum leaks, name the tools involved, and AIKING turns it into the first sensible AI Agent deployment path.</p>
-          <div class="mini-proof"><span>60-second leak map</span><span>No generic chatbot answer</span><span>Audit-ready summary</span></div>
+          <div class="section-kicker">60-second mini audit</div>
+          <h2>Make the first AI Agent path obvious.</h2>
+          <p class="lead">A smoother front door for serious buyers: pick the leak, name the tools, set the timing, then open a clean audit brief instead of starting with a blank enquiry.</p>
+          <div class="mini-proof"><span>60-second mini audit</span><span>No generic chatbot answer</span><span>Prefilled audit brief</span></div>
+          <ol class="audit-flow-steps" aria-label="Mini audit flow">
+            <li>Choose the revenue leak you would pay to stop first.</li>
+            <li>Add the systems where the context already lives.</li>
+            <li>Send Ash a sharper brief with the first agent path prefilled.</li>
+          </ol>
         </div>
         <div class="quiz-board" aria-live="polite">
+          <div class="mini-audit-top"><span class="mini-audit-label">Mini audit</span><span class="quiz-step-count" id="quizStepCount">Step 1 of 3</span></div>
+          <p class="quiz-step-copy" id="quizStepCopy">Start with the leak. This decides the first sensible agent path.</p>
           <div class="quiz-progress"><span id="quizProgress"></span></div>
           <p class="sr-only" id="quizStatus" role="status"></p>
           <form id="bottleneckQuiz" class="quiz-form">
             <fieldset class="quiz-step is-active" data-step="0">
-              <legend>Where is the business leaking the most revenue or speed?</legend>
-              <label><input type="radio" name="bottleneck" value="Revenue follow-up" data-path="revenue" required><span>Warm leads and follow-up go cold</span></label>
-              <label><input type="radio" name="bottleneck" value="Founder approvals" data-path="command"><span>Deals, content or approvals wait for the founder</span></label>
-              <label><input type="radio" name="bottleneck" value="Operations/admin" data-path="ops"><span>Admin, reporting and handovers bury execution</span></label>
-              <label><input type="radio" name="bottleneck" value="Client experience" data-path="trust"><span>Client requests need cleaner triage</span></label>
+              <legend>Where is revenue or speed disappearing first?</legend>
+              <p class="step-hint">Pick the leak that feels most expensive right now.</p>
+              <label><input type="radio" name="bottleneck" value="Revenue follow-up" data-path="revenue" required><span><b>Warm leads go cold</b><small>Enquiries, quotes or booked calls do not get followed up fast enough.</small></span></label>
+              <label><input type="radio" name="bottleneck" value="Founder approvals" data-path="command"><span><b>The founder is the bottleneck</b><small>Deals, content, decisions or approvals wait for one person.</small></span></label>
+              <label><input type="radio" name="bottleneck" value="Operations/admin" data-path="ops"><span><b>Admin buries execution</b><small>Reporting, handovers and updates keep falling back to manual chasing.</small></span></label>
+              <label><input type="radio" name="bottleneck" value="Client experience" data-path="trust"><span><b>Client requests need triage</b><small>Important messages need faster routing, safer drafting and cleaner escalation.</small></span></label>
             </fieldset>
             <fieldset class="quiz-step" data-step="1">
-              <legend>What does the team already run on?</legend>
-              <label><input type="checkbox" name="tools" value="CRM"><span>CRM / lead pipeline</span></label>
-              <label><input type="checkbox" name="tools" value="Email"><span>Email / inbox chaos</span></label>
-              <label><input type="checkbox" name="tools" value="Docs"><span>Docs, notes and SOPs</span></label>
-              <label><input type="checkbox" name="tools" value="Bookings"><span>Bookings / calendar / calls</span></label>
+              <legend>Where does that context already live?</legend>
+              <p class="step-hint">Choose any that matter. Skip if you are not sure yet.</p>
+              <label><input type="checkbox" name="tools" value="CRM"><span><b>CRM / lead pipeline</b><small>Deals, lead stages, quotes, sales notes.</small></span></label>
+              <label><input type="checkbox" name="tools" value="Email"><span><b>Email / inbox chaos</b><small>Follow-ups, client questions, approvals and missed context.</small></span></label>
+              <label><input type="checkbox" name="tools" value="Docs"><span><b>Docs, notes and SOPs</b><small>Internal knowledge, checklists, briefs and procedures.</small></span></label>
+              <label><input type="checkbox" name="tools" value="Bookings"><span><b>Bookings / calendar / calls</b><small>Consults, handovers, reminders and next-step scheduling.</small></span></label>
             </fieldset>
             <fieldset class="quiz-step" data-step="2">
-              <legend>How soon should this be mapped?</legend>
-              <label><input type="radio" name="urgency" value="This week" required><span>This week — the leak is obvious</span></label>
-              <label><input type="radio" name="urgency" value="This month"><span>This month — want the first agent scoped</span></label>
-              <label><input type="radio" name="urgency" value="Exploring"><span>Exploring — need a private map first</span></label>
+              <legend>How soon should AIKING map the first move?</legend>
+              <p class="step-hint">This sets the tone of the audit brief.</p>
+              <label><input type="radio" name="urgency" value="This week" required><span><b>This week</b><small>The leak is visible and worth mapping now.</small></span></label>
+              <label><input type="radio" name="urgency" value="This month"><span><b>This month</b><small>You want the first guarded AI Agent scoped properly.</small></span></label>
+              <label><input type="radio" name="urgency" value="Exploring"><span><b>Exploring</b><small>You want a private map before committing to a build.</small></span></label>
             </fieldset>
             <div class="quiz-result" id="quizResult" hidden>
-              <span class="section-kicker">Recommended path</span>
+              <span class="section-kicker">Mini audit complete</span>
               <h3 id="quizResultTitle">Private AI Revenue Leakage Audit</h3>
               <p id="quizResultText">Start with the audit so AIKING can map the highest-value leak and safest first deployment.</p>
+              <p class="quiz-result-intro">Your answers are now turned into a clean brief Ash can read fast.</p>
               <div class="quiz-result-list" id="quizResultList"></div>
-              <button class="btn btn-primary" type="button" data-open-audit>Send this as my audit brief <span class="arrow">→</span></button>
+              <button class="btn btn-primary" type="button" data-open-audit>Open the pre-filled audit email <span class="arrow">→</span></button>
             </div>
             <div class="quiz-actions">
               <button class="btn btn-secondary" type="button" id="quizBack">Back</button>
               <button class="btn btn-primary" type="button" id="quizNext">Next <span class="arrow">→</span></button>
             </div>
+            <p class="quiz-nudge" id="quizNudge" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -639,7 +709,7 @@ OWNER: context switching again</div></div></article>
   <div class="wrap footer-inner"><span>© <span id="year">2026</span> AI King · Williams Group · Australia</span><span class="mono">Revenue leakage · AI Agents · human guardrails</span></div>
 </footer>
 
-<div class="mobilebar" aria-label="Sticky mobile call to action"><div class="mobilebar-inner"><a class="btn btn-primary" href="#audit-application" data-open-audit>Open revenue leak audit <span class="arrow">→</span></a><a class="btn btn-secondary ig" href="#ai-bottleneck-quiz" aria-label="Revenue leak quiz">Quiz</a></div></div>
+<div class="mobilebar" aria-label="Sticky mobile call to action"><div class="mobilebar-inner"><a class="btn btn-primary" href="#ai-bottleneck-quiz">Start mini audit <span class="arrow">→</span></a><a class="btn btn-secondary ig" href="#audit-application" data-open-audit aria-label="Open audit brief">Brief</a></div></div>
 
 
 <div class="audit-modal" id="audit-application" role="dialog" aria-modal="true" aria-labelledby="auditTitle" hidden>
@@ -647,8 +717,8 @@ OWNER: context switching again</div></div></article>
   <div class="audit-panel" tabindex="-1">
     <button class="audit-close" type="button" data-close-audit aria-label="Close audit application">×</button>
     <div class="section-kicker">Private AI Revenue Leakage Audit</div>
-    <h2 id="auditTitle" tabindex="-1">Turn the static enquiry into a revenue leak brief.</h2>
-    <p class="lead">Answer the essentials and a structured brief goes straight to Ash — the leak, tools and urgency first, no spam list, typical reply within 24–48h.</p>
+    <h2 id="auditTitle" tabindex="-1">Send Ash a clean revenue leak brief.</h2>
+    <p class="lead">The mini audit pre-fills the leak, tools and timing so the enquiry reads like a real operating problem — not a blank contact form.</p>
     <form id="auditForm" class="audit-form">
       <div class="form-grid">
         <label>Full name <input name="name" autocomplete="name" placeholder="Your name" required></label>
@@ -656,9 +726,12 @@ OWNER: context switching again</div></div></article>
         <label>Company <input name="company" autocomplete="organization" placeholder="Company / project"></label>
         <label>Role <input name="role" placeholder="Founder, CEO, operator..."></label>
       </div>
-      <label>Biggest revenue leak <select name="bottleneck"><option>Revenue follow-up</option><option>Founder approvals</option><option>Operations/admin</option><option>Client experience</option><option>Content/campaign follow-through</option><option>Not sure yet</option></select></label>
-      <label>Current tools <input name="tools" placeholder="CRM, email, docs, booking, ads, Slack..."></label>
-      <label>What revenue leak should AI Agents move first? <textarea name="message" rows="4" placeholder="Example: warm leads go cold, campaign enquiries are not followed up, inbox handovers are messy..."></textarea></label>
+      <div class="form-grid">
+        <label>Biggest revenue leak <select name="bottleneck"><option>Revenue follow-up</option><option>Founder approvals</option><option>Operations/admin</option><option>Client experience</option><option>Content/campaign follow-through</option><option>Not sure yet</option></select></label>
+        <label>Preferred timing <select name="urgency"><option>This week</option><option>This month</option><option>Exploring</option></select></label>
+      </div>
+      <label>Systems already in play <input name="tools" placeholder="CRM, email, docs, booking, ads, Slack..."></label>
+      <label>What should AI Agents recover or move first? <textarea name="message" rows="4" placeholder="Example: warm leads go cold, campaign enquiries are not followed up, inbox handovers are messy..."></textarea></label>
       <div class="audit-actions"><button class="btn btn-primary" type="submit">Create audit email <span class="arrow">→</span></button><button class="btn btn-secondary" type="button" data-close-audit>Not yet</button></div>
       <p class="audit-note">Private and direct: this opens a pre-filled revenue leak brief to Ash. Nothing is stored on this site.</p>
     </form>
@@ -798,8 +871,10 @@ OWNER: context switching again</div></div></article>
       var msg = auditForm.elements.message;
       var bottleneck = auditForm.elements.bottleneck;
       var tools = auditForm.elements.tools;
+      var urgency = auditForm.elements.urgency;
       if (bottleneck && quizSummary.bottleneck) bottleneck.value = quizSummary.bottleneck;
       if (tools && quizSummary.tools) tools.value = quizSummary.tools;
+      if (urgency && quizSummary.urgency) urgency.value = quizSummary.urgency;
       if (msg && !msg.value) msg.value = quizSummary.message;
     }
     window.setTimeout(function(){ var t = document.getElementById('auditTitle'); if (t) t.focus(); else if (auditPanel) auditPanel.focus(); }, 20);
@@ -835,6 +910,7 @@ OWNER: context switching again</div></div></article>
         'Company: ' + (f.company.value || ''),
         'Role: ' + (f.role.value || ''),
         'Biggest revenue leak: ' + (f.bottleneck.value || ''),
+        'Preferred timing: ' + (f.urgency.value || ''),
         'Current tools: ' + (f.tools.value || ''),
         '',
         'Context:',
@@ -857,30 +933,54 @@ OWNER: context switching again</div></div></article>
     var quizResultTitle = document.getElementById('quizResultTitle');
     var quizResultText = document.getElementById('quizResultText');
     var quizResultList = document.getElementById('quizResultList');
+    var quizStepCount = document.getElementById('quizStepCount');
+    var quizStepCopy = document.getElementById('quizStepCopy');
+    var quizNudge = document.getElementById('quizNudge');
     var quizIndex = 0;
+    var stepCopy = [
+      'Start with the leak. This decides the first sensible agent path.',
+      'Now name where the context lives so the audit feels practical.',
+      'Set the timing so the brief lands with the right urgency.',
+      'Brief ready. Open it, add contact details, and send.'
+    ];
     var pathMap = {
-      revenue:['Revenue Follow-up Agent Sprint','Your first system should chase lead momentum, draft follow-ups and escalate hot opportunities before money goes cold.'],
-      command:['Founder Command Agent','Your first system should turn inboxes, notes and approvals into a clean decision queue so the founder is not the workflow.'],
-      ops:['Operations Execution Agent','Your first system should clean reporting, admin and handovers so the team stops relying on memory and manual chasing.'],
-      trust:['Client Experience Triage Agent','Your first system should route client requests, draft safe responses and escalate sensitive moments with approval gates.']
+      revenue:['Revenue Follow-up Agent Sprint','Start by recovering lead momentum: draft follow-ups, surface hot opportunities and escalate the work before money goes cold.'],
+      command:['Founder Command Agent','Start by removing founder drag: turn inboxes, notes and approvals into a clean decision queue with human control.'],
+      ops:['Operations Execution Agent','Start by cleaning the operating layer: reporting, admin and handovers stop relying on memory and manual chasing.'],
+      trust:['Client Experience Triage Agent','Start by protecting client flow: route requests, draft safe replies and escalate sensitive moments with approval gates.']
     };
     function selected(name){ var el = quiz.querySelector('[name="'+name+'"]:checked'); return el ? el.value : ''; }
     function selectedPath(){ var el = quiz.querySelector('[name="bottleneck"]:checked'); return el ? (el.getAttribute('data-path') || 'command') : 'command'; }
     function selectedTools(){ return [].slice.call(quiz.querySelectorAll('[name="tools"]:checked')).map(function(el){ return el.value; }).join(', '); }
     var quizStatus = document.getElementById('quizStatus');
+    function canAdvance(){
+      if (quizIndex === 0) return !!selected('bottleneck');
+      if (quizIndex === 2) return !!selected('urgency');
+      return quizIndex < quizSteps.length;
+    }
     function updateQuiz(){
       quizSteps.forEach(function(step,i){ step.classList.toggle('is-active', i === quizIndex); });
+      var isResult = quizIndex >= quizSteps.length;
       if (quizStatus) {
-        if (quizIndex >= quizSteps.length) quizStatus.textContent = 'Quiz complete. Your recommended path is shown below.';
+        if (isResult) quizStatus.textContent = 'Mini audit complete. Your recommended path is shown below.';
         else {
           var legend = quizSteps[quizIndex] ? quizSteps[quizIndex].querySelector('legend') : null;
           quizStatus.textContent = 'Step ' + (quizIndex + 1) + ' of ' + quizSteps.length + (legend ? ': ' + legend.textContent : '');
         }
       }
-      if (quizResult) quizResult.hidden = quizIndex < quizSteps.length;
-      if (quizBack) quizBack.style.visibility = quizIndex === 0 ? 'hidden' : 'visible';
-      if (quizNext) quizNext.textContent = quizIndex >= quizSteps.length - 1 ? 'Show my path →' : 'Next →';
-      if (quizProgress) quizProgress.style.width = Math.min(100, ((quizIndex + 1) / (quizSteps.length + 1)) * 100) + '%';
+      if (quizResult) quizResult.hidden = !isResult;
+      if (quizBack) {
+        quizBack.style.visibility = quizIndex === 0 ? 'hidden' : 'visible';
+        quizBack.textContent = isResult ? 'Refine answers' : 'Back';
+      }
+      if (quizNext) {
+        quizNext.style.display = isResult ? 'none' : 'inline-flex';
+        quizNext.innerHTML = quizIndex >= quizSteps.length - 1 ? 'Show my path <span class="arrow">→</span>' : 'Next <span class="arrow">→</span>';
+        quizNext.disabled = !canAdvance();
+      }
+      if (quizStepCount) quizStepCount.textContent = isResult ? 'Brief ready' : 'Step ' + (quizIndex + 1) + ' of ' + quizSteps.length;
+      if (quizStepCopy) quizStepCopy.textContent = stepCopy[Math.min(quizIndex, stepCopy.length - 1)];
+      if (quizProgress) quizProgress.style.width = Math.min(100, ((Math.min(quizIndex, quizSteps.length - 1) + 1) / quizSteps.length) * 100) + '%';
     }
     function showQuizResult(){
       var p = selectedPath();
@@ -890,24 +990,27 @@ OWNER: context switching again</div></div></article>
       var tools = selectedTools() || 'Tools not selected';
       if (quizResultTitle) quizResultTitle.textContent = data[0];
       if (quizResultText) quizResultText.textContent = data[1];
-      if (quizResultList) quizResultList.innerHTML = '<span>✓ Revenue leak: '+bottleneck+'</span><span>✓ Tools: '+tools+'</span><span>✓ Timing: '+urgency+'</span>';
-      quizSummary = { bottleneck:bottleneck, tools:tools, message:'Quiz result: '+data[0]+'\nRevenue leak: '+bottleneck+'\nTools: '+tools+'\nTiming: '+urgency+'\n\nI want AIKING to map the first safe AI Agent deployment that can recover this leak.' };
+      if (quizResultList) quizResultList.innerHTML = '<span>✓ Leak to recover: '+bottleneck+'</span><span>✓ Systems in play: '+tools+'</span><span>✓ Timing: '+urgency+'</span>';
+      quizSummary = { bottleneck:bottleneck, tools:tools, urgency:urgency, message:'Mini audit result: '+data[0]+'\nLeak to recover: '+bottleneck+'\nSystems in play: '+tools+'\nTiming: '+urgency+'\n\nI want AIKING to map the first safe AI Agent deployment that can recover this leak.' };
       try { localStorage.setItem('aikingQuizSummary', JSON.stringify(quizSummary)); } catch(e) {}
       quizIndex = quizSteps.length;
       updateQuiz();
     }
-    quiz.addEventListener('change', function(e){
-      var t = e.target;
-      if (reduceMotion || !t || t.type !== 'radio' || quizIndex >= quizSteps.length) return;
-      window.setTimeout(function(){
-        if (quizIndex >= quizSteps.length - 1) showQuizResult();
-        else { quizIndex += 1; updateQuiz(); }
-      }, 260);
+    quiz.addEventListener('change', function(){
+      if (quizNudge) quizNudge.textContent = '';
+      updateQuiz();
     });
-    if (quizBack) quizBack.addEventListener('click', function(){ quizIndex = Math.max(0, quizIndex - 1); updateQuiz(); });
+    if (quizBack) quizBack.addEventListener('click', function(){
+      if (quizNudge) quizNudge.textContent = '';
+      quizIndex = Math.max(0, quizIndex - 1);
+      updateQuiz();
+    });
     if (quizNext) quizNext.addEventListener('click', function(){
-      if (quizIndex === 0 && !selected('bottleneck')) return;
-      if (quizIndex === 2 && !selected('urgency')) return;
+      if (!canAdvance()) {
+        if (quizNudge) quizNudge.textContent = quizIndex === 0 ? 'Choose the leak you want mapped first.' : 'Choose a timing so the brief has context.';
+        return;
+      }
+      if (quizNudge) quizNudge.textContent = '';
       if (quizIndex >= quizSteps.length - 1) showQuizResult();
       else { quizIndex += 1; updateQuiz(); }
     });
