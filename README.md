@@ -5,7 +5,7 @@ Landing site for **AI King**, Ash Williams' private executive AI systems consult
 - **Live:** https://aiking.info
 - **Stack:** static HTML/CSS/JS (`index.html`) on GitHub Pages.
 - **Motion/conversion:** CSS boot/mobile launch sequence, canvas hero atmosphere, marquee proof strips, scroll-controlled story stage, 90-second demo flow, risk-reversal guarantee, animated counters, sticky mobile CTA; no backend required.
-- **Primary CTA:** mailto-based private AI Bottleneck Audit request until a real booking slug is connected.
+- **Primary CTA:** mailto-based private AI Revenue Leakage Audit request until a real booking slug is connected.
 
 ## Edit & deploy
 

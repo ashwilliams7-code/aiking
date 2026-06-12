@@ -100,7 +100,7 @@ Pick one:
 ### Lead Capture / Forms
 
 - **Fluent Forms Pro** or **Gravity Forms**
-  - Private AI Bottleneck Audit form
+  - Private AI Revenue Leakage Audit form
   - qualification questionnaire
   - lead source tracking
   - file uploads if needed
@@ -406,12 +406,12 @@ Acceptance:
 
 Tasks:
 
-1. Create AI Bottleneck Audit form.
+1. Create AI Revenue Leakage Audit form.
 2. Add conditional questions:
    - business type
    - team size
    - revenue range optional
-   - biggest bottleneck
+   - biggest revenue leak
    - current tools
    - urgency
    - budget/implementation readiness
@@ -858,7 +858,7 @@ The fastest useful first milestone is:
 1. WordPress staging online
 2. Bricks/ACF installed
 3. current homepage rebuilt dynamically
-4. real AI Bottleneck Audit form live on staging
+4. real AI Revenue Leakage Audit form live on staging
 5. basic login portal live on staging
 6. mobile QA screenshots captured
 
