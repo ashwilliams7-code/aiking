@@ -10,7 +10,7 @@ AIKING should not feel like a cheap automation shop, a chatbot agency, or a gene
 The marketing system:
 
 1. Name the pain: businesses leak revenue through slow follow-up, missed enquiries, manual handovers, owner bottlenecks, disconnected systems, weak reporting, and content/campaign gaps.
-2. Offer the easy first step: **AI Revenue Leak Snapshot — from A$1,250**.
+2. Offer the easy first step: **AI Revenue Leak Snapshot — from A$1,500**.
 3. Use the Snapshot to identify the highest-leverage leakage points and safest first agent path.
 4. Sell the next step only after diagnosis: Blueprint, deployment, or managed AI operations.
 5. Keep the public tone premium, direct, Australian, and operator-led.
@@ -27,7 +27,7 @@ Most businesses don’t need more tools. They need to stop leaking revenue throu
 
 ### Primary public offer
 
-**AI Revenue Leak Snapshot — from A$1,250**
+**AI Revenue Leak Snapshot — from A$1,500**
 
 A focused private diagnostic that shows where the business is leaking leads, revenue, time, follow-up, and operational capacity before any AI Agent deployment is recommended.
 
@@ -55,7 +55,7 @@ AI Revenue Leak Snapshot
 
 ### Price posture
 
-From **A$1,250**.
+From **A$1,500**.
 
 Do not position this as a free sales call. The buyer should feel they are applying for or purchasing a serious private diagnostic.
 
@@ -101,7 +101,7 @@ Support line:
 
 ## Offer ladder
 
-### 1. AI Revenue Leak Snapshot — from A$1,250
+### 1. AI Revenue Leak Snapshot — from A$1,500
 
 The easy entry point. Finds leakage and recommends the first practical AI Agent path.
 
@@ -109,7 +109,7 @@ The easy entry point. Finds leakage and recommends the first practical AI Agent 
 
 A deeper operating plan: integrations, data flow, approval gates, risk controls, implementation sequence, and measurable operating targets.
 
-### 3. AI Agent Deployments — from A$20k+
+### 3. AI Agent Deployments — from A$20,000+
 
 Build and deploy controlled agent systems around the business’s existing tools.
 
@@ -123,7 +123,7 @@ Examples:
 - Content Repurposing Agents.
 - Operations Intelligence Agents.
 
-### 4. Managed AI Operations — custom monthly
+### 4. Managed AI Revenue Operations — from A$7,500/month
 
 Ongoing monitoring, improvement, reporting, tuning, staff feedback, and new workflow expansion.
 
@@ -189,7 +189,7 @@ Examples:
 Homepage should clearly show:
 
 - Hero: “Stop leaking revenue. Deploy AI Agents.”
-- The A$1,250 Snapshot as the first step.
+- The A$1,500 Snapshot as the first step.
 - “Not a vague sales call” language.
 - What AIKING finds.
 - Agent deployment categories.
