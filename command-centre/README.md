@@ -6,9 +6,9 @@ This is a public-safe, approval-first customer acquisition radar for AI King.
 
 ## What it does
 
-- Displays the live lead pipeline from `data/leads.json`.
-- Runs a GitHub Actions scraper daily at 08:30 Brisbane time.
-- Scrapes public business listings and public website homepages only.
+- Displays the current saved lead pipeline from `data/leads.json`.
+- Automatic lead-radar scraping is paused; no daily scans run while the workflow is disabled/no `schedule` trigger exists.
+- Manual refresh is still possible via GitHub Actions `workflow_dispatch` if Ash explicitly asks for it.
 - Scores local dental / aesthetics prospects for AI King fit.
 - Generates Telegram-ready summary text for Ash to approve/review.
 

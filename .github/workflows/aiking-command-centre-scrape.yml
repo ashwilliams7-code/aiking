@@ -15,8 +15,8 @@ on:
         description: "Comma-separated niches: dentist,aesthetic"
         required: false
         default: "dentist,aesthetic"
-  schedule:
-    - cron: "30 22 * * *"
+  # Automatic lead-radar scans are intentionally paused.
+  # Use workflow_dispatch only if Ash explicitly asks for a manual refresh.
 
 permissions:
   contents: write
