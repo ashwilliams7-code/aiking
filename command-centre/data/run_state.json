@@ -1,18 +1,25 @@
 {
-  "last_run_at": "2026-06-13T23:38:11+00:00",
-  "mode": "GitHub Actions cloud scraper",
+  "last_run_at": "2026-06-16T11:29:00+00:00",
+  "mode": "Sky local public-source scraper → GitHub Pages static command centre",
   "status": "ok",
-  "source": "OpenStreetMap public listings + public website homepage scan",
+  "source": "OpenStreetMap public listings + public website/contact checks",
   "cities": [
     "Brisbane",
-    "Gold Coast"
+    "Gold Coast",
+    "Sunshine Coast",
+    "Ipswich / Logan",
+    "Toowoomba"
   ],
   "niches": [
-    "dentist",
-    "aesthetic"
+    "Aesthetics clinic",
+    "Allied health",
+    "Dental",
+    "Premium trades",
+    "Real estate / property"
   ],
-  "found": 30,
-  "saved": 30,
+  "found": 696,
+  "enriched": 140,
+  "saved": 100,
   "errors": [],
   "safety": "Public website/contact metadata only. No login, no bypassing, no private data, no automatic outbound."
 }
