@@ -2,9 +2,14 @@
   "brand": "AI King",
   "command_centre": "AI King Command Centre v1",
   "owner": "Ash Williams",
+  "campaign_sender": {
+    "email": "ash@aiking.info",
+    "display_name": "Ash Williams · AIKING",
+    "purpose": "Client-facing AIKING marketing/outreach campaigns only. Do not send lead campaigns from iCloud, Trilogy, or unrelated personal/work mailboxes."
+  },
   "primary_offer": "AI Revenue Leakage Audit",
   "positioning": "You may not need more leads. You may need to stop leaking the ones you already paid for.",
-  "approval_policy": "Manual approval before outbound for the first 100-200 messages. Sky can research, score and draft automatically; Ash approves send decisions.",
+  "approval_policy": "Manual approval before outbound for the first 100-200 messages. Sky can research, score and draft automatically; Ash approves send decisions. Real client-facing campaigns must use ash@aiking.info as the sender identity.",
   "priority_niches": [
     "Brisbane aesthetics clinics",
     "Gold Coast dental clinics",

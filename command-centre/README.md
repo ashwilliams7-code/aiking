@@ -14,7 +14,9 @@ This is a public-safe, approval-first customer acquisition radar for AI King.
 
 ## Safety boundaries
 
+- Required sender identity for any client-facing lead campaign: `Ash Williams · AIKING <ash@aiking.info>`.
 - No automatic outbound messages.
+- Do not send AIKING lead/campaign outreach from iCloud, Trilogy, or unrelated personal/work mailboxes.
 - No login-only scraping, CAPTCHA bypass, hidden APIs, or private data collection.
 - No secrets in the repo.
 - Published lead data is public-safe metadata only.
