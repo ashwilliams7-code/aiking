@@ -1,15 +1,15 @@
 # AIKING — aiking.info
 
-Landing site for **AIKING**, Ash Williams' premium Australian AI operating consultancy.
+Landing site for **AIKING**, Ash Williams' Australian executive AI advisory and agentic implementation consultancy.
 
 - **Live:** https://aiking.info
-- **Stack:** static HTML/CSS/JS (`index.html`) on GitHub Pages.
-- **Motion/conversion:** CSS boot/mobile launch sequence, canvas hero atmosphere, marquee proof strips, scroll-controlled story stage, Snapshot intake flow, offer ladder, animated counters, sticky mobile CTA; no backend required.
-- **Primary CTA:** mailto-based Revenue Leak Screen / private AI Revenue Leak Snapshot application (from A$1,500 ex GST) until a real checkout/application slug is connected.
+- **Stack:** static HTML/CSS/JS on GitHub Pages.
+- **Positioning:** agentic AI consulting for CEOs, founders, private clients, boards and executive teams.
+- **Primary CTA:** mailto-based Private Executive Briefing request to `ash@aiking.info`.
 
 ## Edit & deploy
 
-This is a static site. Edit `index.html`, commit, push to `main`, and GitHub Pages redeploys automatically.
+Edit the static pages, commit, push to `main`, and GitHub Pages redeploys automatically.
 
 ## Custom domain
 

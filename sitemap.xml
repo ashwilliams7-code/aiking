@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://aiking.info/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://aiking.info/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://aiking.info/executive-ai-advisory.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/agentic-implementation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/executive-intelligence.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/governance.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/selected-work.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/founder.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/insights.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/privacy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/terms.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/responsible-ai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aiking.info/data-security.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

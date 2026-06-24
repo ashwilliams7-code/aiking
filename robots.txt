@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /command-centre/
+Disallow: /docs/
+Disallow: /assets/social/
 Sitemap: https://aiking.info/sitemap.xml
