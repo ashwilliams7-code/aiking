@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="aiking-icon-title">
+  <title id="aiking-icon-title">AIKING</title>
+  <defs>
+    <linearGradient id="lime" x1="20" y1="24" x2="106" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e5ff5a"/>
+      <stop offset="0.5" stop-color="#d1fe17"/>
+      <stop offset="1" stop-color="#a9d80f"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#141613"/>
+  <path d="M24 95 L52 31 L80 95" fill="none" stroke="url(#lime)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 70 H65" fill="none" stroke="url(#lime)" stroke-width="9" stroke-linecap="round"/>
+  <rect x="91" y="34" width="12" height="60" rx="6" fill="url(#lime)"/>
+</svg>

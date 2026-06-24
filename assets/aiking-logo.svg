@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 128" role="img" aria-labelledby="aiking-logo-title">
+  <title id="aiking-logo-title">AIKING</title>
+  <defs>
+    <linearGradient id="aiking-lime" x1="18" y1="16" x2="176" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e5ff5a"/>
+      <stop offset="0.46" stop-color="#d1fe17"/>
+      <stop offset="1" stop-color="#a9d80f"/>
+    </linearGradient>
+    <filter id="soft-lift" x="-8%" y="-35%" width="116%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#141613" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <g filter="url(#soft-lift)">
+    <path d="M30 104 L82 22 L134 104" fill="none" stroke="url(#aiking-lime)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M58 76 H106" fill="none" stroke="url(#aiking-lime)" stroke-width="13" stroke-linecap="round"/>
+    <rect x="160" y="25" width="16" height="80" rx="8" fill="url(#aiking-lime)"/>
+    <text x="206" y="104" fill="#141613" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="92" font-weight="900" letter-spacing="-7">KING</text>
+  </g>
+</svg>
