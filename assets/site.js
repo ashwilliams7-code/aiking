@@ -77,8 +77,13 @@
     }
     const io=new IntersectionObserver(entries=>{
       entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-    },{rootMargin:'0px 0px -7% 0px',threshold:.08});
+    },{rootMargin:'0px 0px -5% 0px',threshold:0});
     document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+    const catchup=setInterval(()=>{
+      const left=document.querySelectorAll('.rv:not(.in)');
+      if(!left.length){ clearInterval(catchup); return; }
+      left.forEach(el=>{ if(el.getBoundingClientRect().top<innerHeight*.98){ el.classList.add('in'); io.unobserve(el); } });
+    },900);
   }
 
   /* ---------- intelligence card: pointer tilt + live status ticks ---------- */
