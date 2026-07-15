@@ -185,7 +185,13 @@ h1 em,h2 em{font-style:italic;font-weight:430;letter-spacing:-.01em;color:var(--
 .flow-node+.flow-node::after{content:"";position:absolute;left:-8px;top:50%;transform:translateY(-50%) rotate(45deg);width:5px;height:5px;border-top:1px solid var(--lime);border-right:1px solid var(--lime)}
 @keyframes flowDash{to{background-position:8px 0}}
 @keyframes flowDashV{to{background-position:0 8px}}
-.fn-tool{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.fn-tool{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.brand-ico{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:#f2efe3;flex:0 0 22px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 4px 12px rgba(0,0,0,.35)}
+.brand-ico img{width:13px;height:13px;object-fit:contain;display:block}
+.brand-ico+.brand-ico{margin-left:-4px}
+.badge .brand-ico{width:19px;height:19px;border-radius:6px;flex:0 0 19px}
+.badge .brand-ico img{width:11px;height:11px}
+.badge:has(.brand-ico){display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 7px}
 .fn-step{font-size:14.5px;font-weight:550;color:var(--ink);line-height:1.4}
 .flow-node.ai{border-color:rgba(209,254,23,.4);background:linear-gradient(165deg,rgba(209,254,23,.09),rgba(209,254,23,.02));box-shadow:0 0 34px rgba(209,254,23,.07)}
 .flow-node.ai .fn-tool{color:var(--lime)}
