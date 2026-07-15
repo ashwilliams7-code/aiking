@@ -20,8 +20,8 @@
   document.querySelectorAll('.briefing-form').forEach(form=>{
     form.addEventListener('submit',e=>{
       e.preventDefault(); if(!form.reportValidity()) return; const fd=new FormData(form);
-      const lines=['Private Executive Briefing request','','Name: '+val(fd,'name'),'Role: '+val(fd,'role'),'Organisation: '+val(fd,'organisation'),'Email: '+val(fd,'email'),'Current AI maturity: '+(val(fd,'maturity')||'Not specified'),'Preferred timeframe: '+val(fd,'timeframe'),'','Strategic or operational outcome being explored:',val(fd,'outcome'),'','Confidentiality note: submitted through the AIKING private briefing form.'];
-      const href='mailto:'+email+'?subject='+encodeURIComponent('AIKING Private Executive Briefing request')+'&body='+encodeURIComponent(lines.join('\n'));
+      const lines=['Private briefing request','','Name: '+val(fd,'name'),'Role: '+val(fd,'role'),'Company: '+val(fd,'organisation'),'Email: '+val(fd,'email'),'Where AI sits today: '+(val(fd,'maturity')||'Not specified'),'Timeframe: '+val(fd,'timeframe'),'','What AI should change in the business:',val(fd,'outcome'),'','Confidential — submitted through the AIKING private briefing form.'];
+      const href='mailto:'+email+'?subject='+encodeURIComponent('AIKING — Private briefing request')+'&body='+encodeURIComponent(lines.join('\n'));
       form.dataset.generatedMailto=href; setResult(form,href);
     });
   });
@@ -67,7 +67,7 @@
   if(motionOK&&'IntersectionObserver' in window){
     const groups=new Map();
     const tag=(el)=>{ el.classList.add('rv'); const p=el.parentElement; if(!groups.has(p)) groups.set(p,0); const i=groups.get(p); groups.set(p,i+1); el.style.setProperty('--rvd',Math.min(i*85,510)+'ms'); };
-    document.querySelectorAll(['.section .section-head','.card','.process li','.detail-list li','.proof-template > div','.quote-card','.founder-photo','.founder-meta','.cta-band','.form-shell','.legal-copy h2','.notice'].join(',')).forEach(tag);
+    document.querySelectorAll(['.section .section-head','.card','.process li','.detail-list li','.proof-template > div','.quote-card','.founder-photo','.founder-meta','.cta-band','.form-shell','.legal-copy h2','.notice','.flow','.stat'].join(',')).forEach(tag);
     const hero=document.querySelector('.hero');
     if(hero){
       const seq=['.eyebrow','h1','.lead','.actions','.trust-line'];
