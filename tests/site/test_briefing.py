@@ -37,7 +37,7 @@ with sync_playwright() as p:
     check("inline builder mounted", page.locator("[data-briefing-inline] form.bb").count() == 1)
     check("step 1 active", page.locator("[data-briefing-inline] .bb-step.active[data-step='1']").count() == 1)
     ref = page.locator("[data-briefing-inline] .bb-ref").inner_text()
-    check("ref code shown", ref.startswith("BRF-"), ref)
+    check("no visible reference code", "BRF-" not in ref and "confidential" in ref.lower(), ref)
 
     # invalid submit on step 1 -> errors, still step 1
     page.locator("[data-briefing-inline] .bb-next").click()
@@ -106,8 +106,9 @@ with sync_playwright() as p:
     check("mailto to ash", href.startswith("mailto:ash@aiking.info"))
     from urllib.parse import unquote
     body = unquote(href)
-    for needle in ["Jordan Blake", "Blake Group", "Next 30 days", "Pilots underway", "Lead follow-up", ref]:
+    for needle in ["Jordan Blake", "Blake Group", "Next 30 days", "Pilots underway", "Lead follow-up"]:
         check(f"mailto body has {needle[:16]}", needle in body)
+    check("mailto has no reference code", "BRF-" not in body, body[:120])
     check("draft cleared after send", page.evaluate("localStorage.getItem('aiking-briefing-draft')") is None)
     page.screenshot(path=f"{SHOTS}/desktop-success.png")
 

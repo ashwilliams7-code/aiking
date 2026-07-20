@@ -52,7 +52,7 @@
   function briefingMarkup(){
     const uid='bb'+(++bbSeq);
     return '<form class="bb" novalidate data-bb>'+
-      '<div class="bb-top"><span class="bb-ref">'+briefRef()+'</span><span class="bb-meta">Step <b data-bb-num>01</b> / 03</span></div>'+
+      '<div class="bb-top"><span class="bb-ref">Private &amp; confidential</span><span class="bb-meta">Step <b data-bb-num>01</b> / 03</span></div>'+
       '<div class="bb-rail"><i data-bb-rail></i></div>'+
       '<div class="bb-viewport" data-bb-viewport>'+
         '<fieldset class="bb-step active" data-step="1">'+
@@ -76,7 +76,7 @@
         '<fieldset class="bb-step" data-step="3">'+
           '<legend class="bb-legend" tabindex="-1"><i>03</i>Review your briefing</legend>'+
           '<div class="bb-doc" data-bb-doc></div>'+
-          '<p class="form-note">Sends as an email from your own mail client — you see exactly what leaves. Confidential. Read personally by Ash Williams. No mailing list.</p>'+
+          '<p class="form-note">Goes directly to Ash Williams, who reads every briefing personally. Confidential — never a mailing list.</p>'+
         '</fieldset>'+
       '</div>'+
       '<input class="bb-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">'+
@@ -89,12 +89,12 @@
       '<div class="bb-done" data-bb-done hidden>'+
         '<svg class="bb-tick" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M20 33.5 28.5 42 45 24"/></svg>'+
         '<h3>Briefing drafted.</h3>'+
-        '<p data-bb-donemsg>Your email app should now be open with the full briefing — reference <b data-bb-doneref></b>. Review it and press send; Ash replies personally.</p>'+
+        '<p data-bb-donemsg>Your email app should now be open with the full briefing. Review it and press send — Ash replies personally.</p>'+
         '<div class="bb-done-actions">'+
           '<a class="btn primary" data-bb-mailto href="mailto:ash@aiking.info">Open email draft <span class="arrow">→</span></a>'+
           '<button type="button" class="btn secondary" data-bb-copy>Copy briefing</button>'+
         '</div>'+
-        '<p class="form-note">Nothing was stored by this website. Prefer to write it yourself? <a href="mailto:ash@aiking.info">ash@aiking.info</a></p>'+
+        '<p class="form-note">Held in strict confidence — <a href="/privacy.html">how your details are handled</a>. Prefer to write instead? <a href="mailto:ash@aiking.info">ash@aiking.info</a></p>'+
       '</div>'+
     '</form>';
   }
@@ -186,7 +186,7 @@
       const f=fields();
       const dt=new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',day:'2-digit',month:'short',year:'numeric'}).format(new Date());
       const rows=[
-        ['reference',ref,0],['prepared',dt+' · Sydney',0],
+        ['prepared',dt+' · Sydney',0],
         ['from',f.name+' — '+f.role,1],['company',f.organisation,1],['reply to',f.email,1],
         ['timeframe',f.timeframe,2],['ai today',f.maturity||'Not specified',2]
       ];
@@ -197,8 +197,8 @@
 
     function mailParts(){
       const f=fields();
-      const lines=['Private briefing request — '+ref,'','Name: '+f.name,'Role: '+f.role,'Company: '+f.organisation,'Email: '+f.email,'Timeframe: '+f.timeframe,'Where AI sits today: '+(f.maturity||'Not specified'),'','What AI should change in the business:',f.outcome,'','— Submitted via the aiking.info private briefing form ('+ref+')'];
-      return { subject:'AIKING private briefing — '+f.name+(f.organisation?', '+f.organisation:'')+' ('+ref+')', body:lines.join('\n') };
+      const lines=['Name: '+f.name,'Role: '+f.role,'Company: '+f.organisation,'Email: '+f.email,'Timeframe: '+f.timeframe,'Where AI sits today: '+(f.maturity||'Not specified'),'','What AI should change in the business:',f.outcome,'','— Prepared on aiking.info'];
+      return { subject:'Private briefing — '+f.name+(f.organisation?', '+f.organisation:''), body:lines.join('\n') };
     }
 
     function showDone(mailOpened){
@@ -207,14 +207,16 @@
       const href='mailto:'+email+'?subject='+encodeURIComponent(m.subject)+'&body='+encodeURIComponent(m.body);
       form.classList.add('done');
       const done=form.querySelector('[data-bb-done]');
-      const dr=form.querySelector('[data-bb-doneref]'); if(dr) dr.textContent=ref;
       const ml=form.querySelector('[data-bb-mailto]'); if(ml) ml.href=href;
       const msg=form.querySelector('[data-bb-donemsg]');
-      if(msg&&!mailOpened) msg.innerHTML='Your briefing is on its way — reference <b data-bb-doneref>'+esc(ref)+'</b>. Ash reads it personally and replies directly.';
+      if(!mailOpened){
+        const h=form.querySelector('[data-bb-done] h3'); if(h) h.textContent='Briefing received.';
+        if(msg) msg.textContent='Thank you. Ash reads every briefing personally and will reply to you directly.';
+      }
       else if(dr&&msg){ /* default copy already references the draft */ }
       if(done){ done.hidden=false; const h=done.querySelector('h3'); if(h){ h.setAttribute('tabindex','-1'); setTimeout(()=>h.focus({preventScroll:true}),0); } }
       try{ localStorage.removeItem(DRAFT_KEY); }catch(_){}
-      if(live) live.textContent='Briefing drafted. Reference '+ref+'.';
+      if(live) live.textContent='Briefing sent. Ash will reply personally.';
       const copy=form.querySelector('[data-bb-copy]');
       if(copy&&!copy.dataset.wired){
         copy.dataset.wired='1';
