@@ -1,0 +1,17 @@
+name = "aiking-lead-capture"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+# Same-origin capture: the Worker intercepts /v1/* on aiking.info before the
+# request reaches GitHub Pages, so the briefing form needs no CORS.
+routes = [
+  { pattern = "aiking.info/v1/*", zone_name = "aiking.info" }
+]
+
+# `npx wrangler dev` uses a local in-memory namespace; the id below is only
+# used for deploys. Create with: npx wrangler kv namespace create LEADS
+[[kv_namespaces]]
+binding = "LEADS"
+id = "REPLACE_ON_DEPLOY"
+
+# Secret (set once): npx wrangler secret put EXPORT_TOKEN

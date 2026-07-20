@@ -1,0 +1,315 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "info": {
+    "title": "AIKING Lead Capture API",
+    "version": "0.1.0",
+    "description": "Local development contract for accepting a private briefing request. This contract is not connected to the public site and does not authorize notifications, CRM writes, or deployment."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8787",
+      "description": "Loopback-only mock or development server"
+    }
+  ],
+  "paths": {
+    "/v1/lead-requests": {
+      "post": {
+        "operationId": "createLeadRequest",
+        "summary": "Accept a private briefing request",
+        "description": "Validates and accepts a data-minimized enquiry. Reusing an idempotency key with the same payload returns the original acceptance; reusing it with a different payload returns 409. Implementations must apply server-side rate limiting and must not echo submitted contact fields in responses or logs.",
+        "security": [],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "description": "Client-generated opaque key scoped to one submission attempt.",
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{15,127}$"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./schemas/lead-request.schema.json"
+              },
+              "example": {
+                "name": "Jordan Example",
+                "role": "Operations Director",
+                "organisation": "Example Industries",
+                "email": "jordan@example.com",
+                "timeframe": "next_30_days",
+                "maturity": "pilots_underway",
+                "outcome": "Reduce manual reporting time and improve weekly operational visibility.",
+                "website": ""
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Request accepted for local processing. The response never echoes submitted fields.",
+            "headers": {
+              "RateLimit-Limit": {
+                "description": "Maximum requests allowed in the current window.",
+                "schema": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "RateLimit-Remaining": {
+                "description": "Requests remaining in the current window.",
+                "schema": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LeadAccepted"
+                },
+                "example": {
+                  "request_id": "018f2b35-7bb8-7f58-9dd7-6d4fd8f21d21",
+                  "status": "accepted",
+                  "duplicate": false
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/MalformedRequest"
+          },
+          "409": {
+            "$ref": "#/components/responses/IdempotencyConflict"
+          },
+          "415": {
+            "$ref": "#/components/responses/UnsupportedMediaType"
+          },
+          "422": {
+            "$ref": "#/components/responses/ValidationFailed"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        },
+        "x-data-handling": {
+          "classification": "contact-enquiry",
+          "responseEchoesSubmittedFields": false,
+          "notificationSideEffectsInLocalDevelopment": false,
+          "retentionPolicy": "Must be defined and reflected in the public collection notice before any non-local implementation."
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LeadAccepted": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "request_id",
+          "status",
+          "duplicate"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Opaque request identifier."
+          },
+          "status": {
+            "type": "string",
+            "const": "accepted"
+          },
+          "duplicate": {
+            "type": "boolean",
+            "description": "True when this idempotency key and payload were accepted previously."
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "invalid_json",
+                  "unsupported_media_type",
+                  "invalid_request",
+                  "idempotency_conflict",
+                  "rate_limited",
+                  "internal_error"
+                ]
+              },
+              "message": {
+                "type": "string",
+                "maxLength": 200,
+                "description": "Safe summary that never includes submitted values."
+              },
+              "fields": {
+                "type": "array",
+                "maxItems": 20,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "field",
+                    "code"
+                  ],
+                  "properties": {
+                    "field": {
+                      "type": "string",
+                      "maxLength": 80
+                    },
+                    "code": {
+                      "type": "string",
+                      "maxLength": 80
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "MalformedRequest": {
+        "description": "The HTTP request headers, framing, or JSON body are malformed.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "invalid_json",
+                "message": "Request body must be valid JSON."
+              }
+            }
+          }
+        }
+      },
+      "UnsupportedMediaType": {
+        "description": "Content-Type is not application/json.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "unsupported_media_type",
+                "message": "Content-Type must be application/json."
+              }
+            }
+          }
+        }
+      },
+      "ValidationFailed": {
+        "description": "One or more fields failed validation.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "invalid_request",
+                "message": "One or more fields are invalid.",
+                "fields": [
+                  {
+                    "field": "email",
+                    "code": "invalid_format"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "IdempotencyConflict": {
+        "description": "The idempotency key was already used with a different payload.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "idempotency_conflict",
+                "message": "Idempotency key was already used for a different request."
+              }
+            }
+          }
+        }
+      },
+      "RateLimited": {
+        "description": "The submission rate limit was exceeded.",
+        "headers": {
+          "Retry-After": {
+            "required": true,
+            "description": "Seconds until another submission may be attempted.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "rate_limited",
+                "message": "Too many requests. Try again later."
+              }
+            }
+          }
+        }
+      },
+      "InternalError": {
+        "description": "Unexpected server failure with no submitted values exposed.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "error": {
+                "code": "internal_error",
+                "message": "Request could not be processed."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

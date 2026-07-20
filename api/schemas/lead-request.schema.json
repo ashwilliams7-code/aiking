@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aiking.info/schemas/lead-request.schema.json",
+  "title": "AIKING lead request",
+  "description": "Data-minimized input for a private briefing request.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "role",
+    "organisation",
+    "email",
+    "timeframe",
+    "outcome"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "organisation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 254
+    },
+    "timeframe": {
+      "type": "string",
+      "enum": [
+        "exploring_now",
+        "next_30_days",
+        "next_quarter",
+        "later_this_year"
+      ]
+    },
+    "maturity": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "individual_tools",
+        "pilots_underway",
+        "systems_in_production"
+      ]
+    },
+    "outcome": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 2000
+    },
+    "website": {
+      "type": "string",
+      "maxLength": 0,
+      "description": "Honeypot field. Browser clients leave this empty; a non-empty value fails validation."
+    },
+    "ref": {
+      "type": "string",
+      "pattern": "^BRF-[A-Z0-9]{4}$",
+      "description": "Client-generated briefing reference shown to the requester."
+    },
+    "page": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Site path the briefing form was submitted from."
+    }
+  }
+}

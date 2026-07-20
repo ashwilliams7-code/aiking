@@ -210,7 +210,7 @@
       const dr=form.querySelector('[data-bb-doneref]'); if(dr) dr.textContent=ref;
       const ml=form.querySelector('[data-bb-mailto]'); if(ml) ml.href=href;
       const msg=form.querySelector('[data-bb-donemsg]');
-      if(msg&&!mailOpened) msg.innerHTML='Your briefing is on its way — reference <b>'+ref+'</b>. Ash reads it personally and replies directly.';
+      if(msg&&!mailOpened) msg.innerHTML='Your briefing is on its way — reference <b data-bb-doneref>'+esc(ref)+'</b>. Ash reads it personally and replies directly.';
       else if(dr&&msg){ /* default copy already references the draft */ }
       if(done){ done.hidden=false; const h=done.querySelector('h3'); if(h){ h.setAttribute('tabindex','-1'); setTimeout(()=>h.focus({preventScroll:true}),0); } }
       try{ localStorage.removeItem(DRAFT_KEY); }catch(_){}
@@ -237,8 +237,14 @@
       const href='mailto:'+email+'?subject='+encodeURIComponent(m.subject)+'&body='+encodeURIComponent(m.body);
       const finish=openMail=>{ next.disabled=false; next.classList.remove('sending'); if(openMail) window.location.href=href; showDone(openMail); };
       if(endpoint&&!(hp&&hp.value)){
-        const f=fields(); f.ref=ref; f.page=location.pathname;
-        fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(f)})
+        const f=fields(); f.ref=ref; f.page=location.pathname; f.website=(hp&&hp.value)||'';
+        /* API enum codes; the mailto/summary keep the display strings */
+        const TF={'Exploring now':'exploring_now','Next 30 days':'next_30_days','Next quarter':'next_quarter','Later this year':'later_this_year'};
+        const MT={"Haven't started":'not_started','Individual tools in use':'individual_tools','Pilots underway':'pilots_underway','Systems in production':'systems_in_production'};
+        f.timeframe=TF[f.timeframe]||f.timeframe;
+        if(f.maturity) f.maturity=MT[f.maturity]||f.maturity; else delete f.maturity;
+        const idem=ref+':'+(self.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2,14));
+        fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Idempotency-Key':idem},body:JSON.stringify(f)})
           .then(r=>{ if(!r.ok) throw 0; finish(false); })
           .catch(()=>finish(true));
       }else{
