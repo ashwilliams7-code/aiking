@@ -64,7 +64,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/site.css?v=20260720-living2" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260720-brief2" />
     <link rel="icon" href="/assets/aiking-icon.svg" type="image/svg+xml" />
     <script type="application/ld+json">
       {
@@ -623,6 +623,19 @@
               A disciplined path from executive priorities to governed systems
               in production — with a decision point at every stage.
             </p>
+            <div
+              class="king-stage"
+              data-king
+              aria-label="The AIKING obsidian king — interactive 3D object"
+            >
+              <img
+                class="king-poster"
+                src="/assets/hero/king-poster.webp"
+                alt="Obsidian chess king"
+                loading="lazy"
+              />
+              <span class="king-hint">Drag to rotate</span>
+            </div>
           </div>
           <ol class="process">
             <li>
@@ -856,98 +869,6 @@
         </nav>
       </div>
     </footer>
-    <div class="modal" data-briefing-modal hidden>
-      <div class="modal-backdrop" data-close-briefing></div>
-      <div
-        class="modal-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="briefing-title"
-      >
-        <button
-          class="modal-close"
-          type="button"
-          aria-label="Close briefing form"
-          data-close-briefing
-        >
-          ×</button
-        ><span class="section-kicker">Private briefing</span>
-        <h2 id="briefing-title">Request a private briefing.</h2>
-        <p class="lead">
-          Tell Ash what you're weighing — a process, a reporting gap, an AI
-          ambition. He reads every enquiry personally and replies with the
-          clearest way forward.
-        </p>
-        <form class="briefing-form" id="modal-briefing-form">
-          <div class="form-grid">
-            <label
-              >Name<input name="name" autocomplete="name" required
-            /></label>
-            <label
-              >Role<input
-                name="role"
-                autocomplete="organization-title"
-                required
-            /></label>
-            <label
-              >Company<input
-                name="organisation"
-                autocomplete="organization"
-                required
-            /></label>
-            <label
-              >Email<input
-                name="email"
-                type="email"
-                autocomplete="email"
-                required
-            /></label>
-            <label
-              >Timeframe<select name="timeframe" required>
-                <option value="">Select timeframe</option>
-                <option>Exploring now</option>
-                <option>Next 30 days</option>
-                <option>Next quarter</option>
-                <option>Later this year</option>
-              </select></label
-            >
-            <label
-              >Where AI sits today<select name="maturity">
-                <option>Haven't started</option>
-                <option>Individual tools in use</option>
-                <option>Pilots underway</option>
-                <option>Systems in production</option>
-              </select></label
-            >
-          </div>
-          <label
-            >What should AI change in your business?<textarea
-              name="outcome"
-              rows="5"
-              required
-              placeholder="Example: lead follow-up, reporting, audit and assurance, operations coordination, customer service or executive decision support..."
-            ></textarea>
-          </label>
-          <p class="form-note">
-            Confidential. Read personally by Ash Williams. No mailing list.
-          </p>
-          <button class="btn primary" type="submit">
-            Send briefing request <span class="arrow">→</span>
-          </button>
-          <div class="form-result" hidden>
-            <p>
-              <strong>Your request is drafted.</strong> Open the email, check it
-              says what you want, and send.
-            </p>
-            <a
-              class="btn secondary generated-mailto"
-              href="mailto:ash@aiking.info"
-              >Open email draft</a
-            >
-          </div>
-        </form>
-      </div>
-    </div>
-    <script src="/assets/site.js?v=20260720-living2" defer></script>
+    <script src="/assets/site.js?v=20260720-brief2" defer></script>
   </body>
 </html>

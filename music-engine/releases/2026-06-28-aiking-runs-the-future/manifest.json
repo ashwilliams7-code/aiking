@@ -1,0 +1,21 @@
+{
+  "engine": "aiking_song_engine",
+  "release_date": "2026-06-28",
+  "release_slug": "aiking-runs-the-future",
+  "brief_path": "music-engine/briefs/aiking-brand-anthem.json",
+  "outputs": {
+    "suno_packet": "music-engine/releases/2026-06-28-aiking-runs-the-future/01-suno-advanced-packet.md",
+    "lyrics": "music-engine/releases/2026-06-28-aiking-runs-the-future/02-lyrics.md",
+    "youtube_packet": "music-engine/releases/2026-06-28-aiking-runs-the-future/03-youtube-upload-packet.md",
+    "spotify_packet": "music-engine/releases/2026-06-28-aiking-runs-the-future/04-spotify-distribution-packet.md",
+    "checklist": "music-engine/releases/2026-06-28-aiking-runs-the-future/05-release-checklist.md",
+    "calendar": "music-engine/releases/2026-06-28-aiking-runs-the-future/06-content-calendar.csv",
+    "manifest": "music-engine/releases/2026-06-28-aiking-runs-the-future/manifest.json"
+  },
+  "status": "packet_ready_human_publish_gate_required",
+  "publish_gates": [
+    "music-generation approval/credits",
+    "YouTube login/publish",
+    "distributor payment/rights confirmation"
+  ]
+}

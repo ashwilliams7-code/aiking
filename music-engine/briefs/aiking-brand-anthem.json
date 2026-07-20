@@ -1,0 +1,48 @@
+{
+  "project": "AIKING",
+  "song_title": "AIKING Runs the Future",
+  "artist": "AIKING",
+  "slug": "aiking-runs-the-future",
+  "purpose": "Brand anthem and sonic identity system for YouTube visualizers, Shorts hooks, and Spotify-style distribution.",
+  "audience": [
+    "founders",
+    "CEOs",
+    "operators",
+    "private clients"
+  ],
+  "mood": [
+    "futuristic",
+    "premium",
+    "confident",
+    "calm power",
+    "executive"
+  ],
+  "hook": "AIKING runs the future while the old world sleeps",
+  "keywords": [
+    "AI agents",
+    "executive intelligence",
+    "agentic implementation",
+    "business automation",
+    "Australia",
+    "private executive briefing"
+  ],
+  "avoid": [
+    "cheesy startup hype",
+    "cartoon robot energy",
+    "fake guarantees",
+    "hard profanity",
+    "naming private client details",
+    "sounding like a generic SaaS ad"
+  ],
+  "voice": "smooth confident male lead, subtle AI vocoder doubles on the hook, deep backing chants, no novelty robot voice",
+  "language": "clean English",
+  "genre": "cinematic cyber-R&B, orchestral hip-hop, executive dark-pop brand anthem",
+  "tempo": "mid-tempo 92 BPM feel with a slow head-nod groove",
+  "duration_target": "2:20-2:45",
+  "contributors": [
+    "Ash Williams",
+    "AIKING"
+  ],
+  "model": "Suno v5.5 / current best available",
+  "save_to": "AIKING Music Engine"
+}
