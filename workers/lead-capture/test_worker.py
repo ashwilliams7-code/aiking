@@ -33,6 +33,9 @@ def check(name, cond, detail=""):
 def call(method="POST", path="/v1/lead-requests", body=None, headers=None, raw=None):
     data = raw.encode() if raw is not None else (json.dumps(body).encode() if body is not None else None)
     req = urllib.request.Request(BASE + path, data=data, method=method)
+    # Cloudflare's browser-integrity check 403s the default python UA in
+    # production; real form traffic comes from browsers.
+    req.add_header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 aiking-contract-tests")
     for k, v in (headers or {}).items():
         req.add_header(k, v)
     try:

@@ -12,6 +12,6 @@ routes = [
 # used for deploys. Create with: npx wrangler kv namespace create LEADS
 [[kv_namespaces]]
 binding = "LEADS"
-id = "REPLACE_ON_DEPLOY"
+id = "a0b93734910b400a8fd71f69e375d707"
 
 # Secret (set once): npx wrangler secret put EXPORT_TOKEN
