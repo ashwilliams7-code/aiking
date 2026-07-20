@@ -64,7 +64,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/site.css?v=20260715-logos" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260720-living" />
     <link rel="icon" href="/assets/aiking-icon.svg" type="image/svg+xml" />
     <script type="application/ld+json">
       {
@@ -137,6 +137,9 @@
     </header>
     <main id="main">
       <section class="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <canvas class="hero-canvas"></canvas>
+        </div>
         <div class="wrap hero-grid">
           <div>
             <span class="eyebrow">Private AI advisory — Australia</span>
@@ -181,6 +184,10 @@
                 <li>Risk &amp; exceptions <span>escalated</span></li>
                 <li>Executive briefing <span>prepared</span></li>
               </ul>
+              <div class="card-feed">
+                <span class="feed-line" data-feed></span
+                ><span class="card-clock" data-clock></span>
+              </div>
             </div>
           </aside>
         </div>
@@ -513,38 +520,81 @@
             </article>
           </div>
           <p class="standard-note" style="margin:0 0 14px">Works across the stack you already run</p>
-          <div class="flow-foot">
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/claude.svg" alt="" loading="lazy" /></span>Claude</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/anthropic.svg" alt="" loading="lazy" /></span>Anthropic</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/openai.svg" alt="" loading="lazy" /></span>OpenAI</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlegemini.svg" alt="" loading="lazy" /></span>Google Gemini</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/perplexity.svg" alt="" loading="lazy" /></span>Perplexity</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/n8n.svg" alt="" loading="lazy" /></span>n8n</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/zapier.svg" alt="" loading="lazy" /></span>Zapier</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/make.svg" alt="" loading="lazy" /></span>Make</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/aws.svg" alt="" loading="lazy" /></span>AWS</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/azure.svg" alt="" loading="lazy" /></span>Microsoft Azure</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlecloud.svg" alt="" loading="lazy" /></span>Google Cloud</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/databricks.svg" alt="" loading="lazy" /></span>Databricks</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/snowflake.svg" alt="" loading="lazy" /></span>Snowflake</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/github.svg" alt="" loading="lazy" /></span>GitHub</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/hubspot.svg" alt="" loading="lazy" /></span>HubSpot</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/salesforce.svg" alt="" loading="lazy" /></span>Salesforce</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/zoho.svg" alt="" loading="lazy" /></span>Zoho</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/xero.svg" alt="" loading="lazy" /></span>Xero</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/myob.svg" alt="" loading="lazy" /></span>MYOB</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/quickbooks.svg" alt="" loading="lazy" /></span>QuickBooks</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/stripe.svg" alt="" loading="lazy" /></span>Stripe</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/shopify.svg" alt="" loading="lazy" /></span>Shopify</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/gmail.svg" alt="" loading="lazy" /></span>Gmail</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/outlook.svg" alt="" loading="lazy" /></span>Outlook</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/slack.svg" alt="" loading="lazy" /></span>Slack</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/teams.svg" alt="" loading="lazy" /></span>Microsoft Teams</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlesheets.svg" alt="" loading="lazy" /></span>Google Sheets</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/googledrive.svg" alt="" loading="lazy" /></span>Google Drive</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/notion.svg" alt="" loading="lazy" /></span>Notion</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/jira.svg" alt="" loading="lazy" /></span>Jira</span>
-            <span class="badge"><span class="brand-ico"><img src="/assets/brands/confluence.svg" alt="" loading="lazy" /></span>Confluence</span>
+          <div class="logo-belt" aria-label="Platforms AIKING systems run across">
+            <div class="belt-track">
+              <div class="belt-half">
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/claude.svg" alt="" loading="lazy" /></span>Claude</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/anthropic.svg" alt="" loading="lazy" /></span>Anthropic</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/openai.svg" alt="" loading="lazy" /></span>OpenAI</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlegemini.svg" alt="" loading="lazy" /></span>Google Gemini</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/perplexity.svg" alt="" loading="lazy" /></span>Perplexity</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/n8n.svg" alt="" loading="lazy" /></span>n8n</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/zapier.svg" alt="" loading="lazy" /></span>Zapier</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/make.svg" alt="" loading="lazy" /></span>Make</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/aws.svg" alt="" loading="lazy" /></span>AWS</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/azure.svg" alt="" loading="lazy" /></span>Microsoft Azure</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlecloud.svg" alt="" loading="lazy" /></span>Google Cloud</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/databricks.svg" alt="" loading="lazy" /></span>Databricks</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/snowflake.svg" alt="" loading="lazy" /></span>Snowflake</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/github.svg" alt="" loading="lazy" /></span>GitHub</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/hubspot.svg" alt="" loading="lazy" /></span>HubSpot</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/salesforce.svg" alt="" loading="lazy" /></span>Salesforce</span>
+              </div>
+              <div class="belt-half" aria-hidden="true">
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/claude.svg" alt="" loading="lazy" /></span>Claude</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/anthropic.svg" alt="" loading="lazy" /></span>Anthropic</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/openai.svg" alt="" loading="lazy" /></span>OpenAI</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlegemini.svg" alt="" loading="lazy" /></span>Google Gemini</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/perplexity.svg" alt="" loading="lazy" /></span>Perplexity</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/n8n.svg" alt="" loading="lazy" /></span>n8n</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/zapier.svg" alt="" loading="lazy" /></span>Zapier</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/make.svg" alt="" loading="lazy" /></span>Make</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/aws.svg" alt="" loading="lazy" /></span>AWS</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/azure.svg" alt="" loading="lazy" /></span>Microsoft Azure</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlecloud.svg" alt="" loading="lazy" /></span>Google Cloud</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/databricks.svg" alt="" loading="lazy" /></span>Databricks</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/snowflake.svg" alt="" loading="lazy" /></span>Snowflake</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/github.svg" alt="" loading="lazy" /></span>GitHub</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/hubspot.svg" alt="" loading="lazy" /></span>HubSpot</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/salesforce.svg" alt="" loading="lazy" /></span>Salesforce</span>
+              </div>
+            </div>
+            <div class="belt-track reverse">
+              <div class="belt-half">
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/zoho.svg" alt="" loading="lazy" /></span>Zoho</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/xero.svg" alt="" loading="lazy" /></span>Xero</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/myob.svg" alt="" loading="lazy" /></span>MYOB</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/quickbooks.svg" alt="" loading="lazy" /></span>QuickBooks</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/stripe.svg" alt="" loading="lazy" /></span>Stripe</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/shopify.svg" alt="" loading="lazy" /></span>Shopify</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/gmail.svg" alt="" loading="lazy" /></span>Gmail</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/outlook.svg" alt="" loading="lazy" /></span>Outlook</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/slack.svg" alt="" loading="lazy" /></span>Slack</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/teams.svg" alt="" loading="lazy" /></span>Microsoft Teams</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlesheets.svg" alt="" loading="lazy" /></span>Google Sheets</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googledrive.svg" alt="" loading="lazy" /></span>Google Drive</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/notion.svg" alt="" loading="lazy" /></span>Notion</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/jira.svg" alt="" loading="lazy" /></span>Jira</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/confluence.svg" alt="" loading="lazy" /></span>Confluence</span>
+              </div>
+              <div class="belt-half" aria-hidden="true">
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/zoho.svg" alt="" loading="lazy" /></span>Zoho</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/xero.svg" alt="" loading="lazy" /></span>Xero</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/myob.svg" alt="" loading="lazy" /></span>MYOB</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/quickbooks.svg" alt="" loading="lazy" /></span>QuickBooks</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/stripe.svg" alt="" loading="lazy" /></span>Stripe</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/shopify.svg" alt="" loading="lazy" /></span>Shopify</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/gmail.svg" alt="" loading="lazy" /></span>Gmail</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/outlook.svg" alt="" loading="lazy" /></span>Outlook</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/slack.svg" alt="" loading="lazy" /></span>Slack</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/teams.svg" alt="" loading="lazy" /></span>Microsoft Teams</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googlesheets.svg" alt="" loading="lazy" /></span>Google Sheets</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/googledrive.svg" alt="" loading="lazy" /></span>Google Drive</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/notion.svg" alt="" loading="lazy" /></span>Notion</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/jira.svg" alt="" loading="lazy" /></span>Jira</span>
+                <span class="badge"><span class="brand-ico"><img src="/assets/brands/confluence.svg" alt="" loading="lazy" /></span>Confluence</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -614,7 +664,7 @@
           </div>
           <div class="grid four">
             <article class="card">
-              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="seal">Standard · 01</span>
               <h3>Founder-answered</h3>
               <p>
                 Every enquiry is read and answered personally by Ash Williams.
@@ -622,7 +672,7 @@
               </p>
             </article>
             <article class="card">
-              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="seal">Standard · 02</span>
               <h3>Human-governed</h3>
               <p>
                 Nothing consequential ships without a named person approving
@@ -630,7 +680,7 @@
               </p>
             </article>
             <article class="card">
-              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="seal">Standard · 03</span>
               <h3>Delivered running</h3>
               <p>
                 Engagements end in systems working in production — connected,
@@ -638,7 +688,7 @@
               </p>
             </article>
             <article class="card">
-              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span class="seal">Standard · 04</span>
               <h3>Inside your boundaries</h3>
               <p>
                 Built around your access controls, Australian privacy
@@ -882,6 +932,6 @@
         </form>
       </div>
     </div>
-    <script src="/assets/site.js?v=20260715-logos" defer></script>
+    <script src="/assets/site.js?v=20260720-living" defer></script>
   </body>
 </html>

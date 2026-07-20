@@ -385,3 +385,85 @@ html.js .nav-actions .btn.small{padding:10px 12px;font-size:12px}
 .stat-strip .wrap{grid-template-columns:1fr 1fr}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* ==================================================================
+   Living layer — 2026-07-20
+   Ambient hero media, scroll-driven depth, live card feed, logo belt,
+   cross-page view transitions. Everything motion-gated and fallback-safe.
+   ================================================================== */
+
+/* ---------- scroll progress hairline (CSS scroll-driven only) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: scroll(root)){
+    body::before{content:"";position:fixed;top:0;left:0;right:0;height:2px;z-index:190;pointer-events:none;background:linear-gradient(90deg,var(--lime),var(--lime-2));box-shadow:0 0 14px rgba(209,254,23,.5);transform-origin:0 50%;transform:scaleX(0);animation:scrollProgress linear both;animation-timeline:scroll(root)}
+  }
+}
+@keyframes scrollProgress{to{transform:scaleX(1)}}
+
+/* ---------- hero backdrop: canvas ambience + film slot ---------- */
+.hero{overflow:hidden}
+.hero-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero-backdrop canvas,.hero-backdrop video,.hero-backdrop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-backdrop video{opacity:0;transition:opacity 1.4s var(--ease)}
+.hero-backdrop video.on{opacity:.55}
+.hero-backdrop::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,10,.32),rgba(10,12,10,.12) 34%,rgba(10,12,10,.55) 76%,var(--paper) 100%),radial-gradient(760px 420px at 24% 38%,rgba(10,12,10,.5),transparent 72%)}
+.hero-grid{z-index:1}
+
+/* ---------- intelligence card: live feed + clock ---------- */
+.card-feed{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--soft);min-height:19px}
+.card-feed .feed-line{color:rgba(242,239,227,.78);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.card-feed .feed-line::after{content:"▍";color:var(--lime);margin-left:1px;animation:cursorBlink 1.1s steps(2) infinite}
+@keyframes cursorBlink{50%{opacity:0}}
+.card-clock{flex:0 0 auto;font-size:10px;letter-spacing:.12em;color:var(--soft)}
+
+/* ---------- standard seal (replaces decorative star ratings) ---------- */
+.seal{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);text-shadow:0 0 14px rgba(209,254,23,.35)}
+.seal::before{content:"";width:22px;height:1px;background:var(--lime);opacity:.65}
+
+/* ---------- integration logo belt (marquee) ---------- */
+.logo-belt{margin-top:14px;position:relative;overflow:hidden;display:grid;gap:10px}
+.logo-belt::before,.logo-belt::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.logo-belt::before{left:0;background:linear-gradient(90deg,#0b0d0a,transparent)}
+.logo-belt::after{right:0;background:linear-gradient(-90deg,#0b0d0a,transparent)}
+.belt-track{display:flex;width:max-content}
+.belt-half{display:flex;gap:8px;padding-right:8px}
+@media (prefers-reduced-motion: no-preference){
+  .belt-track{animation:beltMove 58s linear infinite}
+  .belt-track.reverse{animation-direction:reverse;animation-duration:74s}
+  .logo-belt:hover .belt-track{animation-play-state:paused}
+}
+@keyframes beltMove{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){
+  .belt-track,.belt-half{flex-wrap:wrap}
+  .belt-track{width:auto}
+  .belt-half[aria-hidden="true"]{display:none}
+}
+
+/* ---------- scroll-linked depth (progressive enhancement) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: view()){
+    .section-head[data-ghost]::before{animation:ghostDrift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    .section.dark::before{animation:auroraDrift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    .footer-grid{animation:footRise linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+  }
+}
+@keyframes ghostDrift{from{transform:translateY(52px)}to{transform:translateY(-52px)}}
+@keyframes auroraDrift{from{transform:translateY(4%) scale(1.03)}to{transform:translateY(-5%) scale(1)}}
+@keyframes footRise{from{opacity:.35;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* ---------- cross-page view transitions ---------- */
+@view-transition{navigation:auto}
+.site-header{view-transition-name:site-header}
+@media (prefers-reduced-motion: no-preference){
+  ::view-transition-old(root){animation:vtOut .22s var(--ease) both}
+  ::view-transition-new(root){animation:vtIn .38s var(--ease) both}
+}
+@keyframes vtOut{to{opacity:0}}
+@keyframes vtIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- lenis smooth scroll hooks ---------- */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+
+/* ---------- render safety: nothing is ever lost to a hidden state ---------- */
+@media print{html.js .rv{opacity:1!important;transform:none!important}}
